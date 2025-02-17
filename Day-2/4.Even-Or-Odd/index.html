@@ -21,24 +21,43 @@
       <h2>Exercise 1</h2>
       <p>Create any variable with number <br>
         Create function and check this variable number is even or odd<br>
-        Print result in console is number is Odd console.log("The number is odd."); <br>
-        Print result in console is number is Even console.log("The number is even."); <br>
+        &nbsp;&nbsp;&nbsp;- Print result in console is number is Odd console.log("The number is odd."); <br>
+        &nbsp;&nbsp;&nbsp;- Print result in console is number is Even console.log("The number is even."); <br>
         Create button and add on click event this created function.
       </p>
       <br>
       <pre>
       <code>   
-        
+        let number = 10;
+
+        function checkEvenOdd() {
+          if (number % 2 == 0) {
+            console.log("Number is Even");
+          } else {
+            console.log("Number is Odd");
+          }
+        }
+
+        checkEvenOdd()
       </code></pre>
-      <div id="ex1" class="output-box">Output in Console</div>
-      <button class="output-box-btn" onclick="handleIncrement()">Click To Output</button>
+      <div id="ex1" class="output-box">Number is Even</div>
     </div>
 
 
 
     <script>
 
+      let number = 10;
 
+      function checkEvenOdd() {
+        if (number % 2 == 0) {
+          console.log("Number is Even");
+        } else {
+          console.log("Number is Odd");
+        }
+      }
+
+      checkEvenOdd()
 
     </script>
 

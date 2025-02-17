@@ -19,32 +19,68 @@
     <h1>Grade Calculator</h1>
     <div class="section">
       <h2>Exercise 1</h2>
-      <p> Create a function calculatePower(base, exponent). <br>
-        This function takes two arguments: base and exponent.<br>
-        Inside the function, use a exponential (for a challenge) to calculate base raised to the power of exponent.<br>
-        log the calculated power.<br>
-        Call the function with different values for base and exponent.</p>
+      <p>Create variable and assign any numbers between 0 to 100 <br>
+        Create a function for check what grade based on variable value.<br>
+        &nbsp;&nbsp;&nbsp;- Calculation Grade <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- A: 90-100<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- B: 80-89<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- C: 70-79<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- D: 60-69<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- F: 0-59<br>
+        If user enter number of 100 plus then show message like this is not valid numbers<br>
+        All grade should be print in console<br>
+        Create a button for calling function
+      </p>
       <br>
       <pre>
       <code>   
-        function calculatePower(base, exponent) {
-          console.log(base ** exponent);
+        let marks = 95;
+
+        function checkMarks() {
+          if (marks > 100) {
+            console.log("This is not valid number");
+          } else if (marks >= 90 && marks <= 100) {
+            console.log("Your grade is A");
+          } else if (marks >= 80 && marks <= 89) {
+            console.log("Your grade is B");
+          } else if (marks >= 70 && marks <= 79) {
+            console.log("Your grade is C");
+          } else if (marks >= 60 && marks <= 69) {
+            console.log("Your grade is D");
+          } else if (marks >= 0 && marks <= 59) {
+            console.log("Your grade is F");
+          } else {
+            console.log("This is not valid number");
+          }
         }
-  
-        calculatePower(4, 6)
       </code></pre>
-      <div id="ex1" class="output-box">The Base : 4 and Exponential by 6 is : 4096</div>
+      <div id="ex1" class="output-box">Your grade is A</div>
+      <button class="output-box-btn" onclick="checkMarks()">Click To Output</button>
     </div>
 
 
 
     <script>
 
-      function calculatePower(base, exponent) {
-        console.log(base ** exponent);
-      }
+      let marks = 95;
 
-      calculatePower(4, 6)
+      function checkMarks() {
+        if (marks > 100) {
+          console.log("This is not valid number");
+        } else if (marks >= 90 && marks <= 100) {
+          console.log("Your grade is A");
+        } else if (marks >= 80 && marks <= 89) {
+          console.log("Your grade is B");
+        } else if (marks >= 70 && marks <= 79) {
+          console.log("Your grade is C");
+        } else if (marks >= 60 && marks <= 69) {
+          console.log("Your grade is D");
+        } else if (marks >= 0 && marks <= 59) {
+          console.log("Your grade is F");
+        } else {
+          console.log("This is not valid number");
+        }
+      }
 
     </script>
 

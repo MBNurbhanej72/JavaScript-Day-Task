@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Function Parameter and Argument</title>
+  <title>Check Positive, Negative and Zero number</title>
 
   <!-- =====  Custom CSS  ===== -->
   <link rel="stylesheet" href="style.css">
@@ -16,33 +16,55 @@
 
 
   <div class="container">
-    <h1>Function Parameter and Argument</h1>
+    <h1>Check Positive, Negative and Zero number</h1>
     <div class="section">
       <h2>Exercise 1</h2>
-      <p> Create a function that's take two parameter and this function need to <br>concat this parameter and log result
-        like The concat is 15
+      <p>Create a variable with any number. <br>
+        Create a function that check this variable number is negative, positive or zero <br>
+        &nbsp;&nbsp;&nbsp;- If number is zero then print console.log("The number is zero."); <br>
+        &nbsp;&nbsp;&nbsp;- if number is positive then print console.log("The number is positive .");
+        <br>
+        &nbsp;&nbsp;&nbsp;- if number is negative then print console.log("The number is negative ."); <br>
+        Create a button and on click event to call the function
       </p>
       <br>
       <pre>
       <code>   
-        function concatNumber(num1, num2) {
-          console.log(num1 + num2);
+        let num = 30;
+
+        function checkNumber() {
+          if (num == 0) {
+            console.log("The number is zero.");
+          } else if (num > 0) {
+            console.log("The number is positive.");
+          } else if (num < 0) {
+            console.log("The number is negative.");
+          } else {
+            console.log("This is not valid number");
+          }
         }
-  
-        concatNumber(20, 5)
       </code></pre>
-      <div id="ex1" class="output-box">25</div>
+      <div id="ex1" class="output-box">The number is positive.</div>
+      <button class="output-box-btn" onclick="checkNumber()">Click To Output</button>
     </div>
 
 
 
     <script>
 
-      function concatNumber(num1, num2) {
-        console.log(num1 + num2);
-      }
+      let num = 30;
 
-      concatNumber(20, 5)
+      function checkNumber() {
+        if (num == 0) {
+          console.log("The number is zero.");
+        } else if (num > 0) {
+          console.log("The number is positive.");
+        } else if (num < 0) {
+          console.log("The number is negative.");
+        } else {
+          console.log("This is not valid number");
+        }
+      }
 
     </script>
 

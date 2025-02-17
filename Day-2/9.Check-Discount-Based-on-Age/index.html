@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Function Parameter and Argument</title>
+  <title>Check Discount Based On Age</title>
 
   <!-- =====  Custom CSS  ===== -->
   <link rel="stylesheet" href="style.css">
@@ -16,33 +16,75 @@
 
 
   <div class="container">
-    <h1>Function Parameter and Argument</h1>
+    <h1>Check Discount Based On Age</h1>
     <div class="section">
       <h2>Exercise 1</h2>
-      <p> Create a function that's take two parameter and this function need to <br>concat this parameter and log result
-        like The concat is 15
+      <p>Create object with name and age value. <br />
+        Create a function check discount based on age <br />
+        &nbsp;&nbsp;&nbsp;- Discount based on age <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- if age is between 40 to 50 then user get 40% discounts <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- if age is between 30 to 40then user get 30% discounts <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- if age is between 20 to 30 then user get 20% discounts <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- if age is between 0 to 20 then user get 10% discounts <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- if age is more then 50 +then user not able to get any discount <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Show message on console if eligible discount like Raju, you are eligible
+        for a 10% discount! <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- if not eligible for discount then show Raju, sorry, no discount available.
+        <br />
+        Click button should create function.
       </p>
       <br>
       <pre>
       <code>   
-        function concatNumber(num1, num2) {
-          console.log(num1 + num2);
-        }
+        let personDetail = {
+          name: "MB",
+          age: 20
+        };
   
-        concatNumber(20, 5)
+        function checkDiscount() {
+          if (personDetail.age > 50) {
+            console.log(personDetail.name + " Sorry, No Discount Available.");
+          } else if (personDetail.age >= 40 && personDetail.age <= 50) {
+            console.log(personDetail.name + " You are eligible for a 40% discount!");
+          } else if (personDetail.age >= 30 && personDetail.age <= 39) {
+            console.log(personDetail.name + " You are eligible for a 30% discount!");
+          } else if (personDetail.age >= 20 && personDetail.age <= 29) {
+            console.log(personDetail.name + " You are eligible for a 20% discount!");
+          } else if (personDetail.age >= 0 && personDetail.age <= 19) {
+            console.log(personDetail.name + " You are eligible for a 10% discount!");
+          } else {
+            console.log("This is not valid age");
+          }
+        }
       </code></pre>
-      <div id="ex1" class="output-box">25</div>
+      <div id="ex1" class="output-box">MB You are eligible for a 20% discount!</div>
+      <button class="output-box-btn" onclick="checkDiscount()">Click To Output</button>
     </div>
 
 
 
     <script>
 
-      function concatNumber(num1, num2) {
-        console.log(num1 + num2);
-      }
+      let personDetail = {
+        name: "MB",
+        age: 20
+      };
 
-      concatNumber(20, 5)
+      function checkDiscount() {
+        if (personDetail.age > 50) {
+          console.log(personDetail.name + " Sorry, No Discount Available.");
+        } else if (personDetail.age >= 40 && personDetail.age <= 50) {
+          console.log(personDetail.name + " You are eligible for a 40% discount!");
+        } else if (personDetail.age >= 30 && personDetail.age <= 39) {
+          console.log(personDetail.name + " You are eligible for a 30% discount!");
+        } else if (personDetail.age >= 20 && personDetail.age <= 29) {
+          console.log(personDetail.name + " You are eligible for a 20% discount!");
+        } else if (personDetail.age >= 0 && personDetail.age <= 19) {
+          console.log(personDetail.name + " You are eligible for a 10% discount!");
+        } else {
+          console.log("This is not valid age");
+        }
+      }
 
     </script>
 

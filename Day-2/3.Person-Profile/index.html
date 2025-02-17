@@ -21,26 +21,40 @@
       <h2>Exercise 1</h2>
       <p>Create variable with object <br>
         &nbsp;&nbsp;&nbsp;- add two key like first name and last name<br>
-
         Create a function for create full name <br>
-        &nbsp;&nbsp;&nbsp;- for example object first name is Raju and last name Sharma then concat this first and last name and console &nbsp;&nbsp;&nbsp;- log
+        &nbsp;&nbsp;&nbsp;- for example object first name is Raju and last name Sharma then concat this first and last
+        name <br> &nbsp;&nbsp;&nbsp;- console log
         the full name like The full name is Raju Sharma <br>
-
         Create a button to execute this function.
       </p>
       <br>
       <pre>
       <code>   
-        
+        let person = {
+          firstName: "MohammadAli",
+          lastName: "Nurbhanej"
+        };
+  
+        function personFullName() {
+          console.log(person.firstName, person.lastName);
+        }
       </code></pre>
-      <div id="ex1" class="output-box"></div>
+      <div id="ex1" class="output-box">MohammadAli Nurbhanej</div>
+      <button class="output-box-btn" onclick="personFullName()">Click To Output</button>
     </div>
 
 
 
     <script>
 
+      let person = {
+        firstName: "MohammadAli",
+        lastName: "Nurbhanej"
+      };
 
+      function personFullName() {
+        console.log(person.firstName, person.lastName);
+      }
 
     </script>
 
