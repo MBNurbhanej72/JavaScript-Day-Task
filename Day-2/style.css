@@ -7,57 +7,87 @@
   font-family: "Jost", serif;
 }
 
+:root {
+  --color: #2a2e34;
+}
+
 body {
-  background: #f2f2f2;
-  color: #333;
-  text-align: center;
-  padding: 40px;
+  background-color: var(--color);
+  color: #32a6f4;
+  margin: 0;
+  padding: 5px;
 }
 
-.container {
-  max-width: 800px;
-  margin: auto;
+.header {
+  display: flex;
+  align-items: center;
+  background-color: var(--color);
+  padding: 10px 5px 20px 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.505);
 }
 
-h1 {
-  font-size: 48px;
-  background: #222;
-  padding: 10px;
-  display: inline-block;
+.header .title {
+  margin-right: auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'poppins';
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+}
+
+.tasks {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.beginner {
+  background-color: #848484;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.circle {
+  height: 15px;
+  width: 15px;
+  color: #222;
+}
+
+.tasks .title {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.449);
+  border-top: 1px solid rgba(255, 255, 255, 0.449);
+}
+
+.task {
+  background-color: var(--color);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.397);
+  padding: 10px 5px;
+}
+
+.task a {
+  text-decoration: none;
   color: #32a6f4;
 }
 
-h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-
-.section {
-  padding: 20px;
-  margin: 20px 0;
-  text-align: left;
-}
-
-pre {
-  background: #222;
-  color: #4fa2d9;
-  padding: 15px;
-  text-align: left;
-  overflow-x: auto;
-  font-size: 16px;
-}
-
-.output-box {
-  padding: 15px;
-  border: 2px solid #333;
-  box-shadow: 6px 6px 0px #333;
-  margin-top: 10px;
-  color: black;
-  font-weight: 500;
-}
-
-p {
-  font-weight: 500;
-  color: #40484e;
+.task:hover {
+  background-color: #2a2e34;
 }
