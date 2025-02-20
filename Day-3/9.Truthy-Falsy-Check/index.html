@@ -33,9 +33,33 @@
       <br>
       <pre>
       <code>   
-        
+        ***** Falsy Values *****
+
+        let zero = 0; 
+
+        let nullValue = null;
+
+        let undefinedValue = undefined;
+
+        let str = "";
+
+        let booleanValue = false;
+
+        ********************
+
+
+        function isTruthy(type) {
+          if (!type) {
+            console.log("Falsy");
+          } else {
+            console.log("Truthy");
+          }
+        }
+    
+        isTruthy("MB")
+
       </code></pre>
-      <div id="ex1" class="output-box"></div>
+      <div id="ex1" class="output-box">Truthy</div>
     </div>
   </div>
 
@@ -43,6 +67,28 @@
 
   <script>
 
+    // Falsy Values
+
+    // let zero = 0;
+
+    // let nullValue = null;
+
+    // let undefinedValue = undefined;
+
+    // let str = "";
+
+    // let booleanValue = false;
+
+
+    function isTruthy(type) {
+      if (!type) {
+        console.log("Falsy");
+      } else {
+        console.log("Truthy");
+      }
+    }
+
+    isTruthy("MB")
 
 
   </script>

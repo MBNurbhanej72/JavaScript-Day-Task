@@ -38,9 +38,20 @@
       <br>
       <pre>
       <code>   
-        
+        let likesChocolate = false;
+
+        let likesVanilla = true;
+
+        function checkFlavour() {
+          if (likesChocolate || likesVanilla) {
+            console.log("Here's your ice cream");
+          } else {
+            console.log("Sorry, we don't have a flavor for you");
+          }
+        }
       </code></pre>
-      <div id="ex1" class="output-box"></div>
+      <div id="ex1" class="output-box">Here's your ice cream</div>
+      <button class="output-box-btn" onclick="checkFlavour()">Click To Output In Console</button>
     </div>
   </div>
 
@@ -48,7 +59,17 @@
 
   <script>
 
+    let likesChocolate = false;
 
+    let likesVanilla = true;
+
+    function checkFlavour() {
+      if (likesChocolate || likesVanilla) {
+        console.log("Here's your ice cream");
+      } else {
+        console.log("Sorry, we don't have a flavor for you");
+      }
+    }
 
   </script>
 

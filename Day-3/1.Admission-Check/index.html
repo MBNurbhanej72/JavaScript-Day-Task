@@ -38,9 +38,20 @@
       <br>
       <pre>
       <code>   
-        
+        let age = 19;
+
+        let hasTicket = true;
+
+        function checkAge() {
+          if (age > 18 && hasTicket == true) {
+            console.log("Welcome!");
+          } else {
+            console.log("Sorry, you cannot enter.");
+          }
+        }
       </code></pre>
-      <div id="ex1" class="output-box"></div>
+      <div id="ex1" class="output-box">Welcome!</div>
+      <button class="output-box-btn" onclick="checkAge()">Click To Output In Console</button>
     </div>
   </div>
 
@@ -48,7 +59,17 @@
 
   <script>
 
+    let age = 19;
 
+    let hasTicket = true;
+
+    function checkAge() {
+      if (age > 18 && hasTicket == true) {
+        console.log("Welcome!");
+      } else {
+        console.log("Sorry, you cannot enter.");
+      }
+    }
 
   </script>
 

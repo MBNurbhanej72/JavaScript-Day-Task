@@ -32,9 +32,19 @@
       <br>
       <pre>
       <code>   
-        
+        let isAdmin = true;
+
+        let isEditor = false;
+
+        let isModerator = false;
+
+        if (isAdmin || isEditor || isModerator) {
+          console.log("Access Granted");
+        } else {
+          console.log("Access Denied");
+        }
       </code></pre>
-      <div id="ex1" class="output-box"></div>
+      <div id="ex1" class="output-box">Access Granted</div>
     </div>
   </div>
 
@@ -42,7 +52,17 @@
 
   <script>
 
+    let isAdmin = true;
 
+    let isEditor = false;
+
+    let isModerator = false;
+
+    if (isAdmin || isEditor || isModerator) {
+      console.log("Access Granted");
+    } else {
+      console.log("Access Denied");
+    }
 
   </script>
 

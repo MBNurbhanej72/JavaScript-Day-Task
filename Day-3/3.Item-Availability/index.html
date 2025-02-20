@@ -39,9 +39,24 @@
       <br>
       <pre>
       <code>   
-        
+        let itemInStock = true;
+
+        let isSubscribed = false;
+
+        function checkStockOrSubscribed() {
+          if (itemInStock == true && isSubscribed == true) {
+            console.log("You can purchase this item");
+          } else if (itemInStock == false && isSubscribed == true) {
+            console.log("The item is out of stock");
+          } else if (itemInStock == true && isSubscribed == false) {
+            console.log("You need to be subscribed");
+          } else {
+            console.log("You can't purchase this item");
+          }
+        }
       </code></pre>
-      <div id="ex1" class="output-box"></div>
+      <div id="ex1" class="output-box">You need to be subscribed</div>
+      <button class="output-box-btn" onclick="checkStockOrSubscribed()">Click To Output In Console</button>
     </div>
   </div>
 
@@ -49,7 +64,21 @@
 
   <script>
 
+    let itemInStock = true;
 
+    let isSubscribed = false;
+
+    function checkStockOrSubscribed() {
+      if (itemInStock == true && isSubscribed == true) {
+        console.log("You can purchase this item");
+      } else if (itemInStock == false && isSubscribed == true) {
+        console.log("The item is out of stock");
+      } else if (itemInStock == true && isSubscribed == false) {
+        console.log("You need to be subscribed");
+      } else {
+        console.log("You can't purchase this item");
+      }
+    }
 
   </script>
 
