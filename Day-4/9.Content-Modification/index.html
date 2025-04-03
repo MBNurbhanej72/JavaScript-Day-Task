@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Modification</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../favicon/site.webmanifest">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Content Modification</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>● Create a webpage with a heading (e.g., "Welcome Visitor") and a button. <br>
+        ● Clicking the button should change the heading text to something personalized <br> &nbsp;&nbsp; (e.g.,
+        "Welcome [Your
+        Name]!").
+      </p>
+      <br>
+      <div id="ex1" class="output-box">
+        <h3 id="heading">Welcome Visitor!</h3>
+      </div>
+      <button class="output-box-btn" onclick="changeHeading()">Change The Heading</button>
+    </div>
+  </div>
+
+
+
+  <script>
+
+    const heading = document.getElementById("heading");
+
+    function changeHeading() {
+      heading.innerText = "Welcome MohammadAli!";
+    }
+
+  </script>
+
+
+
+</body>
+
+</html>

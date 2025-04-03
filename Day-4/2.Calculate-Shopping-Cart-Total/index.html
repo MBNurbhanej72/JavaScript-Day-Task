@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculate Shopping Cart Total</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../favicon/site.webmanifest">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Calculate Shopping Cart Total</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>● Create object array like <br>
+        ● const cartItems = [{ name: "Laptop", price: 999.99 }, { name: "Headphones", price: 149.95 }, <br>
+        &nbsp;&nbsp;&nbsp;{
+        name:"Mouse",
+        price: 29.99 }]; <br>
+
+        ● Using for loop find total final price and print log result
+
+      </p>
+      <br>
+      <pre>
+      <code>   
+        const cartItems = [
+        {
+          name: "Laptop",
+          price: 999.99
+        },
+        {
+          name: "Headphones",
+          price: 149.95
+        },
+        {
+          name: "Mouse",
+          price: 29.99
+        }
+      ];
+
+      let sum = 0;
+
+      for (let i = 0; i < cartItems.length; i++) {
+        sum = sum + cartItems[i].price;
+      }
+
+      console.log(sum);
+      </code></pre>
+      <div id="ex1" class="output-box">1179.93</div>
+    </div>
+  </div>
+
+
+
+  <script>
+
+    const cartItems = [
+      {
+        name: "Laptop",
+        price: 999.99
+      },
+      {
+        name: "Headphones",
+        price: 149.95
+      },
+      {
+        name: "Mouse",
+        price: 29.99
+      }
+    ];
+
+    let sum = 0;
+
+    for (let i = 0; i < cartItems.length; i++) {
+      sum = sum + cartItems[i].price;
+    }
+
+    console.log(sum);
+
+  </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sum of Array Elements</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../favicon/site.webmanifest">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Sum of Array Elements</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>● Create a function and call on clicking button <br>
+        ● Create Number data types Array like const numbers = [5, 12, 8, 130, 44]; <br>
+        ● Sum all numbers inside array using for loop and print final result in console.
+      </p>
+      <br>
+      <pre>
+      <code>   
+        function sumNum() {
+          const numbers = [5, 12, 8, 130, 44];
+    
+          let sum = 0;
+    
+          for (let i = 0; i < numbers.length; i++) {
+            sum = sum + numbers[i];
+          }
+    
+          console.log(sum);
+        }
+      </code></pre>
+      <div id="ex1" class="output-box">199</div>
+      <button class="output-box-btn" onclick="sumNum()">Click To Output In Console</button>
+    </div>
+  </div>
+
+
+
+  <script>
+
+    function sumNum() {
+      const numbers = [5, 12, 8, 130, 44];
+
+      let sum = 0;
+
+      for (let i = 0; i < numbers.length; i++) {
+        sum = sum + numbers[i];
+      }
+
+      console.log(sum);
+    }
+
+  </script>
+
+
+
+</body>
+
+</html>

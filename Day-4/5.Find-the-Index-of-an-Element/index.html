@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find the Index of an Element</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../favicon/site.webmanifest">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Find the Index of an Element</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>● Create array variable like this const fruits = ["apple", "banana", "orange", "grape"]; <br>
+
+        ● Create another variable like this const targetFruit = "orange"; <br>
+
+        ● Using this array and for loop find index position of targetFruit value. <br>
+
+        ● If targetFruit index found then break loop <br>
+
+        ● If targetFruit index position is found then print message like console.log("Index of", targetFruit, "is:",
+        &nbsp;&nbsp;&nbsp;targetIndex); <br>
+
+        ● And other wise if index position is not found then print message console.log(targetFruit, "not found.");
+
+      </p>
+      <br>
+      <pre>
+      <code>   
+        const fruits = ["apple", "banana", "orange", "grape"];
+
+        const targetFruit = "orange";
+
+        for (let i = 0; i < fruits.length; i++) {
+          if (targetFruit == fruits[i]) {
+            console.log("Index of", targetFruit, "is:", i);
+            break;
+          }
+
+          if (i == fruits.length) {
+            console.log("orange not found");
+          }
+        }
+      </code></pre>
+      <div id="ex1" class="output-box">Index of orange is: 2</div>
+    </div>
+  </div>
+
+
+
+  <script>
+
+    const fruits = ["apple", "banana", "orange", "grape"];
+
+    const targetFruit = "orange";
+
+    for (let i = 0; i < fruits.length; i++) {
+      if (targetFruit == fruits[i]) {
+        console.log("Index of", targetFruit, "is:", i);
+        break;
+      }
+
+      if (i == fruits.length) {
+        console.log("orange not found");
+      }
+    }
+
+  </script>
+
+
+
+</body>
+
+</html>

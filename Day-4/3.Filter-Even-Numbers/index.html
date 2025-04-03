@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter Even Numbers</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../favicon/site.webmanifest">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Filter Even Numbers</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>● Create a function and call on clicking button <br>
+        ● Create Number data types Array like const numbers = [1, 2, 3, 4, 5, 6, 7, 8]; <br>
+        ● Filter all even number and push in new array all even value and for filter even number use for loop <br>
+        ● Print final result in console log
+      </p>
+      <br>
+      <pre>
+      <code>   
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+        function filterEvenValue() {
+          for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 == 0) {
+              const element = numbers[i];
+              console.log(element);
+            }
+          }
+        }
+      </code></pre>
+      <div id="ex1" class="output-box">2,4,6,8</div>
+      <button class="output-box-btn" onclick="filterEvenValue()">Click To Output In Console</button>
+    </div>
+  </div>
+
+
+
+  <script>
+
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+    function filterEvenValue() {
+      for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 == 0) {
+          const element = numbers[i];
+          console.log(element);
+        }
+      }
+    }
+
+  </script>
+
+
+
+</body>
+
+</html>

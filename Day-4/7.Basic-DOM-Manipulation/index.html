@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic DOM Manipulation</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../favicon/site.webmanifest">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+
+    <!-- Section 1 -->
+    <h1>Basic DOM Manipulation</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>● Change the background color of the entire webpage when a button is clicked. <br>
+      </p>
+      <br>
+      <button class="output-box-btn" onclick="changeBgColor()">Click To Change The Background Colour</button>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+      <h2>Exercise 2</h2>
+      <p>● Create a list of items. When a user clicks on an item, change its font style (e.g., bold, italic).
+      </p>
+      <br>
+      <div id="ex1" class="output-box">
+        <span id="apple" onclick="appleFont()">Apple</span> <br>
+        <span id="banana" onclick="bananaFont()">Banana</span> <br>
+        <span id="mango" onclick="mangoFont()">Mango</span> <br>
+        <span id="grapes" onclick="grapesFont()">Grapes</span>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+      <h2>Exercise 3</h2>
+      <p>● Create a form with a name input field. When the form is submitted, display the entered <br>
+        &nbsp;&nbsp;&nbsp;name in a
+        separate
+        paragraph element.
+      </p>
+      <br>
+      <div>
+        <input type="text" class="output-box" id="inputValue" placeholder="Enter your name" autocomplete="off">
+        <button class="output-box-btn submit-btn" onclick="submitName()">Submit</button>
+        <p id="addInputData"></p>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <script>
+
+    // Ex:- 1
+    function changeBgColor() {
+      const body = document.body.style.backgroundColor = "darkgrey";
+    }
+
+
+    // Ex:- 2
+    const apple = document.getElementById("apple");
+    const banana = document.getElementById("banana");
+    const mango = document.getElementById("mango");
+    const grapes = document.getElementById("grapes");
+
+    function appleFont() {
+      apple.style.fontStyle = "italic";
+    }
+
+    function bananaFont() {
+      banana.style.fontStyle = "italic";
+    }
+
+    function mangoFont() {
+      mango.style.fontStyle = "italic";
+    }
+
+    function grapesFont() {
+      grapes.style.fontStyle = "italic";
+    }
+
+
+    // Ex:- 3
+    const inputValue = document.getElementById("inputValue");
+    const addInputData = document.getElementById("addInputData");
+
+    function submitName() {
+      const inputData = inputValue.value;
+      addInputData.innerText = inputData;
+    }
+
+  </script>
+
+
+
+</body>
+
+</html>

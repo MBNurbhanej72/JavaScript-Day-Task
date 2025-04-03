@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element Visibility Toggle</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../favicon/site.webmanifest">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Element Visibility Toggle</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>● Create a webpage with three buttons and two text boxes (initially hidden). <br>
+        ● The first button should toggle the visibility of both text boxes (show/hide). <br>
+        ● The second and third buttons should toggle the visibility of each text box individually.
+      </p>
+      <br>
+      <button class="output-box-btn" onclick="allBox()">Show The All Text Boxes</button>
+      <button class="output-box-btn" onclick="firstBox()">Show The First Text Box</button>
+      <button class="output-box-btn" onclick="secondBox()">Show The Second Text Box</button>
+      <br>
+      <br>
+      <br>
+      <div style="display: flex; gap: 20px;">
+        <textarea id="firstTextBox" rows="5" cols="20" placeholder="Text Box 1"></textarea>
+        <textarea id="secondTextBox" rows="5" cols="20" placeholder="Text Box 2"></textarea>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+
+    const firstTextBox = document.getElementById("firstTextBox");
+    const secondTextBox = document.getElementById("secondTextBox");
+
+    function allBox() {
+      firstTextBox.classList.toggle("active");
+      secondTextBox.classList.toggle("active");
+    }
+
+    function firstBox() {
+      firstTextBox.classList.toggle("active");
+    }
+
+    function secondBox() {
+      secondTextBox.classList.toggle("active");
+    }
+
+  </script>
+
+
+
+</body>
+
+</html>
