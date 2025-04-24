@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", serif;
+}
+
+body {
+  background: #f2f2f2;
+  color: #333;
+  text-align: center;
+  padding: 40px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 38px;
+  background: #222;
+  padding: 10px;
+  display: inline-block;
+  color: #32a6f4;
+}
+
+.section {
+  padding: 20px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+pre {
+  background: #222;
+  color: #4fa2d9;
+  padding: 15px;
+  text-align: left;
+  overflow-x: auto;
+  font-size: 16px;
+}
+
+.output-box {
+  padding: 15px;
+  border: 2px solid #333;
+  box-shadow: 6px 6px 0px #333;
+  margin-top: 10px;
+  color: black;
+  font-weight: 500;
+}
+
+.output-box-btn {
+  padding: 10px;
+  border: 2px solid #333;
+  box-shadow: 6px 6px 0px #333;
+  margin-top: 15px;
+  color: black;
+  transition: all 0.5s;
+}
+
+.output-box-btn:hover {
+  box-shadow: 1px 1px 0px #333;
+}
+
+.output-box-btn:focus-visible {
+  outline: none;
+}
+
+p {
+  font-weight: 500;
+  color: #40484e;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app h2 {
+  font-size: 40px;
+  text-align: center;
+  color: #0a3959;
+}
+
+.input-div {
+  border: 1px solid #B1B1B166;
+  background-color: #dbe2ef;
+  padding-left: 10px;
+  border-radius: 5px;
+  width: 250px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.input-div input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 81%;
+  color: #757575;
+}
+
+.input-div button {
+  background-color: #AAAAAA;
+  border: none;
+  outline: none;
+  font-size: 25px;
+  width: 40px;
+  height: 100%;
+  color: white;
+  border-top-right-radius: 4.5px;
+  border-bottom-right-radius: 4.5px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+#dataContain {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.valueDiv {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: #dbe2ef;
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+#pTag {
+  width: 100%;
+  text-align: center;
+  word-break: break-word;
+  white-space: normal;
+  margin-left: 20px;
+}

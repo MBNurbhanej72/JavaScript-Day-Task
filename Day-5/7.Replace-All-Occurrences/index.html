@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Replace All Occurrences</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/favicon/site.webmanifest">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Replace All Occurrences</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p> ● Create a variable like that const numbers = [1, 2, 3, 2, 4];<br>
+        ● Write a function that takes an numbers, a value to replace, and a new value as a parameter.
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● Like replac1zeAll(numbers, 2, 5); <br>
+        ● It should modify the original array, replacing all occurrences of the old value with the new value.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● For example we have array like numbers variable <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● and function second parameter is old value like 2 number
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● and function 3rd parameter is new number <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● so function can do this is in number on every places found 2 number then <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this 2 number should be replaced to
+        with new
+        number 5
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● Final result will be console.log(numbers); // Output: [1, 5, 3, 5, 4]
+      </p>
+      <br>
+      <pre>
+      <code>   
+        const numbers = [1, 2, 3, 2, 4];
+
+        function replaceAll(numbers, oldValue, newValue) {
+          for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] === oldValue) {
+              numbers[i] = newValue;
+            }
+          }
+        }
+
+        replaceAll(numbers, 2, 5);
+        console.log(numbers);
+      </code></pre>
+      <div id="ex1" class="output-box">[1, 5, 3, 5, 4]</div>
+    </div>
+
+
+
+    <script>
+
+      const numbers = [1, 2, 3, 2, 4];
+
+      function replaceAll(numbers, oldValue, newValue) {
+        for (let i = 0; i < numbers.length; i++) {
+          if (numbers[i] === oldValue) {
+            numbers[i] = newValue;
+          }
+        }
+      }
+
+      replaceAll(numbers, 2, 5);
+      console.log(numbers);
+
+    </script>
+
+
+
+</body>
+
+</html>

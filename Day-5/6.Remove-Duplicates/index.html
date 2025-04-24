@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remove Duplicates</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/favicon/site.webmanifest">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Remove Duplicates (Using includes())</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p> ● Create an array like this const numbers = [1, 2, 2, 3, 4, 1]; <br>
+        ● Write a function that takes an array as parameter and print a new array containing only
+        <br>&nbsp;&nbsp;&nbsp;unique elements
+        (removing duplicates). Implement a loop and includes() to check for <br>&nbsp;&nbsp;&nbsp;existing elements
+        before adding. <br>
+        ● Final result will be console.log(uniqueNumbers); // Output: [1, 2, 3, 4]
+      </p>
+      <br>
+      <pre>
+      <code>   
+        const numbers = [1, 2, 2, 3, 4, 1];
+
+        function removeDuplicateValue(num) {
+          const uniqueNumbers = [];
+
+          for (let i = 0; i < num.length; i++) {
+
+            if (!uniqueNumbers.includes(num[i])) {
+              uniqueNumbers.push(num[i]);
+            }
+          }
+          console.log(uniqueNumbers);
+        }
+
+        removeDuplicateValue(numbers)
+      </code></pre>
+      <div id="ex1" class="output-box">[1,2,3,4]</div>
+    </div>
+
+
+
+    <script>
+
+      const numbers = [1, 2, 2, 3, 4, 1];
+
+      function removeDuplicateValue(num) {
+        const uniqueNumbers = [];
+
+        for (let i = 0; i < num.length; i++) {
+
+          if (!uniqueNumbers.includes(num[i])) {
+            uniqueNumbers.push(num[i]);
+          }
+        }
+        console.log(uniqueNumbers);
+      }
+
+      removeDuplicateValue(numbers)
+
+    </script>
+
+
+
+</body>
+
+</html>

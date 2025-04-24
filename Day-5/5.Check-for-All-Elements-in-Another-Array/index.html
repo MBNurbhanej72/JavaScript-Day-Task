@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check for All Elements in Another Array</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/favicon/site.webmanifest">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Check for All Elements in Another Array</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>● Create two arrays like that <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● const colors1 = ["red", "green", "blue"]; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● const colors2 = ["blue", "red", "purple"];<br>
+        ● After that write a function allElementsExist(colors1, colors2) using these two parameters.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● This function takes two arrays as input and prints true if all elements of the
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; first array exist in the second array (regardless of order),
+        otherwise
+        false.
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Utilize a loop and the
+        includes()
+        method. <br>
+      </p>
+      <br>
+      <pre>
+      <code>   
+        const colors1 = ["red", "green", "blue"];
+
+        const colors2 = ["blue", "red", "purple"];
+
+        function allElementsExist(colors1, colors2) {
+          for (let i = 0; i < colors1.length; i++) {
+            console.log(colors1[i].includes(colors2[i]));
+          }
+        }
+
+        allElementsExist(colors1, colors2)
+      </code></pre>
+      <div id="ex1" class="output-box">false</div>
+    </div>
+
+
+
+    <script>
+
+      const colors1 = ["red", "green", "blue"];
+
+      const colors2 = ["blue", "red", "purple"];
+
+      function allElementsExist(colors1, colors2) {
+        for (let i = 0; i < colors1.length; i++) {
+          console.log(colors1[i].includes(colors2[i]));
+        }
+      }
+
+      allElementsExist(colors1, colors2)
+
+    </script>
+
+
+
+</body>
+
+</html>

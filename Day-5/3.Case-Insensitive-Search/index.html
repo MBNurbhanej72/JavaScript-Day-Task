@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case-Insensitive Search</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/favicon/site.webmanifest">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Case-Insensitive Search</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>● Create a function that takes two parameter <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● first param is string with all lowercase<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● second param is search string with all uppercase<br>
+        ● Using this two parameters found second param string from first string using case sensitive.
+      </p>
+      <br>
+      <pre>
+      <code>   
+        const str1 = "hello";
+        const str2 = "HELLO";
+
+        function checkCaseSensitive(firstStr, secondStr) {
+          console.log(firstStr.toUpperCase().includes(secondStr));
+        }
+
+        checkCaseSensitive(str1, str2)
+      </code></pre>
+      <div id="ex1" class="output-box">true</div>
+    </div>
+
+
+
+    <script>
+
+      const str1 = "hello";
+      const str2 = "HELLO";
+
+      function checkCaseSensitive(firstStr, secondStr) {
+        console.log(firstStr.toUpperCase().includes(secondStr));
+      }
+
+      checkCaseSensitive(str1, str2)
+
+    </script>
+
+
+
+</body>
+
+</html>

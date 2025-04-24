@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remove All Occurrences of a Substring</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/favicon/site.webmanifest">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Remove All Occurrences of a Substring</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>● Write a function that takes a string and a substring as parameters <br>
+        ● If the substring parameter value is found on the main string parameter
+        then remove the <br> &nbsp;&nbsp;&nbsp;substring value on main
+        string and print new string in console.
+      </p>
+      <br>
+      <pre>
+      <code>   
+        const testStr = "This is a test string";
+        const subStr = "is";
+
+        function removeStr(testStr, subStr) {
+          const newStr = testStr.replaceAll(subStr, "");
+          console.log(newStr);
+        }
+
+        removeStr(testStr, subStr)
+      </code></pre>
+      <div id="ex1" class="output-box">Th a test string</div>
+    </div>
+
+
+
+    <script>
+
+      const testStr = "This is a test string";
+      const subStr = "is";
+
+      function removeStr(testStr, subStr) {
+        const newStr = testStr.replaceAll(subStr, "");
+        console.log(newStr);
+      }
+
+      removeStr(testStr, subStr)
+
+    </script>
+
+
+
+</body>
+
+</html>

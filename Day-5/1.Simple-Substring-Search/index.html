@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Time</title>
+  <title>Simple Substring Search</title>
 
   <!-- =====  Custom CSS  ===== -->
   <link rel="stylesheet" href="style.css">
@@ -22,41 +22,39 @@
 
 
   <div class="container">
-    <h1>Travel Time</h1>
+    <h1>Simple Substring Search</h1>
     <div class="section">
       <h2>Exercise 1</h2>
-      <p> ● You're driving to a destination 250 KM away. <br>
-        ● You average a speed of 55 KM per hour. <br>
-        ● Calculate approximately how long the drive will take time. <br>
-        ● console.log("The drive will take approximately:", time, "hours");</p>
+      <p>● Write a function that takes a string and a substring as parameter.
+        <br>● It should print true if the substring is found anywhere in the string, false otherwise.
+      </p>
       <br>
       <pre>
       <code>   
-        let km = 250;
+        const myStr = "Hello JS";
 
-        let speed = 55;
+        function checkStr(str, subStr = "Hello") {
+          console.log(str.includes(subStr));
+        }
 
-        let time = km / speed;
-
-        console.log("The drive will take approximately:", time, "hours");
+        checkStr(myStr)
       </code></pre>
-      <div id="ex1" class="output-box">The drive will take approximately: 4.545454545454546 hours</div>
+      <div id="ex1" class="output-box">true</div>
     </div>
-  </div>
 
 
 
-  <script>
+    <script>
 
-    let km = 250;
+      const myStr = "Hello JS";
 
-    let speed = 55;
+      function checkStr(str, subStr = "Hello") {
+        console.log(str.includes(subStr));
+      }
 
-    let time = km / speed;
+      checkStr(myStr)
 
-    console.log("The drive will take approximately:", time, "hours");
-
-  </script>
+    </script>
 
 
 
