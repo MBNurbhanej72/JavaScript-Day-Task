@@ -10,10 +10,10 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- =====  Favicon Link ===== -->
-  <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
-  <link rel="manifest" href="../../favicon/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/favicon/site.webmanifest">
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -35,6 +35,55 @@
         ● Show all value below of the button
       </p>
       <br>
+      <pre>
+      <code>   
+        const input = document.getElementById("myInput");
+        const dataContain = document.getElementById("dataContain");
+    
+        dataContain.innerText = "No Data Found!";
+    
+        function addValue() {
+    
+          if (input.value.trim().length === 0) {
+            alert("No Text Added");
+            return;
+          }
+    
+          if (dataContain.innerText === "No Data Found!") {
+            dataContain.innerText = "";
+          }
+    
+          const createDiv = document.createElement("div");
+    
+          dataContain.append(createDiv);
+    
+          var id = Math.random().toString(16).slice(2);
+    
+          const myHTMLCode = `
+          &lt;div id=${id} class="valueDiv"&gt;
+              &lt;i class="fa-solid fa-trash" onclick="removeData('${id}')" style="cursor:pointer"&gt;&lt;/i&gt;
+              &lt;p id="pTag"&gt;${input.value}&lt;/p&gt;
+          &lt;/div&gt;
+          `;
+    
+          createDiv.insertAdjacentHTML("beforeend", myHTMLCode);
+    
+          input.value = "";
+    
+        }
+    
+        function removeData(id) {
+          const task = document.getElementById(id);
+          if (task) {
+            task.remove();
+          }
+    
+          if (dataContain.querySelectorAll(".valueDiv").length === 0) {
+            dataContain.innerText = "No Data Found!";
+          }
+        }
+      </code></pre>
+      <br>
       <br>
       <br>
 
@@ -49,73 +98,62 @@
       </div>
 
     </div>
+  </div>
 
 
 
-    <script>
+  <script>
 
-      const input = document.getElementById("myInput");
-      const dataContain = document.getElementById("dataContain");
+    const input = document.getElementById("myInput");
+    const dataContain = document.getElementById("dataContain");
 
-      dataContain.innerText = "No Data Found!";
+    dataContain.innerText = "No Data Found!";
 
-      function addValue() {
+    function addValue() {
 
-        if (input.value.length === 0) {
-          alert("No Text Added");
-          return;
-        }
-
-        if (dataContain.innerText === "No Data Found!") {
-          dataContain.innerText = "";
-        }
-
-        const createDiv = document.createElement("div");
-
-        dataContain.append(createDiv);
-
-        var id = Math.random().toString(16).slice(2);
-
-        const removeIcon = document.createElement("i");
-
-        createDiv.setAttribute("id", id);
-
-        createDiv.setAttribute("class", "valueDiv");
-
-        removeIcon.setAttribute("class", "fa-solid fa-trash");
-
-        removeIcon.setAttribute("onclick", `removeData("${id}")`);
-
-        removeIcon.style.cursor = "pointer";
-
-        const p = document.createElement("p");
-
-        p.setAttribute("id", "pTag");
-
-        p.innerHTML = input.value;
-
-        createDiv.append(removeIcon, p);
-
-        input.value = "";
-
+      if (input.value.trim().length === 0) {
+        alert("No Text Added");
+        return;
       }
 
-      function removeData(id) {
-        const task = document.getElementById(id);
-        if (task) {
-          task.remove();
-        }
-
-        if (dataContain.querySelectorAll(".valueDiv").length === 0) {
-          dataContain.innerText = "No Data Found!";
-        }
+      if (dataContain.innerText === "No Data Found!") {
+        dataContain.innerText = "";
       }
 
+      const createDiv = document.createElement("div");
 
-    </script>
+      dataContain.append(createDiv);
+
+      var id = Math.random().toString(16).slice(2);
+
+      const myHTMLCode = `
+      <div id=${id} class="valueDiv">
+          <i class="fa-solid fa-trash" onclick="removeData('${id}')" style="cursor:pointer"></i>
+          <p id="pTag">${input.value}</p>
+      </div>
+      `;
+
+      createDiv.insertAdjacentHTML("beforeend", myHTMLCode);
+
+      input.value = "";
+
+    }
+
+    function removeData(id) {
+      const task = document.getElementById(id);
+      if (task) {
+        task.remove();
+      }
+
+      if (dataContain.querySelectorAll(".valueDiv").length === 0) {
+        dataContain.innerText = "No Data Found!";
+      }
+    }
+
+  </script>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
 
 
 

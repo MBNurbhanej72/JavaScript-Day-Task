@@ -63,32 +63,33 @@
       <div id="ex1" class="output-box">Your grade is A</div>
       <button class="output-box-btn" onclick="checkMarks()">Click To Output In Console</button>
     </div>
+  </div>
 
 
 
-    <script>
+  <script>
 
-      let marks = 95;
+    let marks = 95;
 
-      function checkMarks() {
-        if (marks > 100) {
-          console.log("This is not valid number");
-        } else if (marks >= 90 && marks <= 100) {
-          console.log("Your grade is A");
-        } else if (marks >= 80 && marks <= 89) {
-          console.log("Your grade is B");
-        } else if (marks >= 70 && marks <= 79) {
-          console.log("Your grade is C");
-        } else if (marks >= 60 && marks <= 69) {
-          console.log("Your grade is D");
-        } else if (marks >= 0 && marks <= 59) {
-          console.log("Your grade is F");
-        } else {
-          console.log("This is not valid number");
-        }
+    function checkMarks() {
+      if (marks > 100) {
+        console.log("This is not valid number");
+      } else if (marks >= 90 && marks <= 100) {
+        console.log("Your grade is A");
+      } else if (marks >= 80 && marks <= 89) {
+        console.log("Your grade is B");
+      } else if (marks >= 70 && marks <= 79) {
+        console.log("Your grade is C");
+      } else if (marks >= 60 && marks <= 69) {
+        console.log("Your grade is D");
+      } else if (marks >= 0 && marks <= 59) {
+        console.log("Your grade is F");
+      } else {
+        console.log("This is not valid number");
       }
+    }
 
-    </script>
+  </script>
 
 
 

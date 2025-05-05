@@ -59,25 +59,26 @@
       </code></pre>
       <div id="ex1" class="output-box">[1, 5, 3, 5, 4]</div>
     </div>
+  </div>
 
 
 
-    <script>
+  <script>
 
-      const numbers = [1, 2, 3, 2, 4];
+    const numbers = [1, 2, 3, 2, 4];
 
-      function replaceAll(numbers, oldValue, newValue) {
-        for (let i = 0; i < numbers.length; i++) {
-          if (numbers[i] === oldValue) {
-            numbers[i] = newValue;
-          }
+    function replaceAll(numbers, oldValue, newValue) {
+      for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] === oldValue) {
+          numbers[i] = newValue;
         }
       }
+    }
 
-      replaceAll(numbers, 2, 5);
-      console.log(numbers);
+    replaceAll(numbers, 2, 5);
+    console.log(numbers);
 
-    </script>
+  </script>
 
 
 

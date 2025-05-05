@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-time Character Count</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/favicon/site.webmanifest">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Real-time Character Count</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>● Create a form with a text area for entering a message. Use JavaScript to display a character
+        <br>&nbsp;&nbsp;&nbsp;count next to
+        the text area that updates dynamically as the user types.
+      </p>
+      <br>
+      <pre>
+      <code>   
+        const text = document.getElementById("myTextArea");
+        const p = document.querySelector(".pTag");
+
+        function showData() {
+          const finalText = text.value.length;
+          p.innerHTML = `Character Count: ${finalText}`;
+        }
+      </code></pre>
+      <form>
+        <textarea id="myTextArea" class="output-box" placeholder="Enter your text" oninput="showData()"></textarea>
+        <p class="pTag">Character Count: 0</p>
+      </form>
+    </div>
+  </div>
+
+
+
+  <script>
+
+    const text = document.getElementById("myTextArea");
+    const p = document.querySelector(".pTag");
+
+    function showData() {
+      const finalText = text.value.length;
+      p.innerHTML = `Character Count: ${finalText}`;
+    }
+
+  </script>
+
+
+
+</body>
+
+</html>

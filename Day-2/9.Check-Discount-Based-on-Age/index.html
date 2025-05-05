@@ -73,33 +73,34 @@
       <div id="ex1" class="output-box">MB You are eligible for a 20% discount!</div>
       <button class="output-box-btn" onclick="checkDiscount()">Click To Output In Console</button>
     </div>
+  </div>
 
 
 
-    <script>
+  <script>
 
-      let personDetail = {
-        name: "MB",
-        age: 20
-      };
+    let personDetail = {
+      name: "MB",
+      age: 20
+    };
 
-      function checkDiscount() {
-        if (personDetail.age > 50) {
-          console.log(personDetail.name + " Sorry, No Discount Available.");
-        } else if (personDetail.age >= 40 && personDetail.age <= 50) {
-          console.log(personDetail.name + " You are eligible for a 40% discount!");
-        } else if (personDetail.age >= 30 && personDetail.age <= 39) {
-          console.log(personDetail.name + " You are eligible for a 30% discount!");
-        } else if (personDetail.age >= 20 && personDetail.age <= 29) {
-          console.log(personDetail.name + " You are eligible for a 20% discount!");
-        } else if (personDetail.age >= 0 && personDetail.age <= 19) {
-          console.log(personDetail.name + " You are eligible for a 10% discount!");
-        } else {
-          console.log("This is not valid age");
-        }
+    function checkDiscount() {
+      if (personDetail.age > 50) {
+        console.log(personDetail.name + " Sorry, No Discount Available.");
+      } else if (personDetail.age >= 40 && personDetail.age <= 50) {
+        console.log(personDetail.name + " You are eligible for a 40% discount!");
+      } else if (personDetail.age >= 30 && personDetail.age <= 39) {
+        console.log(personDetail.name + " You are eligible for a 30% discount!");
+      } else if (personDetail.age >= 20 && personDetail.age <= 29) {
+        console.log(personDetail.name + " You are eligible for a 20% discount!");
+      } else if (personDetail.age >= 0 && personDetail.age <= 19) {
+        console.log(personDetail.name + " You are eligible for a 10% discount!");
+      } else {
+        console.log("This is not valid age");
       }
+    }
 
-    </script>
+  </script>
 
 
 

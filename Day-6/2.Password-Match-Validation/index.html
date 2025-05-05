@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Match Validation</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/favicon/site.webmanifest">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Password Match Validation</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>● Create a form with a password and confirm password field. When the form is submitted,
+        <br>&nbsp;&nbsp;&nbsp;write JavaScript code
+        to check if both passwords match. If not, display an error message next <br>&nbsp;&nbsp;&nbsp;to the confirm
+        password field.
+      </p>
+      <br>
+      <pre>
+      <code>   
+      const password = document.querySelector(".password");
+      const confirmPassword = document.querySelector(".confirmPassword");
+
+      const passwordError = document.querySelector(".password-error");
+      const confirmPasswordError = document.querySelector(".confirmPassword-error");
+      const bothError = document.querySelector(".bothError");
+
+      function onSubmitData(event) {
+        event.preventDefault();
+
+        if (!password.value) {
+          passwordError.style.display = "block";
+        } else if (!confirmPassword.value) {
+          confirmPasswordError.style.display = "block";
+        } else if (password.value !== confirmPassword.value) {
+          bothError.style.display = "block";
+        } else {
+          passwordError.style.display = "none";
+          confirmPasswordError.style.display = "none";
+          bothError.style.display = "none";
+
+          password.value = "";
+          confirmPassword.value = "";
+        }
+      }
+      </code></pre>
+      <br>
+      <br>
+      <br>
+      <form onsubmit="onSubmitData(event)">
+        <input type="password" placeholder="Password" class="password output-box"> <br>
+        <span class="password-error">! Please Fill The Password</span><br>
+        <input type="password" placeholder="Confirm Password" class="confirmPassword output-box"> <br>
+        <span class="confirmPassword-error">! Please Fill The Password</span><br>
+        <span class="bothError">! Password Are Not Match</span><br>
+        <button type="submit" class="submitBtn output-box-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+
+  <script>
+
+    const password = document.querySelector(".password");
+    const confirmPassword = document.querySelector(".confirmPassword");
+
+    const passwordError = document.querySelector(".password-error");
+    const confirmPasswordError = document.querySelector(".confirmPassword-error");
+    const bothError = document.querySelector(".bothError");
+
+    function onSubmitData(event) {
+      event.preventDefault();
+
+      if (!password.value) {
+        passwordError.style.display = "block";
+      } else if (!confirmPassword.value) {
+        confirmPasswordError.style.display = "block";
+      } else if (password.value !== confirmPassword.value) {
+        bothError.style.display = "block";
+      } else {
+        passwordError.style.display = "none";
+        confirmPasswordError.style.display = "none";
+        bothError.style.display = "none";
+
+        password.value = "";
+        confirmPassword.value = "";
+      }
+    }
+
+  </script>
+
+
+
+</body>
+
+</html>

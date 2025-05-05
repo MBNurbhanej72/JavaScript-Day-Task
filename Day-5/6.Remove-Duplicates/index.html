@@ -53,28 +53,29 @@
       </code></pre>
       <div id="ex1" class="output-box">[1,2,3,4]</div>
     </div>
+  </div>
 
 
 
-    <script>
+  <script>
 
-      const numbers = [1, 2, 2, 3, 4, 1];
+    const numbers = [1, 2, 2, 3, 4, 1];
 
-      function removeDuplicateValue(num) {
-        const uniqueNumbers = [];
+    function removeDuplicateValue(num) {
+      const uniqueNumbers = [];
 
-        for (let i = 0; i < num.length; i++) {
+      for (let i = 0; i < num.length; i++) {
 
-          if (!uniqueNumbers.includes(num[i])) {
-            uniqueNumbers.push(num[i]);
-          }
+        if (!uniqueNumbers.includes(num[i])) {
+          uniqueNumbers.push(num[i]);
         }
-        console.log(uniqueNumbers);
       }
+      console.log(uniqueNumbers);
+    }
 
-      removeDuplicateValue(numbers)
+    removeDuplicateValue(numbers)
 
-    </script>
+  </script>
 
 
 
