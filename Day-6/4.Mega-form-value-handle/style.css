@@ -42,6 +42,12 @@ pre {
   font-size: 16px;
 }
 
+.codePara {
+  background: #222;
+  color: #32a6f4;
+  padding: 15px;
+}
+
 .output-box {
   padding: 15px;
   border: 2px solid #333;
@@ -122,14 +128,6 @@ textarea {
 .gender,
 .country {
   margin-bottom: 35px;
-}
-
-.nameData,
-.passwordData,
-.addressData,
-.sportsData,
-.genderData {
-  text-transform: capitalize;
 }
 
 .nameError,

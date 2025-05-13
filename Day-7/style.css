@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", serif;
+}
+
+:root {
+  --color: #2a2e34;
+}
+
+body {
+  background-color: var(--color);
+  color: #32a6f4;
+  margin: 0;
+  padding: 5px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: var(--color);
+  padding: 10px 5px 20px 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.505);
+}
+
+.header .title {
+  margin-right: auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'poppins';
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+}
+
+.tasks {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.beginner {
+  background-color: #848484;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.circle {
+  height: 15px;
+  width: 15px;
+  color: #222;
+}
+
+.tasks .title {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.449);
+  border-top: 1px solid rgba(255, 255, 255, 0.449);
+}
+
+.task {
+  background-color: var(--color);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.397);
+  padding: 10px 5px;
+}
+
+.task a {
+  text-decoration: none;
+  color: #32a6f4;
+}
+
+.task:hover {
+  background-color: #303337;
+}

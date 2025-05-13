@@ -39,7 +39,10 @@
         ● Reset button will be disabled on edit mode <br>
       </p>
       <br>
-      <p class="codePara">Code Available On My Github Repo.</p>
+      <pre>
+      <code>   
+        
+      </code></pre>
       <br>
       <br>
       <br>
@@ -174,11 +177,13 @@
 
 
 
+    var editId = "";
 
-    const showAllUsers = JSON.parse(localStorage.getItem("Users")) || [];
 
 
-    if (showAllUsers.length === 0) {
+    const users = JSON.parse(localStorage.getItem("Users")) || [];
+
+    if (users.length === 0) {
       tbody.innerHTML = `
       <tr>
         <td colspan="9" style="text-align: center; padding: 40px 0; font-size: 35px; font-weight: bold; border : none;">No Data Found!</td>
@@ -187,33 +192,31 @@
     }
 
 
-    var editId = "";
 
+    for (let i = 0; i < users.length; i++) {
+      const id = users[i].Id;
 
-    for (let i = 0; i < showAllUsers.length; i++) {
-      const userRow = `
-          <tr id="${showAllUsers[i].id}" class="userRow">
-            <td class="nameData">${showAllUsers[i].name}</td>
-            <td class="emailData">${showAllUsers[i].email}</td>
-            <td class="passwordData">${showAllUsers[i].password}</td>
-            <td class="addressData">${showAllUsers[i].address}</td>
-            <td class="sportsData">${showAllUsers[i].sports}</td>
-            <td class="genderData">${showAllUsers[i].gender}</td>
-            <td class="countryData">${showAllUsers[i].country}</td>
-            <td><i class="fa-solid fa-pen-to-square" style="cursor : pointer;" onclick="editData('${showAllUsers[i].id}')"></i></td>
-            <td><i class="fa-solid fa-trash" style="cursor : pointer;" onclick="removeData('${showAllUsers[i].id}')"></i></td>
-          </tr>
+      const local = JSON.parse(localStorage.getItem("Users"))[i];
+
+      const myHTML = `
+        <tr id="${id}" class="createUser">
+          <td class="nameData">${local.Name}</td>
+          <td class="emailData">${local.Email}</td>
+          <td class="passwordData">${local.Password}</td>
+          <td class="addressData">${local.Address}</td>
+          <td class="sportsData">${local.Sports}</td>
+          <td class="genderData">${local.Gender}</td>
+          <td class="countryData">${local.Country}</td>
+          <td><i class="fa-solid fa-pen-to-square" style="cursor : pointer;" onclick="editData('${id}')"></i></td>
+          <td><i class="fa-solid fa-trash" style="cursor : pointer;" onclick="removeData('${id}')"></i></td>
+        </tr>
         `;
-
-      tbody.insertAdjacentHTML("beforeend", userRow);
+      tbody.insertAdjacentHTML("beforeend", myHTML);
     }
-
-
 
 
     function handleSubmitData(event) {
       event.preventDefault();
-
 
       let isValid = true;
 
@@ -232,6 +235,7 @@
       }
 
       if (!password.value.trim()) {
+        passwordError.innerText = "Please enter your password";
         passwordError.style.display = "block";
         isValid = false;
       } else if (password.value.length <= 4 || password.value.length >= 12) {
@@ -249,14 +253,14 @@
         addressError.style.display = "none";
       }
 
-      if (!cricket.checked && !football.checked && !baseball.checked) {
+      if (cricket.checked === false && football.checked === false && baseball.checked === false) {
         sportsError.style.display = "block";
         isValid = false;
       } else {
         sportsError.style.display = "none";
       }
 
-      if (!male.checked && !female.checked && !other.checked) {
+      if (male.checked === false && female.checked === false && other.checked === false) {
         genderError.style.display = "block";
         isValid = false;
       } else {
@@ -271,184 +275,117 @@
       }
 
 
-      if (isValid) {
-        if (tbody.innerText === "No Data Found!") {
-          tbody.innerText = "";
-        }
 
+      if (isValid) {
+        const gender = document.querySelector('input[name="gender"]:checked');
 
         const sports = document.querySelectorAll('input[name="sports"]:checked');
 
-        const sportsData = [];
+        let sportsData = [];
 
         for (let i = 0; i < sports.length; i++) {
           sportsData.push(sports[i].value);
         }
 
-        const sportsText = sportsData.join(", ");
+        let sportsText = sportsData.join(", ");
 
 
-        const gender = document.querySelector('input[name="gender"]:checked');
+
+        if (tbody.innerText === "No Data Found!") {
+          tbody.innerText = "";
+        }
+
+
+        const users = JSON.parse(localStorage.getItem("Users")) || [];
 
 
         if (editId) {
-          const user = document.getElementById(editId);
-
+          const editElem = document.getElementById(editId);
 
           const userData = {
-            id: editId,
-            name: name.value,
-            email: email.value,
-            password: password.value,
-            address: address.value,
-            sports: sportsText,
-            gender: gender.value,
-            country: country.value
+            "Id": editId,
+            "Name": name.value,
+            "Email": email.value,
+            "Password": password.value,
+            "Address": address.value,
+            "Sports": sportsText,
+            "Gender": gender.value,
+            "Country": country.value
           };
 
-          const getUserData = JSON.parse(localStorage.getItem("Users"));
+          const local = JSON.parse(localStorage.getItem("Users"));
 
-          const index = getUserData.findIndex(x => x.id == editId);
+          const index = local.findIndex(x => x.Id == editId);
 
           if (index != -1) {
-            getUserData[index] = userData;
+            local[index] = userData;
 
-            localStorage.setItem("Users", JSON.stringify(getUserData));
+            localStorage.setItem("Users", JSON.stringify(local));
           }
 
-
-          user.children[0].innerHTML = name.value;
-          user.children[1].innerHTML = email.value;
-          user.children[2].innerHTML = password.value;
-          user.children[3].innerHTML = address.value;
-          user.children[4].innerHTML = sportsText;
-          user.children[5].innerHTML = gender.value;
-          user.children[6].innerHTML = country.value;
-
+          editElem.children[0].innerHTML = name.value;
+          editElem.children[1].innerHTML = email.value;
+          editElem.children[2].innerHTML = password.value;
+          editElem.children[3].innerHTML = address.value;
+          editElem.children[4].innerHTML = sportsText;
+          editElem.children[5].innerHTML = gender.value;
+          editElem.children[6].innerHTML = country.value;
 
           editId = "";
+
         } else {
+
           var id = Math.random().toString(16).slice(2);
 
 
           const userData = {
-            id: id,
-            name: name.value,
-            email: email.value,
-            password: password.value,
-            address: address.value,
-            sports: sportsText,
-            gender: gender.value,
-            country: country.value
+            "Id": id,
+            "Name": name.value,
+            "Email": email.value,
+            "Password": password.value,
+            "Address": address.value,
+            "Sports": sportsText,
+            "Gender": gender.value,
+            "Country": country.value
           };
 
-          showAllUsers.push(userData);
 
-          localStorage.setItem("Users", JSON.stringify(showAllUsers));
+          users.push(userData);
 
+          localStorage.setItem("Users", JSON.stringify(users));
 
-          const userRow = `
-            <tr id="${id}" class="userRow">
-              <td class="nameData">${name.value}</td>
-              <td class="emailData">${email.value}</td>
-              <td class="passwordData">${password.value}</td>
-              <td class="addressData">${address.value}</td>
-              <td class="sportsData">${sportsText}</td>
-              <td class="genderData">${gender.value}</td>
-              <td class="countryData">${country.value}</td>
+          const myHTML = `
+            <tr id="${id}" class="createUser">
+              <td class="nameData">${userData.Name}</td>
+              <td class="emailData">${userData.Email}</td>
+              <td class="passwordData">${userData.Password}</td>
+              <td class="addressData">${userData.Address}</td>
+              <td class="sportsData">${userData.Sports}</td>
+              <td class="genderData">${userData.Gender}</td>
+              <td class="countryData">${userData.Country}</td>
               <td><i class="fa-solid fa-pen-to-square" style="cursor : pointer;" onclick="editData('${id}')"></i></td>
               <td><i class="fa-solid fa-trash" style="cursor : pointer;" onclick="removeData('${id}')"></i></td>
             </tr>
-          `;
+            `;
 
-          tbody.insertAdjacentHTML("beforeend", userRow);
+          tbody.insertAdjacentHTML("beforeend", myHTML);
         }
 
-        resetAllField();
-      }
-    }
 
-
-
-
-    function removeData(id) {
-      const deleteUserId = document.getElementById(id);
-
-      const deletePermission = confirm("Are you sure you want to delete this data ?");
-
-      if (deletePermission) {
-        deleteUserId.remove();
-        const afterDeleteData = showAllUsers.filter(x => x.id != id);
-
-        localStorage.setItem("Users", JSON.stringify(afterDeleteData));
+        name.value = "";
+        email.value = "";
+        password.value = "";
+        address.value = "";
+        cricket.checked = false;
+        football.checked = false;
+        baseball.checked = false;
+        male.checked = false;
+        female.checked = false;
+        other.checked = false;
+        country.value = "Select";
       }
 
-
-      if (tbody.querySelectorAll(".userRow").length === 0) {
-        tbody.innerHTML = `
-        <tr>
-          <td colspan="9" style="text-align: center; padding: 40px 0; font-size: 35px; font-weight: bold; border : none;">
-            No Data Found!
-          </td>
-        </tr>
-        `;
-      }
     }
-
-
-
-
-    function editData(id) {
-      const editUserId = document.getElementById(id);
-
-      editId = id;
-
-
-      const showAllUsers = JSON.parse(localStorage.getItem("Users"));
-
-      const specificData = showAllUsers.filter(x => x.id == editId);
-
-      for (let i = 0; i < specificData.length; i++) {
-        name.value = specificData[i].name;
-
-        email.value = specificData[i].email;
-
-        password.value = specificData[i].password;
-
-        address.value = specificData[i].address;
-
-        const sportsArray = specificData[i].sports.split(", ");
-        cricket.checked = sportsArray.includes("Cricket");
-        football.checked = sportsArray.includes("Football");
-        baseball.checked = sportsArray.includes("Baseball");
-
-        male.checked = specificData[i].gender == "Male" ? true : false;
-        female.checked = specificData[i].gender == "Female" ? true : false;
-        other.checked = specificData[i].gender == "Prefer Not To Say" ? true : false;
-
-        country.value = specificData[i].country;
-      }
-
-      resetBtn.style.pointerEvents = "none";
-    }
-
-
-
-
-    function resetAllField() {
-      name.value = "";
-      email.value = "";
-      password.value = "";
-      address.value = "";
-      cricket.checked = false;
-      football.checked = false;
-      baseball.checked = false;
-      male.checked = false;
-      female.checked = false;
-      other.checked = false;
-      country.value = "Select";
-    }
-
 
 
 
@@ -467,7 +404,71 @@
         female.checked = false;
         other.checked = false;
         country.value = "Select";
+
+        nameError.style.display = "none";
+        emailError.style.display = "none";
+        passwordError.style.display = "none";
+        addressError.style.display = "none";
+        sportsError.style.display = "none";
+        genderError.style.display = "none";
+        countryError.style.display = "none";
       }
+
+    }
+
+
+
+    function removeData(id) {
+      const getUser = document.getElementById(id);
+
+      const deleteUser = confirm("Are you sure you want to delete this data ?");
+
+      if (deleteUser) {
+        getUser.remove();
+
+        const allUsers = JSON.parse(localStorage.Users || []);
+
+        const removeOneUser = allUsers.filter(x => x.Id != id);
+
+        localStorage.setItem("Users", JSON.stringify(removeOneUser));
+      }
+
+      if (tbody.querySelectorAll(".userRow").length === 0) {
+        tbody.innerHTML = `
+        <tr>
+          <td colspan="9" style="text-align: center; padding: 40px 0; font-size: 35px; font-weight: bold; border : none;">
+            No Data Found!
+          </td>
+        </tr>
+        `;
+      }
+    }
+
+
+    function editData(id) {
+      const editElem = document.getElementById(id);
+
+      editId = id;
+
+      const local = JSON.parse(localStorage.getItem("Users"));
+
+      for (let i = 0; i < local.length; i++) {
+        name.value = local[i].Name;
+        email.value = local[i].Email;
+        password.value = local[i].Password;
+        address.value = local[i].Address;
+
+        const sportsArray = local[i].Sports.split(", ");
+        cricket.checked = sportsArray.includes("Cricket");
+        football.checked = sportsArray.includes("Football");
+        baseball.checked = sportsArray.includes("Baseball");
+
+        male.checked = local[i].Gender == "Male" ? true : false;
+        female.checked = local[i].Gender == "Female" ? true : false;
+        other.checked = local[i].Gender == "Prefer Not To Say" ? true : false;
+        country.value = local[i].Country;
+      }
+
     }
 
   </script>
