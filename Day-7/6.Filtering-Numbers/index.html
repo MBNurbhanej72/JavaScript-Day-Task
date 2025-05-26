@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtering Numbers</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/favicon/site.webmanifest">
+
+  <!-- =====  Font Awesome CSS ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Filtering Numbers</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>
+        <b>1. Filtering Numbers:</b> <br>
+        ● Create an array of numbers. <br>
+        ● Filter out even numbers.<br>
+        ● Filter out numbers greater than 5.<br>
+        ● Filter out numbers divisible by 3.<br>
+        <b>2. Filtering Strings:</b> <br>
+        ● Create an array of strings.<br>
+        ● Filter out strings longer than 5 characters.<br>
+        ● Filter out strings that start with a specific letter.<br>
+        ● Filter out strings that contain a specific word.<br>
+        <b>3. Filtering Objects:</b> <br>
+        ● Create an array of objects with properties like name and age.<br>
+        ● Filter out objects where age is greater than 40.<br>
+        ● Filter out objects whose name starts with 'A'.<br>
+      </p>
+      <br>
+      <pre>
+        <code>
+          // Ex:- 1
+          const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+          const filterEvenNumber = myNumbers.filter((num) => num % 2 == 0);
+          console.log(filterEvenNumber);
+
+          const filterNum = myNumbers.filter((num) => num > 5);
+          console.log(filterNum);
+
+          const filterNumByThree = myNumbers.filter((num) => num % 3 == 0);
+          console.log(filterNumByThree);
+
+
+          // Ex:- 2
+          const mystr = ["banana", "mango", "blueberry", "apple", "grapes"];
+
+          const finalLenghtStr = mystr.filter((fruit) => fruit.length > 5);
+          console.log(finalLenghtStr);
+
+          const filterStr = mystr.filter((fruit) => fruit.startsWith("b"));
+          console.log(filterStr);
+
+          const filterWord = mystr.filter((fruit) => fruit.includes("grapes"));
+          console.log(filterWord);
+
+
+          // Ex:- 3
+          const myObj = [
+            { name: "Abbasali", age: 35 },
+            { name: "Mohammadali", age: 50 },
+            { name: "Shabbirhasan", age: 45 },
+          ];
+
+          const filterAge = myObj.filter((obj) => obj.age > 40);
+          console.log(filterAge);
+
+          const filterName = myObj.filter((obj) => obj.name.startsWith("A"));
+          console.log(filterName)
+        </code>
+      </pre>
+      <div id="ex1" class="output-box">
+        Ex 1: <br>
+        ● [2, 4, 6, 8, 10] <br>
+        ● [6, 7, 8, 9, 10]<br>
+        ● [3, 6, 9]<br>
+        <br>
+        Ex 2: <br>
+        ● ['banana', 'blueberry', 'grapes']<br>
+        ● ['banana', 'blueberry']<br>
+        ● ['grapes']<br>
+        <br>
+        Ex 3: <br>
+        ● 0:{name: 'MB', age: 50} <br>
+        &nbsp; &nbsp;1:{name: 'SK', age: 45}<br>
+        ● 0:{name: 'Abbasali', age: 35} <br>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+
+    // Ex:- 1
+    const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    const filterEvenNumber = myNumbers.filter((num) => num % 2 == 0);
+    console.log(filterEvenNumber);
+
+    const filterNum = myNumbers.filter((num) => num > 5);
+    console.log(filterNum);
+
+    const filterNumByThree = myNumbers.filter((num) => num % 3 == 0);
+    console.log(filterNumByThree);
+
+    // Ex:- 2
+    const mystr = ["banana", "mango", "blueberry", "apple", "grapes"];
+
+    const finalLenghtStr = mystr.filter((fruit) => fruit.length > 5);
+    console.log(finalLenghtStr);
+
+    const filterStr = mystr.filter((fruit) => fruit.startsWith("b"));
+    console.log(filterStr);
+
+    const filterWord = mystr.filter((fruit) => fruit.includes("grapes"));
+    console.log(filterWord);
+
+    // Ex:- 3
+    const myObj = [
+      { name: "Abbasali", age: 35 },
+      { name: "Mohammadali", age: 50 },
+      { name: "Shabbirhasan", age: 45 },
+    ];
+
+    const filterAge = myObj.filter((obj) => obj.age > 40);
+    console.log(filterAge);
+
+    const filterName = myObj.filter((obj) => obj.name.startsWith("A"));
+    console.log(filterName)
+
+  </script>
+
+
+
+  <!-- =====  Font Awesome JS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finding the index</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/favicon/site.webmanifest">
+
+  <!-- =====  Font Awesome CSS ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Finding the index</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>
+        <b>1. Finding the index of the first even number:</b> <br>
+        ● Create an array of numbers. <br>
+        ● Use findIndex() to find the index of the first even number.<br>
+        <b>2. Finding the index of the first string starting with 'a':</b> <br>
+        ● Create an array of strings.<br>
+        ● Use findIndex() to find the index of the first string that starts with 'a'.<br>
+        <b>3. Finding the index of the first object with a specific property value:</b> <br>
+        ● Create an array of objects with properties like name and age. <br>
+        ● Use findIndex() to find the index of the first object where age is greater than 30.<br>
+      </p>
+      <br>
+      <pre>
+        <code>
+          // Ex:- 1
+          const myNumbers = [1, 2, 3, 4, 5];
+
+          const finalNumber = myNumbers.findIndex((num) => num % 2 == 0);
+          console.log(finalNumber)
+
+          // Ex:- 2
+          const mystr = ["banana", "mango", "apple"];
+
+          const finalstr = mystr.findIndex((fruit) => fruit.startsWith("a"));
+          console.log(finalstr)
+
+          // Ex:- 3
+          const myObj = [
+            { name: "MT", age: 35 },
+            { name: "MB", age: 25 },
+            { name: "SK", age: 20 },
+          ];
+
+          const finalObj = myObj.findIndex((obj) => obj.age > 30);
+          console.log(finalObj)
+        </code>
+      </pre>
+      <div id="ex1" class="output-box">
+        Ex 1:- 1 <br>
+        Ex 2:- 2 <br>
+        Ex 3:- 0
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+
+    // Ex:- 1
+    const myNumbers = [1, 2, 3, 4, 5];
+
+    const finalNumber = myNumbers.findIndex((num) => num % 2 == 0);
+    console.log(finalNumber);
+
+    // Ex:- 2
+    const mystr = ["banana", "mango", "apple"];
+
+    const finalstr = mystr.findIndex((fruit) => fruit.startsWith("a"));
+    console.log(finalstr);
+
+    // Ex:- 3
+    const myObj = [
+      { name: "MT", age: 35 },
+      { name: "MB", age: 25 },
+      { name: "SK", age: 20 },
+    ];
+
+    const finalObj = myObj.findIndex((obj) => obj.age > 30);
+    console.log(finalObj)
+
+  </script>
+
+
+
+  <!-- =====  Font Awesome JS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+
+
+
+</body>
+
+</html>

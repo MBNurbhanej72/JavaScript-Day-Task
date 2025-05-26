@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript SetInterval Exercise: Slide Show</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/favicon/site.webmanifest">
+
+  <!-- =====  Font Awesome CSS ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>JavaScript SetInterval Exercise: Slide Show</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>● Create a simple image slideshow that automatically cycles through a set of images using setInterval. <br>
+        ● On html create a div and inside div put 3 images. <br>
+        ● So at the time show only on image after 3 second show 2nd image and after 3 second. <br>
+        ● Show third image so keep rotation each 3 seconds.
+      </p>
+      <br>
+      <pre>
+        <code>
+          
+        </code>
+    </pre>
+      <div id="ex1" class="output-box">
+        <img
+          src="https://images.pexels.com/photos/945693/pexels-photo-945693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt="" class="img1">
+
+        <img
+          src="https://images.pexels.com/photos/27271960/pexels-photo-27271960/free-photo-of-leaf-macro-july-finland.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+          alt="" class="img2">
+
+        <img
+          src="https://images.pexels.com/photos/4215449/pexels-photo-4215449.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+          alt="" class="img3">
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+
+    const img1 = document.querySelector(".img1");
+    const img2 = document.querySelector(".img2");
+    const img3 = document.querySelector(".img3");
+
+    setInterval(() => {
+      img1.classList.toggle("activeImg");
+    }, 3000);
+
+    setInterval(() => {
+      img2.classList.toggle("activeImg");
+    }, 4000);
+
+    setInterval(() => {
+      img3.classList.toggle("activeImg");
+    }, 5000)
+
+  </script>
+
+
+
+  <!-- =====  Font Awesome JS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Date Exercise: Date Formatting</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/favicon/site.webmanifest">
+
+  <!-- =====  Font Awesome CSS ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>JavaScript Date Exercise: Date Formatting</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>● Create a JavaScript function that formats a date according to a specified format string.<br>
+        ● date: A Date object representing the date to be formatted. <br>
+        ● formatString: A string specifying the desired format <br>
+        &nbsp;&nbsp;&nbsp;(e.g., 'YYYY-MM-DD', 'DD/MM/YYYY', 'MM DD, YYYY').
+        <br>
+        ● function formatDate(date, formatString) { // ... }
+      </p>
+      <br>
+      <pre>
+        <code>
+          const currDate = new Date();
+          const formatString = "DD/MM/YYYY";
+
+          const output = document.querySelector(".output-box");
+
+          function formatDate(date, formatString) {
+            const day = date.getDate();
+            const month = date.getMonth();
+            const year = date.getFullYear();
+
+            const arr = `${day}/${month + 1}/${year}`;
+
+            const data = formatString.replace("DD/MM/YYYY", arr);
+            console.log(data);
+            output.innerHTML = data;
+          }
+
+          formatDate(currDate, formatString)
+        </code>
+      </pre>
+      <div class="output-box"></div>
+    </div>
+  </div>
+
+
+
+  <script>
+
+    const currDate = new Date();
+    const formatString = "DD/MM/YYYY";
+
+    const output = document.querySelector(".output-box");
+
+    function formatDate(date, formatString) {
+      const day = date.getDate();
+      const month = date.getMonth();
+      const year = date.getFullYear();
+
+      const arr = `${day}/${month + 1}/${year}`;
+
+      const data = formatString.replace("DD/MM/YYYY", arr);
+      console.log(data);
+      output.innerHTML = data;
+    }
+
+    formatDate(currDate, formatString)
+
+  </script>
+
+
+
+  <!-- =====  Font Awesome JS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+
+
+
+</body>
+
+</html>

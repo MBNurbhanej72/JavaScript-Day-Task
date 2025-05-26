@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript: Counter</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/favicon/site.webmanifest">
+
+  <!-- =====  Font Awesome CSS ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>JavaScript: Counter</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>● Need to make a counter using setInterval. <br>
+        ● So first create a p tag inside P tag put 0 value <br>
+        ● After that create three buttons. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● Start <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● If I click start then every second p tag value
+        should be increase.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● Stop <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● If I click stop then counter will stop on
+        current value<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● Reset <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● If I reset then counter value should be 0 and
+        counter is stop<br>
+      </p>
+      <br>
+      <pre>
+        <code>
+          const box = document.querySelector(".output-box");
+          const btn1 = document.querySelector(".btn1");
+          const btn2 = document.querySelector(".btn2");
+          const btn3 = document.querySelector(".btn3");
+
+          var counter = 0;
+
+          var interval;
+
+          box.innerText = counter;
+
+          function startCounter() {
+            interval = setInterval(() => {
+              counter++;
+              box.innerText = counter;
+            }, 1000);
+          }
+
+          function stopCounter() {
+            clearInterval(interval);
+          }
+
+          function resetCounter() {
+            counter = 0;
+            box.innerText = counter;
+          }
+        </code>
+      </pre>
+      <div id="ex1" class="output-box"></div> <br>
+      <div style="display: flex; gap: 50px;">
+        <button class="output-box-btn btn1" onclick="startCounter()">Start</button>
+        <button class="output-box-btn btn2" onclick="stopCounter()">Stop</button>
+        <button class="output-box-btn btn3" onclick="resetCounter()">Reset</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+
+    const box = document.querySelector(".output-box");
+    const btn1 = document.querySelector(".btn1");
+    const btn2 = document.querySelector(".btn2");
+    const btn3 = document.querySelector(".btn3");
+
+    var counter = 0;
+
+    var interval;
+
+    box.innerText = counter;
+
+    function startCounter() {
+      interval = setInterval(() => {
+        counter++;
+        box.innerText = counter;
+      }, 1000);
+    }
+
+    function stopCounter() {
+      clearInterval(interval);
+    }
+
+    function resetCounter() {
+      counter = 0;
+      box.innerText = counter;
+    }
+
+  </script>
+
+
+
+  <!-- =====  Font Awesome JS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+
+
+
+</body>
+
+</html>

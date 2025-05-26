@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript SetInterval Exercise: Simple Timer</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/favicon/site.webmanifest">
+
+  <!-- =====  Font Awesome CSS ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>JavaScript SetInterval Exercise: Simple Timer</h1>
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <p>● Create a simple timer that counts down from a specified number of seconds.<br>
+        ● Create a counter with start of 10 second in p tag so this counter decrease of each second and <br> &nbsp;
+        &nbsp;If counter
+        value
+        is 0 then stop timer and place of time in p tag show text 'Time up!'
+      </p>
+      <br>
+      <pre>
+        <code>
+          var counter = 10;
+          outputBox.innerHTML = "10";
+
+          const timer = setInterval(() => {
+            counter--;
+            outputBox.innerHTML = counter;
+            if (counter == 0) {
+              clearInterval(timer);
+              outputBox.innerHTML = "Time up!";
+            }
+          }, 1000);
+        </code>
+      </pre>
+      <div id="outputBox" class="output-box"></div>
+    </div>
+  </div>
+
+
+
+  <script>
+
+    var counter = 10;
+    outputBox.innerHTML = "10";
+
+    const timer = setInterval(() => {
+      counter--;
+      outputBox.innerHTML = counter;
+      if (counter == 0) {
+        clearInterval(timer);
+        outputBox.innerHTML = "Time up!";
+      }
+    }, 1000);
+
+  </script>
+
+
+
+  <!-- =====  Font Awesome JS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+
+
+
+</body>
+
+</html>
