@@ -5,11 +5,17 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Jost", serif;
+  outline: none;
+}
+
+:root {
+  --bg-color: #051d18;
+  --text-color: #a1cca5;
 }
 
 body {
-  background: #f2f2f2;
-  color: #333;
+  background: var(--bg-color);
+  color: var(--text-color);
   text-align: center;
   padding: 40px;
 }
@@ -21,10 +27,11 @@ body {
 
 h1 {
   font-size: 48px;
-  background: #222;
-  padding: 10px;
+  background: var(--text-color);
+  border-radius: 10px;
+  padding: 10px 20px;
   display: inline-block;
-  color: #32a6f4;
+  color: var(--bg-color);
 }
 
 .section {
@@ -34,46 +41,92 @@ h1 {
 }
 
 pre {
-  background: #222;
-  color: #32a6f4;
+  background: var(--text-color);
+  border-radius: 10px;
+  color: var(--bg-color);
+  font-weight: 600;
   padding: 15px;
   text-align: left;
   overflow-x: auto;
-  font-size: 16px;
+  font-size: 18px;
+}
+
+pre::-webkit-scrollbar {
+  display: none;
 }
 
 .output-box {
   padding: 15px;
-  border: 2px solid #333;
-  box-shadow: 6px 6px 0px #333;
-  margin-top: 10px;
-  color: black;
+  border-radius: 10px;
+  border: 2px solid var(--text-color);
+  box-shadow: 5px 5px 0px var(--text-color);
+  margin-top: 20px;
+  color: var(--text-color);
   font-weight: 500;
 }
 
 .output-box-btn {
   padding: 10px;
-  border: 2px solid #333;
-  box-shadow: 6px 6px 0px #333;
+  border: 2px solid var(--text-color);
+  box-shadow: 5px 5px 0px var(--text-color);
   margin-top: 15px;
-  color: black;
+  color: var(--text-color);
   transition: all 0.5s;
 }
 
 .output-box-btn:hover {
-  box-shadow: 0px 0px 0px #333;
+  box-shadow: 0px 0px 0px var(--text-color);
 }
 
 .output-box-btn:focus-visible {
   outline: none;
 }
 
-p {
+ul {
   font-weight: 500;
-  color: #40484e;
+  font-size: 18px;
+  color: var(--text-color);
+  margin-top: 20px;
+  margin-left: 18px;
 }
 
 h2 {
   font-size: 28px;
   margin-bottom: 10px;
 }
+
+
+
+/** =====  Start Media Queries Section  ===== **/
+
+@media only screen and (max-width: 576px) {
+
+  h1 {
+    padding: 10px 10px;
+  }
+
+}
+
+/** =====  End Media Queries Section  ===== **/
+
+/* =====  Start Scrollbar Section  ===== */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+  border-radius: 50px;
+  height: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6f967a;
+}
+
+/* =====  End Scrollbar Section  ===== */

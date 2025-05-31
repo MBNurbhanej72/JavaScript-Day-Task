@@ -5,89 +5,96 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Jost", serif;
+  outline: none;
 }
 
 :root {
-  --color: #2a2e34;
+  --bg-color: #051d18;
+  --text-color: #a1cca5;
 }
 
 body {
-  background-color: var(--color);
-  color: #32a6f4;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-weight: 500;
   margin: 0;
-  padding: 5px;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  background-color: var(--color);
-  padding: 10px 5px 20px 5px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.505);
-}
-
-.header .title {
-  margin-right: auto;
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: 'poppins';
-}
-
-.logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 20px;
-}
-
-.logo img {
+  padding: 0;
   height: 100%;
-  width: 100%;
 }
 
-.tasks {
+.main {
   width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-
-}
-
-.beginner {
-  background-color: #848484;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px;
-}
-
-.circle {
-  height: 15px;
-  width: 15px;
-  color: #222;
-}
-
-.tasks .title {
-  display: flex;
-  align-items: center;
-  padding: 10px 5px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.449);
-  border-top: 1px solid rgba(255, 255, 255, 0.449);
+  margin-top: 70px;
+  margin-bottom: 70px;
+  flex-direction: column;
 }
 
 .task {
-  background-color: var(--color);
-  border-bottom: 1px solid rgba(128, 128, 128, 0.397);
-  padding: 10px 5px;
+  background-color: var(--text-color);
+  border-radius: 32px;
+  margin-bottom: 30px;
+  padding: 15px 0;
+  width: 50%;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  text-decoration: none;
+  color: var(--bg-color);
+  box-shadow: inset rgba(7, 37, 31, 0.32) -5px -5px 0px 0px;
 }
 
-.task a {
-  text-decoration: none;
-  color: #32a6f4;
+.task:last-child {
+  margin-bottom: 0;
 }
 
 .task:hover {
-  background-color: #303337;
+  scale: 0.95;
 }
+
+
+
+/** =====  Start Media Queries Section  ===== **/
+
+@media only screen and (max-width: 768px) {
+
+  .main {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .task {
+    width: 80%;
+  }
+
+}
+
+/** =====  End Media Queries Section  ===== **/
+
+
+
+/* =====  Start Scrollbar Section  ===== */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+  border-radius: 50px;
+  height: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6f967a;
+}
+
+/* =====  End Scrollbar Section  ===== */

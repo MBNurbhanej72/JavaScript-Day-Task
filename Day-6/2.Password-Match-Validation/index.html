@@ -25,11 +25,12 @@
     <h1>Password Match Validation</h1>
     <div class="section">
       <h2>Exercise 1</h2>
-      <p>● Create a form with a password and confirm password field. When the form is submitted,
-        <br>&nbsp;&nbsp;&nbsp;write JavaScript code
-        to check if both passwords match. If not, display an error message next <br>&nbsp;&nbsp;&nbsp;to the confirm
-        password field.
-      </p>
+      <ul>
+        <li> Create a form with a password and confirm password field. When the form is submitted,
+          write JavaScript code
+          to check if both passwords match. If not, display an error message next to the confirm
+          password field.</li>
+      </ul>
       <br>
       <pre>
       <code>   
@@ -38,7 +39,6 @@
 
       const passwordError = document.querySelector(".password-error");
       const confirmPasswordError = document.querySelector(".confirmPassword-error");
-      const bothError = document.querySelector(".bothError");
 
       function onSubmitData(event) {
         event.preventDefault();
@@ -48,11 +48,11 @@
         } else if (!confirmPassword.value) {
           confirmPasswordError.style.display = "block";
         } else if (password.value !== confirmPassword.value) {
-          bothError.style.display = "block";
+          confirmPasswordError.style.display = "block";
+          confirmPasswordError.innerHTML = "! Password Are Not Match";
         } else {
           passwordError.style.display = "none";
           confirmPasswordError.style.display = "none";
-          bothError.style.display = "none";
 
           password.value = "";
           confirmPassword.value = "";
@@ -67,7 +67,6 @@
         <span class="password-error">! Please Fill The Password</span><br>
         <input type="password" placeholder="Confirm Password" class="confirmPassword output-box"> <br>
         <span class="confirmPassword-error">! Please Fill The Password</span><br>
-        <span class="bothError">! Password Are Not Match</span><br>
         <button type="submit" class="submitBtn output-box-btn">Submit</button>
       </form>
     </div>
@@ -82,7 +81,6 @@
 
     const passwordError = document.querySelector(".password-error");
     const confirmPasswordError = document.querySelector(".confirmPassword-error");
-    const bothError = document.querySelector(".bothError");
 
     function onSubmitData(event) {
       event.preventDefault();
@@ -92,11 +90,11 @@
       } else if (!confirmPassword.value) {
         confirmPasswordError.style.display = "block";
       } else if (password.value !== confirmPassword.value) {
-        bothError.style.display = "block";
+        confirmPasswordError.style.display = "block";
+        confirmPasswordError.innerHTML = "! Password Are Not Match";
       } else {
         passwordError.style.display = "none";
         confirmPasswordError.style.display = "none";
-        bothError.style.display = "none";
 
         password.value = "";
         confirmPassword.value = "";

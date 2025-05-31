@@ -28,16 +28,24 @@
     <h1>Mega form value handle</h1>
     <div class="section">
       <h2>Exercise 1</h2>
-      <p>● Create a form with name, email, password, address, sports, gender, country. <br>
-        ● All filed are required <br>
-        ● If not filled any once then show an error message below of input in red colour <br>
-        ● If form is valid and then show all submitted value below of the form in table mode <br>
-        ● If click on edit icon then this table value fill in the all form control and if change anything then update
-        the specific selected row on table.<br>
-        ● If click on delete icon then remove this row from table <br>
-        ● If click on reset button then blank all form. <br>
-        ● Reset button will be disabled on edit mode <br>
-      </p>
+      <ul>
+        <li> Create a form with name, email, password, address, sports, gender, country.</li>
+        <br>
+        <li> All filed are required.</li>
+        <br>
+        <li> If not filled any once then show an error message below of input in red colour.</li>
+        <br>
+        <li> If form is valid and then show all submitted value below of the form in table mode.</li>
+        <br>
+        <li> If click on edit icon then this table value fill in the all form control and if change anything then update
+          the specific selected row on table.</li>
+        <br>
+        <li> If click on delete icon then remove this row from table.</li>
+        <br>
+        <li> If click on reset button then blank all form.</li>
+        <br>
+        <li> Reset button will be disabled on edit mode.</li>
+      </ul>
       <br>
       <p class="codePara">Code Available On My Github Repo.</p>
       <br>
@@ -47,51 +55,51 @@
         <form onsubmit="handleSubmitData(event)">
           <div class="name">
             <label for="name">Name</label> <br>
-            <input type="text" class="output-box" id="name" placeholder="Enter Your Name"></input>
+            <input type="text" class="output-box" id="name" placeholder="Enter Your Name" autocomplete="off"></input>
             <br>
-            <span class="nameError">Please enter your name</span>
+            <span class="nameError">! Please enter your name</span>
           </div>
 
           <div class="email">
             <label for="email">Email</label> <br>
             <input type="email" class="output-box" id="email" placeholder="Enter Your Email"></input> <br>
-            <span class="emailError">Please enter your email</span>
+            <span class="emailError">! Please enter your email</span>
           </div>
 
           <div class="password">
             <label for="password">Password</label> <br>
             <input type="password" class="output-box" id="password" placeholder="Enter Your Password"></input> <br>
-            <span class="passwordError">Please enter your password</span>
+            <span class="passwordError">! Please enter your password</span>
           </div>
 
           <div class="address">
             <label for="address">Address</label> <br>
             <textarea class="output-box" id="address" placeholder="Enter Your Address"></textarea> <br>
-            <span class="addressError">Please enter your address</span>
+            <span class="addressError">! Please enter your address</span>
           </div>
 
           <div class="sports">
             <p>Choose your sports </p>
             <input type="checkbox" name="sports" id="cricket" value="Cricket">
-            <label for="cricket">Cricket</label><br>
+            <label for="cricket" class="label">Cricket</label><br>
             <input type="checkbox" name="sports" id="football" value="Football">
-            <label for="football">Football</label><br>
+            <label for="football" class="label">Football</label><br>
             <input type="checkbox" name="sports" id="baseball" value="Baseball">
-            <label for="baseball">Baseball</label>
+            <label for="baseball" class="label">Baseball</label>
             <br>
-            <span class="sportsError">Please select your sports</span>
+            <span class="sportsError">! Please select your sports</span>
           </div>
 
           <div class="gender">
             <p>Choose your gender </p>
             <input type="radio" name="gender" id="male" value="Male">
-            <label for="male">Male</label><br>
+            <label for="male" class="label">Male</label><br>
             <input type="radio" name="gender" id="female" value="Female">
-            <label for="female">Female</label><br>
+            <label for="female" class="label">Female</label><br>
             <input type="radio" name="gender" id="other" value="Prefer Not To Say">
-            <label for="other">Prefer not to say</label>
+            <label for="other" class="label">Prefer not to say</label>
             <br>
-            <span class="genderError">Please select your gender</span>
+            <span class="genderError">! Please select your gender</span>
           </div>
 
           <div class="country">
@@ -102,7 +110,7 @@
               <option value="Pakistan">Pakistan</option>
               <option value="UAE">UAE</option>
             </select>
-            <span class="countryError">Please select your country</span>
+            <span class="countryError">! Please select your country</span>
           </div>
 
           <div class="btnDiv">

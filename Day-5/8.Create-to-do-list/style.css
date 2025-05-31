@@ -5,11 +5,17 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Jost", serif;
+  outline: none;
+}
+
+:root {
+  --bg-color: #051d18;
+  --text-color: #a1cca5;
 }
 
 body {
-  background: #f2f2f2;
-  color: #333;
+  background: var(--bg-color);
+  color: var(--text-color);
   text-align: center;
   padding: 40px;
 }
@@ -20,11 +26,12 @@ body {
 }
 
 h1 {
-  font-size: 38px;
-  background: #222;
-  padding: 10px;
+  font-size: 48px;
+  background: var(--text-color);
+  border-radius: 10px;
+  padding: 10px 20px;
   display: inline-block;
-  color: #32a6f4;
+  color: var(--bg-color);
 }
 
 .section {
@@ -34,43 +41,55 @@ h1 {
 }
 
 pre {
-  background: #222;
-  color: #32a6f4;
+  background: var(--text-color);
+  border-radius: 10px;
+  color: var(--bg-color);
+  font-weight: 600;
   padding: 15px;
   text-align: left;
   overflow-x: auto;
-  font-size: 16px;
+  font-size: 18px;
+}
+
+pre::-webkit-scrollbar {
+  display: none;
 }
 
 .output-box {
   padding: 15px;
-  border: 2px solid #333;
-  box-shadow: 6px 6px 0px #333;
-  margin-top: 10px;
-  color: black;
+  border-radius: 10px;
+  border: 2px solid var(--text-color);
+  box-shadow: 5px 5px 0px var(--text-color);
+  margin-top: 20px;
+  color: var(--text-color);
   font-weight: 500;
 }
 
 .output-box-btn {
   padding: 10px;
-  border: 2px solid #333;
-  box-shadow: 6px 6px 0px #333;
-  margin-top: 15px;
-  color: black;
+  border-radius: 10px;
+  border: 2px solid var(--text-color);
+  box-shadow: 5px 5px 0px var(--text-color);
+  margin-top: 20px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   transition: all 0.5s;
 }
 
 .output-box-btn:hover {
-  box-shadow: 0px 0px 0px #333;
+  box-shadow: 0px 0px 0px var(--text-color);
 }
 
 .output-box-btn:focus-visible {
   outline: none;
 }
 
-p {
+ul {
   font-weight: 500;
-  color: #40484e;
+  font-size: 18px;
+  color: var(--text-color);
+  margin-top: 20px;
+  margin-left: 18px;
 }
 
 h2 {
@@ -88,12 +107,12 @@ h2 {
 .app h2 {
   font-size: 50px;
   text-align: center;
-  color: #0a3959;
+  color: var(--text-color);
 }
 
 .input-div {
-  border: 1px solid #B1B1B166;
-  background-color: #dbe2ef;
+  border: 1.5px solid var(--text-color);
+  background-color: transparent;
   padding-left: 10px;
   border-radius: 5px;
   width: 250px;
@@ -108,21 +127,21 @@ h2 {
   outline: none;
   background-color: transparent;
   width: 81%;
-  color: #0a3959;
+  color: var(--text-color);
 }
 
 .input-div input::placeholder {
-  color: #0a3959
+  color: var(--text-color)
 }
 
 .input-div button {
-  background-color: #0a3959;
+  background-color: var(--text-color);
   border: none;
   outline: none;
   font-size: 25px;
   width: 40px;
   height: 100%;
-  color: white;
+  color: var(--bg-color);
   border-top-right-radius: 4.5px;
   border-bottom-right-radius: 4.5px;
   cursor: pointer;
@@ -139,13 +158,14 @@ hr {
   margin-top: 15px;
   margin-bottom: 15px;
   width: 100%;
+  border-color: var(--text-color);
 }
 
 #dataContain {
   width: 100%;
   text-align: center;
   font-size: 20px;
-  color: #0a3959;
+  color: var(--text-color);
   font-weight: 700;
   font-size: 25px;
 }
@@ -154,8 +174,9 @@ hr {
   width: 100%;
   padding: 15px 20px;
   font-size: 15px;
-  border-radius: 5px;
-  background-color: #dbe2ef;
+  border-radius: 10px;
+  border: 2px solid var(--text-color);
+  background-color: var(--bg-color);
   display: flex;
   margin-bottom: 15px;
   align-items: center;
@@ -167,5 +188,41 @@ hr {
   word-break: break-word;
   white-space: normal;
   margin-left: 20px;
-  color: #0a3959;
+  color: var(--text-color);
 }
+
+
+
+/** =====  Start Media Queries Section  ===== **/
+
+@media only screen and (max-width: 576px) {
+
+  h1 {
+    padding: 10px 10px;
+  }
+
+}
+
+/** =====  End Media Queries Section  ===== **/
+
+/* =====  Start Scrollbar Section  ===== */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+  border-radius: 50px;
+  height: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6f967a;
+}
+
+/* =====  End Scrollbar Section  ===== */

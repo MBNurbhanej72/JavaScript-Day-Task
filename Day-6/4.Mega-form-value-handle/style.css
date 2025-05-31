@@ -5,26 +5,32 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Jost", serif;
+  outline: none;
+}
+
+:root {
+  --bg-color: #051d18;
+  --text-color: #a1cca5;
 }
 
 body {
-  background: #f2f2f2;
-  color: #333;
+  background: var(--bg-color);
+  color: var(--text-color);
   text-align: center;
   padding: 40px;
 }
 
 .container {
-  /* max-width: 800px; */
   margin: auto;
 }
 
 h1 {
-  font-size: 40px;
-  background: #222;
-  padding: 10px;
+  font-size: 48px;
+  background: var(--text-color);
+  border-radius: 10px;
+  padding: 10px 20px;
   display: inline-block;
-  color: #32a6f4;
+  color: var(--bg-color);
 }
 
 .section {
@@ -34,49 +40,55 @@ h1 {
 }
 
 pre {
-  background: #222;
-  color: #32a6f4;
+  background: var(--text-color);
+  border-radius: 10px;
+  color: var(--bg-color);
+  font-weight: 600;
   padding: 15px;
   text-align: left;
   overflow-x: auto;
-  font-size: 16px;
+  font-size: 18px;
 }
 
-.codePara {
-  background: #222;
-  color: #32a6f4;
-  padding: 15px;
+pre::-webkit-scrollbar {
+  display: none;
 }
 
 .output-box {
   padding: 15px;
-  border: 2px solid #333;
-  box-shadow: 6px 6px 0px #333;
-  margin-top: 10px;
-  color: black;
+  border-radius: 10px;
+  border: 2px solid var(--text-color);
+  box-shadow: 5px 5px 0px var(--text-color);
+  margin-top: 20px;
+  color: var(--text-color);
   font-weight: 500;
 }
 
 .output-box-btn {
   padding: 10px;
-  border: 2px solid #333;
-  box-shadow: 6px 6px 0px #333;
-  margin-top: 15px;
-  color: black;
+  border-radius: 10px;
+  border: 2px solid var(--text-color);
+  box-shadow: 5px 5px 0px var(--text-color);
+  margin-top: 20px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   transition: all 0.5s;
 }
 
 .output-box-btn:hover {
-  box-shadow: 0px 0px 0px #333;
+  box-shadow: 0px 0px 0px var(--text-color);
 }
 
 .output-box-btn:focus-visible {
   outline: none;
 }
 
-p {
+ul {
   font-weight: 500;
-  color: #40484e;
+  font-size: 18px;
+  color: var(--text-color);
+  margin-top: 20px;
+  margin-left: 18px;
 }
 
 h2 {
@@ -84,10 +96,26 @@ h2 {
   margin-bottom: 10px;
 }
 
+.codePara {
+  background-color: var(--text-color);
+  border-radius: 10px;
+  color: var(--bg-color);
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 input,
 textarea,
 select {
   outline: none;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-color);
 }
 
 input:-webkit-autofill,
@@ -95,16 +123,17 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   box-shadow:
-    6px 6px 0px #333,
-    0 0 0px 1000px white inset !important;
+    5px 5px 0px var(--text-color),
+    0 0 0px 1000px var(--bg-color) inset !important;
 
   -webkit-box-shadow:
-    6px 6px 0px #333,
-    0 0 0px 1000px white inset !important;
+    5px 5px 0px var(--text-color),
+    0 0 0px 1000px var(--bg-color) inset !important;
 
-  background-color: #fff !important;
-  -webkit-text-fill-color: #000 !important;
+  background-color: var(--bg-color) !important;
+  -webkit-text-fill-color: var(--text-color) !important;
   transition: background-color 5000s ease-in-out 0s;
+  color: var(--text-color);
 }
 
 textarea {
@@ -138,7 +167,7 @@ textarea {
 .genderError,
 .countryError {
   display: none;
-  color: red;
+  color: var(--text-color);
 }
 
 .sports p,
@@ -168,6 +197,7 @@ select {
 
 select {
   width: 100%;
+  background-color: var(--bg-color);
 }
 
 .btnDiv {
@@ -175,9 +205,38 @@ select {
   justify-content: space-between;
 }
 
+.label {
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
 input[type="checkbox"],
 input[type="radio"] {
-  accent-color: #333333;
+  display: none;
+}
+
+input[type="checkbox"]+label::before,
+input[type="radio"]+label::before {
+  content: "";
+  cursor: pointer;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--text-color);
+  border-radius: 3px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background-color: transparent;
+}
+
+input[type="radio"]+label::before {
+  border-radius: 10px;
+}
+
+input[type="checkbox"]:checked+label::before,
+input[type="radio"]:checked+label::before {
+  background-color: var(--text-color);
 }
 
 .allData {
@@ -193,21 +252,62 @@ th,
 td {
   padding: 20px 10px;
   text-align: left;
-  border-bottom: 2px solid #757575;
+  border-bottom: 2px solid var(--text-color);
   word-break: break-word;
   white-space: normal;
 }
 
 th {
   font-weight: 700;
-  color: #000;
+  color: var(--text-color);
   white-space: nowrap;
+}
+
+p {
+  color: var(--text-color);
+  font-weight: 600;
 }
 
 label[for="name"],
 label[for="email"],
 label[for="password"],
 label[for="address"] {
-  font-weight: 500;
-  color: #40484e;
+  font-weight: 600;
+  color: var(--text-color);
 }
+
+
+
+/** =====  Start Media Queries Section  ===== **/
+
+@media only screen and (max-width: 576px) {
+
+  h1 {
+    padding: 10px 10px;
+  }
+
+}
+
+/** =====  End Media Queries Section  ===== **/
+
+/* =====  Start Scrollbar Section  ===== */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+  border-radius: 50px;
+  height: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6f967a;
+}
+
+/* =====  End Scrollbar Section  ===== */
