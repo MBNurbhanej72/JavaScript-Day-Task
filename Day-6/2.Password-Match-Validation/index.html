@@ -24,7 +24,6 @@
   <div class="container">
     <h1>Password Match Validation</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create a form with a password and confirm password field. When the form is submitted,
           write JavaScript code
@@ -32,33 +31,7 @@
           password field.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-      const password = document.querySelector(".password");
-      const confirmPassword = document.querySelector(".confirmPassword");
-
-      const passwordError = document.querySelector(".password-error");
-      const confirmPasswordError = document.querySelector(".confirmPassword-error");
-
-      function onSubmitData(event) {
-        event.preventDefault();
-
-        if (!password.value) {
-          passwordError.style.display = "block";
-        } else if (!confirmPassword.value) {
-          confirmPasswordError.style.display = "block";
-        } else if (password.value !== confirmPassword.value) {
-          confirmPasswordError.style.display = "block";
-          confirmPasswordError.innerHTML = "! Password Are Not Match";
-        } else {
-          passwordError.style.display = "none";
-          confirmPasswordError.style.display = "none";
-
-          password.value = "";
-          confirmPassword.value = "";
-        }
-      }
-      </code></pre>
+      <pre><code id="code"></code></pre>
       <br>
       <br>
       <br>
@@ -75,12 +48,15 @@
 
 
   <script>
-
     const password = document.querySelector(".password");
+
     const confirmPassword = document.querySelector(".confirmPassword");
 
+
     const passwordError = document.querySelector(".password-error");
+
     const confirmPasswordError = document.querySelector(".confirmPassword-error");
+
 
     function onSubmitData(event) {
       event.preventDefault();
@@ -91,16 +67,25 @@
         confirmPasswordError.style.display = "block";
       } else if (password.value !== confirmPassword.value) {
         confirmPasswordError.style.display = "block";
+
         confirmPasswordError.innerHTML = "! Password Are Not Match";
       } else {
         passwordError.style.display = "none";
+
         confirmPasswordError.style.display = "none";
 
+
         password.value = "";
+
         confirmPassword.value = "";
       }
     }
+  </script>
 
+
+
+  <script>
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

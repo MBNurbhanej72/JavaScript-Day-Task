@@ -31,13 +31,8 @@
           uppercase.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const changeCase = str => str.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
-
-        console.log(changeCase("i love india"));
-      </code></pre>
-      <div id="ex1" class="output-box">I Love India</div>
+      <pre><code id="code1"></code></pre>
+      <div id="ex1" class="output-box"></div>
     </div>
 
 
@@ -49,18 +44,8 @@
         <li> Create a function which counts the digit provided as argument.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const countDigit = num => ("" + num).length;
-
-        console.log(countDigit(123456789));
-        
-        console.log(countDigit(555));
-      </code></pre>
-      <div id="ex2" class="output-box">
-        9 <br>
-        3
-      </div>
+      <pre><code id="code2"></code></pre>
+      <div id="ex2" class="output-box"></div>
     </div>
 
 
@@ -74,18 +59,8 @@
         </li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const palindrome = num => num === +([..."" + num].reverse().join(""));
-
-        console.log(palindrome(12321));
-
-        console.log(palindrome(452103));
-      </code></pre>
-      <div id="ex3" class="output-box">
-        true <br>
-        false
-      </div>
+      <pre><code id="code3"></code></pre>
+      <div id="ex3" class="output-box"></div>
     </div>
 
 
@@ -97,18 +72,8 @@
         <li> Create a function which return array elements which sort and reverse order of elements.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const sortReverseFunc = str => str.sort().reverse();
-
-        console.log(sortReverseFunc(["a", "k", "z", "b"]));
-
-        console.log(sortReverseFunc(["apple", "zebra", "mango"]));
-      </code></pre>
-      <div id="ex4" class="output-box">
-        ["z", "k", "b", "a"] <br>
-        ["zebra", "mango", "apple"]
-      </div>
+      <pre><code id="code4"></code></pre>
+      <div id="ex4" class="output-box"></div>
     </div>
 
 
@@ -117,21 +82,11 @@
     <div class="section">
       <h2>Exercise 5</h2>
       <ul>
-        <li> Create a function to check whether an • input' is an array or not.</li>
+        <li> Create a function to check whether an 'input' is an array or not.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const is_array = str => Array.isArray(str);
-
-        console.log(is_array("dcoders"));
-
-        console.log(is_array([1, 2, 3, 4]));
-      </code></pre>
-      <div id="ex5" class="output-box">
-        false <br>
-        true
-      </div>
+      <pre><code id="code5"></code></pre>
+      <div id="ex5" class="output-box"></div>
     </div>
 
 
@@ -144,18 +99,8 @@
           return the name & the value of that new variable in a string.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const firstElement = arr => newStr = arr.slice(0, 1).flat(Infinity);
-
-        console.log(firstElement([70, 90, 50]));
-
-        console.log(firstElement([[], 90, 50]));
-      </code></pre>
-      <div id="ex6" class="output-box">
-        70 <br>
-        []
-      </div>
+      <pre><code id="code6"></code></pre>
+      <div id="ex6" class="output-box"></div>
     </div>
 
 
@@ -168,18 +113,8 @@
           using value of second argument.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const getStr = (str1, str2) => str1.join(str2);
-
-        console.log(getStr(["Hello", "dCoders"], " + "));
-
-        console.log(getStr(["I", "am", "Indian"], " "));
-      </code></pre>
-      <div id="ex7" class="output-box">
-        Hello + dCoders <br>
-        I am Indian
-      </div>
+      <pre><code id="code7"></code></pre>
+      <div id="ex7" class="output-box"></div>
     </div>
 
 
@@ -191,15 +126,8 @@
         <li> Create a function to prints all the elements of nested array into single array.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const singleArr = arr => arr.flat(Infinity);
-
-        console.log(singleArr([1, 2, [3], [[4, 5]], 6, 7]));
-      </code></pre>
-      <div id="ex8" class="output-box">
-        [1, 2, 3, 4, 5, 6, 7]
-      </div>
+      <pre><code id="code8"></code></pre>
+      <div id="ex8" class="output-box"></div>
     </div>
 
 
@@ -212,15 +140,8 @@
         </li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const multiplyArr = num => newArr = num.map(e => e * 2);
-
-        console.log(multiplyArr([2, 3, 4, 5]));
-      </code></pre>
-      <div id="ex9" class="output-box">
-        [4, 6, 8, 10]
-      </div>
+      <pre><code id="code9"></code></pre>
+      <div id="ex9" class="output-box"></div>
     </div>
 
 
@@ -232,18 +153,8 @@
         <li> Create a functions to find the sum of squares of a array elements.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const getSum = num => num.reduce((total, elem) => total += elem * elem, 0);
-
-        console.log(getSum([1, 2, 3]));
-
-        console.log(getSum([4, 5]));
-      </code></pre>
-      <div id="ex10" class="output-box">
-        14 <br>
-        41
-      </div>
+      <pre><code id="code10"></code></pre>
+      <div id="ex10" class="output-box"></div>
     </div>
 
 
@@ -255,15 +166,8 @@
         <li> Create a functions to remove negative values from an array.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const removeNagative = num => num.filter(e => e > 0);
-
-        console.log(removeNagative([1, -2, 3, 77, -99, 5]));
-      </code></pre>
-      <div id="ex10" class="output-box">
-        [1, 3, 77, 5]
-      </div>
+      <pre><code id="code11"></code></pre>
+      <div id="ex11" class="output-box"></div>
     </div>
 
 
@@ -275,138 +179,197 @@
         <li> Create a functions which takes an array and return a sum of odd elements in array.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const getOddSum = num => num <br>
-        .map(e => Number(e)) <br>
-        .filter(elem => elem % 2 !== 0) <br>
-        .reduce((total, elem) => total + elem, 0);
-
-        console.log(getOddSum(["20", "50", "30", "10", "50"]));
-
-        console.log(getOddSum(["15", "15", "5", "1", "20", "2", "40"]))
-      </code></pre>
-      <div id="ex10" class="output-box">
-        0 <br>
-        36
-      </div>
+      <pre><code id="code12"></code></pre>
+      <div id="ex12" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
-
-    // Ex:- 1
-
     const changeCase = str => str.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
 
-    console.log(changeCase("i love india"));
+
+    var change_case = changeCase("i love india");
+    console.log(change_case);
+  </script>
 
 
-
-    // Ex:- 2
-
+  <script>
     const countDigit = num => ("" + num).length;
 
-    console.log(countDigit(123456789));
 
-    console.log(countDigit(555));
+    var count_digit1 = countDigit(123456789);
+    console.log(count_digit1);
 
 
+    var count_digit2 = countDigit(555);
+    console.log(count_digit2);
+  </script>
 
-    // Ex:- 3
 
+  <script>
     const palindrome = num => num === +([..."" + num].reverse().join(""));
 
-    console.log(palindrome(12321));
 
-    console.log(palindrome(452103));
+    var palindrome_num1 = palindrome(12321);
+    console.log(palindrome_num1);
 
 
+    var palindrome_num2 = palindrome(452103);
+    console.log(palindrome_num2);
+  </script>
 
-    // Ex:- 4
 
+  <script>
     const sortReverseFunc = str => str.sort().reverse();
 
-    console.log(sortReverseFunc(["a", "k", "z", "b"]));
 
-    console.log(sortReverseFunc(["apple", "zebra", "mango"]));
+    var sort_reverse_func1 = sortReverseFunc(["a", "k", "z", "b"]);
+    console.log(sort_reverse_func1);
 
 
+    var sort_reverse_func2 = sortReverseFunc(["apple", "zebra", "mango"]);
+    console.log(sort_reverse_func2);
+  </script>
 
-    // Ex:- 5
 
+  <script>
     const is_array = str => Array.isArray(str);
 
-    console.log(is_array("dcoders"));
 
-    console.log(is_array([1, 2, 3, 4]));
-
-
-
-    // Ex:- 6
-
-    const firstElement = arr => newStr = arr.slice(0, 1).flat(Infinity);
-
-    console.log(firstElement([70, 90, 50]));
-
-    console.log(firstElement([[], 90, 50]));
+    var isArr1 = is_array("dcoders");
+    console.log(isArr1);
 
 
+    var isArr2 = is_array([1, 2, 3, 4]);
+    console.log(isArr2);
+  </script>
 
-    // Ex:- 7
 
+  <script>
+    const firstElement = arr => {
+      const [first] = arr;
+
+      return `firstElement ${Array.isArray(first) ? "[]" : first.toString()}`;
+    };
+
+
+    var first_element1 = firstElement([70, 90, 50]);
+    console.log(first_element1);
+
+
+    var first_element2 = firstElement([[], 90, 50]);
+    console.log(first_element2);
+  </script>
+
+
+  <script>
     const getStr = (str1, str2) => str1.join(str2);
 
-    console.log(getStr(["Hello", "dCoders"], " + "));
 
-    console.log(getStr(["I", "am", "Indian"], " "));
+    var get_str1 = getStr(["Hello", "dCoders"], " + ");
+    console.log(get_str1);
 
 
+    var get_str2 = getStr(["I", "am", "Indian"], " ");
+    console.log(get_str2);
+  </script>
 
-    // Ex:- 8
 
+  <script>
     const singleArr = arr => arr.flat(Infinity);
 
-    console.log(singleArr([1, 2, [3], [[4, 5]], 6, 7]));
+
+    var single_arr = singleArr([1, 2, [3], [[4, 5]], 6, 7]);
+    console.log(single_arr);
+  </script>
 
 
-
-    // Ex:- 9
-
-    const multiplyArr = num => newArr = num.map(e => e * 2);
-
-    console.log(multiplyArr([2, 3, 4, 5]));
+  <script>
+    const multiplyArr = num => num.map(e => e * 2);
 
 
+    var multiply_arr = multiplyArr([2, 3, 4, 5]);
+    console.log(multiply_arr);
+  </script>
 
-    // Ex:- 10
 
+  <script>
     const getSum = num => num.reduce((total, elem) => total += elem * elem, 0);
 
-    console.log(getSum([1, 2, 3]));
 
-    console.log(getSum([4, 5]));
+    var get_sum1 = getSum([1, 2, 3]);
+    console.log(get_sum1);
 
 
+    var get_sum2 = getSum([4, 5]);
+    console.log(get_sum2);
+  </script>
 
-    // Ex:- 11
 
+  <script>
     const removeNagative = num => num.filter(e => e > 0);
 
-    console.log(removeNagative([1, -2, 3, 77, -99, 5]));
+
+    var remove_nagative = removeNagative([1, -2, 3, 77, -99, 5]);
+
+    console.log(remove_nagative);
+  </script>
+
+
+  <script>
+    const getOddSum = num => num.map(e => +e).reduce((total, elem, index) => total + (index % 2 !== 0 ? elem : 0), 0);
+
+
+    var get_odd_sum1 = getOddSum(["20", "50", "30", "10", "50"]);
+    console.log(get_odd_sum1);
+
+
+    var get_odd_sum2 = getOddSum(["15", "15", "5", "1", "20", "2", "40"]);
+    console.log(get_odd_sum2);
+  </script>
 
 
 
-    // Ex:- 12
 
-    const getOddSum = num => num.map(e => Number(e)).filter(elem => elem % 2 !== 0).reduce((total, elem) => total + elem, 0);
 
-    console.log(getOddSum(["20", "50", "30", "10", "50"]));
+  <script>
+    ex1.innerHTML = `${change_case}`;
+    code1.innerText = document.querySelectorAll("script")[0].innerText;
 
-    console.log(getOddSum(["15", "15", "5", "1", "20", "2", "40"]))
+    ex2.innerHTML = `${count_digit1} <br> ${count_digit2}`;
+    code2.innerText = document.querySelectorAll("script")[1].innerText;
 
+    ex3.innerHTML = `${palindrome_num1} <br> ${palindrome_num2}`;
+    code3.innerText = document.querySelectorAll("script")[2].innerText;
+
+    ex4.innerHTML = `${JSON.stringify(sort_reverse_func1)} <br> ${JSON.stringify(sort_reverse_func2)}`;
+    code4.innerText = document.querySelectorAll("script")[3].innerText;
+
+    ex5.innerHTML = `${isArr1} <br> ${isArr2}`;
+    code5.innerText = document.querySelectorAll("script")[4].innerText;
+
+    ex6.innerHTML = `${first_element1} <br> ${first_element2}`;
+    code6.innerText = document.querySelectorAll("script")[5].innerText;
+
+    ex7.innerHTML = `${get_str1} <br> ${get_str2}`;
+    code7.innerText = document.querySelectorAll("script")[6].innerText;
+
+    ex8.innerHTML = `${JSON.stringify(single_arr)}`;
+    code8.innerText = document.querySelectorAll("script")[7].innerText;
+
+    ex9.innerHTML = `${JSON.stringify(multiply_arr)}`;
+    code9.innerText = document.querySelectorAll("script")[8].innerText;
+
+    ex10.innerHTML = `${get_sum1} <br> ${get_sum2}`;
+    code10.innerText = document.querySelectorAll("script")[9].innerText;
+
+    ex11.innerHTML = `${JSON.stringify(remove_nagative)}`;
+    code11.innerText = document.querySelectorAll("script")[10].innerText;
+
+    ex12.innerHTML = `${get_odd_sum1} <br> ${get_odd_sum2}`;
+    code12.innerText = document.querySelectorAll("script")[11].innerText;
   </script>
 
 

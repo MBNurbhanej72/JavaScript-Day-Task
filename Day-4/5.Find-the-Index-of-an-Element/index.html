@@ -24,7 +24,6 @@
   <div class="container">
     <h1>Find the Index of an Element</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create array variable like this const fruits = ["apple", "banana", "orange", "grape"];</li>
         <br>
@@ -34,54 +33,43 @@
         <br>
         <li> If targetFruit index found then break loop.</li>
         <br>
-        <li> If targetFruit index position is found then print message like console.log("Index of", targetFruit, "is:",
-          &nbsp;&nbsp;&nbsp;targetIndex);</li>
-        <br>
-        <li> And other wise if index position is not found then print message console.log(targetFruit, "not found.");
+        <li> If targetFruit index position is found then print message like console.log("Index of", targetFruit,
+          "is:", targetIndex);</li>
         </li>
-
       </ul>
       <br>
-      <pre>
-      <code>   
-        const fruits = ["apple", "banana", "orange", "grape"];
-
-        const targetFruit = "orange";
-
-        for (let i = 0; i < fruits.length; i++) {
-          if (targetFruit == fruits[i]) {
-            console.log("Index of", targetFruit, "is:", i);
-            break;
-          }
-
-          if (i == fruits.length) {
-            console.log("orange not found");
-          }
-        }
-      </code></pre>
-      <div id="ex1" class="output-box">Index of orange is: 2</div>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
-
     const fruits = ["apple", "banana", "orange", "grape"];
 
     const targetFruit = "orange";
 
+
     for (let i = 0; i < fruits.length; i++) {
       if (targetFruit == fruits[i]) {
         console.log("Index of", targetFruit, "is:", i);
-        break;
-      }
 
-      if (i == fruits.length) {
-        console.log("orange not found");
+        ex1.innerHTML = `${targetFruit == fruits[i] ? `Index of ${targetFruit} is: ${i}` : "Fruit is not found"}`;
+
+        break;
+      } else {
+        console.log("Fruit is not found");
+
+        ex1.innerHTML = `${targetFruit == fruits[i] ? `Index of ${targetFruit} is: ${i}` : "Fruit is not found"}`;
       }
     }
+  </script>
 
+
+
+  <script>
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

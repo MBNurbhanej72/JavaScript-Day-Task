@@ -24,46 +24,39 @@
   <div class="container">
     <h1>Multiple Permissions</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
-      <p>● Create variables isAdmin, isEditor, and isModerator. and set boolen value. <br>
-        ● Use || to log "Access granted" if any of the permission variables are true. <br>
-        ● Log "Access denied" if none are true.
-      </p>
-      <br>
-      <pre>
-      <code>   
-        let isAdmin = true;
-
-        let isEditor = false;
-
-        let isModerator = false;
-
-        if (isAdmin || isEditor || isModerator) {
-          console.log("Access Granted");
-        } else {
-          console.log("Access Denied");
-        }
-      </code></pre>
-      <div id="ex1" class="output-box">Access Granted</div>
+      <ul>
+        <li> Create variables isAdmin, isEditor, and isModerator. and set boolen value.</li> <br>
+        <li> Use || to log "Access granted" if any of the permission variables are true.</li> <br>
+        <li> Log "Access denied" if none are true.</li>
+        </p>
+        <br>
+        <pre><code id="code"></code></pre>
+        <div id="ex1" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
-
     let isAdmin = true;
 
     let isEditor = false;
 
     let isModerator = false;
 
+
     if (isAdmin || isEditor || isModerator) {
       console.log("Access Granted");
     } else {
       console.log("Access Denied");
     }
+  </script>
 
+
+
+  <script>
+    ex1.innerHTML = `${isAdmin || isEditor || isModerator ? "Access Granted" : "Access Denied"}`;
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

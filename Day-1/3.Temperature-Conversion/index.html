@@ -24,35 +24,32 @@
   <div class="container">
     <h1>Temperature Conversion</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Your friend in Europe tells you it's 25 degrees Celsius.</li>
         <br>
         <li> Convert that temperature to Fahrenheit using the formula: F = (C * 9/5) + 32.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        let cal = 25;
-
-        let f = (cal * 9 / 5) + 32;
-    
-        console.log(f)
-      </code></pre>
-      <div id="ex1" class="output-box">77</div>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
-
     let cal = 25;
 
     let f = (cal * 9 / 5) + 32;
 
-    console.log(f)
+    console.log(f);
+  </script>
 
+
+
+  <script>
+    ex1.innerHTML = `${f}`;
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

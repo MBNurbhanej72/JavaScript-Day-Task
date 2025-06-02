@@ -24,7 +24,6 @@
   <div class="container">
     <h1>Replace All Occurrences</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create a variable like that const numbers = [1, 2, 3, 2, 4];</li>
         <br>
@@ -53,30 +52,16 @@
         </ul>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const numbers = [1, 2, 3, 2, 4];
-
-        function replaceAll(numbers, oldValue, newValue) {
-          for (let i = 0; i < numbers.length; i++) {
-            if (numbers[i] === oldValue) {
-              numbers[i] = newValue;
-            }
-          }
-        }
-
-        replaceAll(numbers, 2, 5);
-        console.log(numbers);
-      </code></pre>
-      <div id="ex1" class="output-box">[1, 5, 3, 5, 4]</div>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
-
     const numbers = [1, 2, 3, 2, 4];
+
 
     function replaceAll(numbers, oldValue, newValue) {
       for (let i = 0; i < numbers.length; i++) {
@@ -84,11 +69,21 @@
           numbers[i] = newValue;
         }
       }
+
+      return numbers;
     }
 
-    replaceAll(numbers, 2, 5);
-    console.log(numbers);
 
+    var replace_all = replaceAll(numbers, 2, 5);
+    console.log(replace_all);
+
+  </script>
+
+
+
+  <script>
+    ex1.innerHTML = `${JSON.stringify(replace_all)}`;
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

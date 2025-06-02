@@ -26,150 +26,140 @@
 
   <div class="container">
     <h1>Filtering Numbers</h1>
+    <!-- Section 1  -->
     <div class="section">
       <h2>Exercise 1</h2>
       <ul>
-        <ol>
-          <li>Filtering Numbers:</li>
-          <ul style="list-style-type: disc;">
-            <li> Create an array of numbers.</li> <br>
-            <li> Filter out even numbers.</li>
-            <br>
-            <li> Filter out numbers greater than 5.</li>
-            <br>
-            <li> Filter out numbers divisible by 3.</li>
-            <br>
-          </ul>
-
-          <li>Filtering Strings:</li>
-          <ul style="list-style-type: disc;">
-            <li> Create an array of strings.</li>
-            <br>
-            <li> Filter out strings longer than 5 characters.</li>
-            <br>
-            <li> Filter out strings that start with a specific letter.</li>
-            <br>
-            <li> Filter out strings that contain a specific word.</li>
-            <br>
-          </ul>
-
-          <li>Filtering Objects:</li>
-          <ul style="list-style-type: disc;">
-            <li> Create an array of objects with properties like name and age.</li>
-            <br>
-            <li> Filter out objects where age is greater than 40.</li>
-            <br>
-            <li> Filter out objects whose name starts with 'A'.</li>
-            <br>
-          </ul>
-        </ol>
-
-
-
+        <li>Filtering Numbers:</li>
+        <ul>
+          <li> Create an array of numbers.</li> <br>
+          <li> Filter out even numbers.</li>
+          <br>
+          <li> Filter out numbers greater than 5.</li>
+          <br>
+          <li> Filter out numbers divisible by 3.</li>
+          <br>
+        </ul>
       </ul>
       <br>
-      <pre>
-        <code>
-          // Ex:- 1
-          const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-          const filterEvenNumber = myNumbers.filter((num) => num % 2 == 0);
-          console.log(filterEvenNumber);
-
-          const filterNum = myNumbers.filter((num) => num > 5);
-          console.log(filterNum);
-
-          const filterNumByThree = myNumbers.filter((num) => num % 3 == 0);
-          console.log(filterNumByThree);
+      <pre><code id="code1"></code></pre>
+      <div id="ex1" class="output-box"></div>
+    </div>
 
 
-          // Ex:- 2
-          const mystr = ["banana", "mango", "blueberry", "apple", "grapes"];
+    <!-- Section 2 -->
+    <div class="section">
+      <h2>Exercise 2</h2>
+      <ul>
+        <li>Filtering Strings:</li>
+        <ul>
+          <li> Create an array of strings.</li>
+          <br>
+          <li> Filter out strings longer than 5 characters.</li>
+          <br>
+          <li> Filter out strings that start with a specific letter.</li>
+          <br>
+          <li> Filter out strings that contain a specific word.</li>
+          <br>
+        </ul>
+      </ul>
+      <br>
+      <pre><code id="code2"></code></pre>
+      <div id="ex2" class="output-box"></div>
+    </div>
 
-          const finalLenghtStr = mystr.filter((fruit) => fruit.length > 5);
-          console.log(finalLenghtStr);
 
-          const filterStr = mystr.filter((fruit) => fruit.startsWith("b"));
-          console.log(filterStr);
-
-          const filterWord = mystr.filter((fruit) => fruit.includes("grapes"));
-          console.log(filterWord);
-
-
-          // Ex:- 3
-          const myObj = [
-            { name: "Abbasali", age: 35 },
-            { name: "Mohammadali", age: 50 },
-            { name: "Shabbirhasan", age: 45 },
-          ];
-
-          const filterAge = myObj.filter((obj) => obj.age > 40);
-          console.log(filterAge);
-
-          const filterName = myObj.filter((obj) => obj.name.startsWith("A"));
-          console.log(filterName)
-        </code>
-      </pre>
-      <div id="ex1" class="output-box">
-        Ex 1: <br>
-        ● [2, 4, 6, 8, 10] <br>
-        ● [6, 7, 8, 9, 10]<br>
-        ● [3, 6, 9]<br>
-        <br>
-        Ex 2: <br>
-        ● ['banana', 'blueberry', 'grapes']<br>
-        ● ['banana', 'blueberry']<br>
-        ● ['grapes']<br>
-        <br>
-        Ex 3: <br>
-        ● 0:{name: 'MB', age: 50} <br>
-        &nbsp; &nbsp;1:{name: 'SK', age: 45}<br>
-        ● 0:{name: 'Abbasali', age: 35} <br>
-      </div>
+    <!-- Section 3 -->
+    <div class="section">
+      <h2>Exercise 3</h2>
+      <ul>
+        <li>Filtering Objects:</li>
+        <ul>
+          <li> Create an array of objects with properties like name and age.</li>
+          <br>
+          <li> Filter out objects where age is greater than 40.</li>
+          <br>
+          <li> Filter out objects whose name starts with 'A'.</li>
+          <br>
+        </ul>
+      </ul>
+      <br>
+      <pre><code id="code3"></code></pre>
+      <div id="ex3" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
-
-    // Ex:- 1
     const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-    const filterEvenNumber = myNumbers.filter((num) => num % 2 == 0);
+
+    var filterEvenNumber = myNumbers.filter((num) => num % 2 == 0);
+
     console.log(filterEvenNumber);
 
-    const filterNum = myNumbers.filter((num) => num > 5);
+
+    var filterNum = myNumbers.filter((num) => num > 5);
+
     console.log(filterNum);
 
-    const filterNumByThree = myNumbers.filter((num) => num % 3 == 0);
-    console.log(filterNumByThree);
 
-    // Ex:- 2
+    var filterNumByThree = myNumbers.filter((num) => num % 3 == 0);
+
+    console.log(filterNumByThree);
+  </script>
+
+
+  <script>
     const mystr = ["banana", "mango", "blueberry", "apple", "grapes"];
 
+
     const finalLenghtStr = mystr.filter((fruit) => fruit.length > 5);
+
     console.log(finalLenghtStr);
 
-    const filterStr = mystr.filter((fruit) => fruit.startsWith("b"));
+
+    var filterStr = mystr.filter((fruit) => fruit.startsWith("b"));
+
     console.log(filterStr);
 
-    const filterWord = mystr.filter((fruit) => fruit.includes("grapes"));
-    console.log(filterWord);
 
-    // Ex:- 3
+    var filterWord = mystr.filter((fruit) => fruit.includes("grapes"));
+
+    console.log(filterWord);
+  </script>
+
+
+  <script>
     const myObj = [
       { name: "Abbasali", age: 35 },
-      { name: "Mohammadali", age: 50 },
-      { name: "Shabbirhasan", age: 45 },
+      { name: "MB", age: 50 },
+      { name: "SK", age: 45 },
     ];
 
-    const filterAge = myObj.filter((obj) => obj.age > 40);
+
+    var filterAge = myObj.filter((obj) => obj.age > 40);
+
     console.log(filterAge);
 
-    const filterName = myObj.filter((obj) => obj.name.startsWith("A"));
-    console.log(filterName)
 
+    var filterName = myObj.filter((obj) => obj.name.startsWith("A"));
+
+    console.log(filterName)
+  </script>
+
+
+
+  <script>
+    ex1.innerHTML = `${JSON.stringify(filterEvenNumber)} <br> ${JSON.stringify(filterNum)} <br> ${JSON.stringify(filterNumByThree)}`;
+    code1.innerText = document.querySelectorAll("script")[0].innerText;
+
+    ex2.innerHTML = `${JSON.stringify(filterStr)} <br> ${JSON.stringify(filterWord)}`;
+    code2.innerText = document.querySelectorAll("script")[1].innerText;
+
+    ex3.innerHTML = `${JSON.stringify(filterAge)} <br> ${JSON.stringify(filterName)}`;
+    code3.innerText = document.querySelectorAll("script")[2].innerText;
   </script>
 
 

@@ -32,13 +32,8 @@
         </li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const replaceWord = (str1, str2) => str1.replaceAll(str2, "");
-
-        console.log(replaceWord("Hello World", "o"));
-      </code></pre>
-      <div id="ex1" class="output-box">Hell Wrld</div>
+      <pre><code id="code1"></code></pre>
+      <div id="ex1" class="output-box"></div>
     </div>
 
 
@@ -51,21 +46,8 @@
           of Blank Space in a string.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const countBlackSpace = str => str.split(" ").length - 1;
-
-        console.log(countBlackSpace("TypeScript is better than JavaScript"));
-
-        console.log(countBlackSpace("Dcoders"));
-
-        console.log(countBlackSpace("Learning JavaScript is a fun and enjoyable"));
-      </code></pre>
-      <div id="ex2" class="output-box">
-        4 <br>
-        0 <br>
-        6
-      </div>
+      <pre><code id="code2"></code></pre>
+      <div id="ex2" class="output-box"></div>
     </div>
 
 
@@ -78,18 +60,8 @@
           joined string as example.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const changePosition = (str1, str2) => `${str2} ${str1}`;
-
-        console.log(changePosition("Hello", "Coders"));
-
-        console.log(changePosition("Hi", "India"));
-      </code></pre>
-      <div id="ex3" class="output-box">
-        Coders Hello <br>
-        India Hi
-      </div>
+      <pre><code id="code3"></code></pre>
+      <div id="ex3" class="output-box"></div>
     </div>
 
 
@@ -101,13 +73,8 @@
         <li> Create a function which takes string as argument and return the all the small "a" to Capital "A".</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const replaceToUpper = str => str.replaceAll("a", "A");
-
-        console.log(replaceToUpper("I am learning Javascript"));
-      </code></pre>
-      <div id="ex4" class="output-box">I Am leArning JAvAscript</div>
+      <pre><code id="code4"></code></pre>
+      <div id="ex4" class="output-box"></div>
     </div>
 
 
@@ -119,18 +86,8 @@
         <li> Create a functions which takes String as argument return string by removing last character.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const removeLastChar = str => str.slice(0, - 1);
-
-        console.log(removeLastChar("Kites"));
-
-        console.log(removeLastChar("Global"));
-      </code></pre>
-      <div id="ex5" class="output-box">
-        Kite <br>
-        Globa
-      </div>
+      <pre><code id="code5"></code></pre>
+      <div id="ex5" class="output-box"></div>
     </div>
 
 
@@ -142,27 +99,8 @@
         <li> Create a functions which takes an String (includes numbers) and extract a numbers from a string.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-       const extractNumbers = str => {
-          let num = "";
-
-          for (let i = 0; i < str.length; i++) {
-            if (!isNaN(str[i]) && str[i] !== "") {
-              num += str[i];
-            }
-          }
-          return num;
-       };
-
-       console.log(extractNumbers("Dcoders15Lab"));
-
-       console.log(extractNumbers("India555aaa"));
-      </code></pre>
-      <div id="ex6" class="output-box">
-        15 <br>
-        555
-      </div>
+      <pre><code id="code6"></code></pre>
+      <div id="ex6" class="output-box"></div>
     </div>
 
 
@@ -174,18 +112,8 @@
         <li> Create a functions which takes String as argument return new string with all characters in upper case.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const changeToUpper = str => str.toUpperCase();
-
-        console.log(changeToUpper("india"));
-
-        console.log(changeToUpper("dcoders"));
-      </code></pre>
-      <div id="ex7" class="output-box">
-        INDIA <br>
-        DCODERS
-      </div>
+      <pre><code id="code7"></code></pre>
+      <div id="ex7" class="output-box"></div>
     </div>
 
 
@@ -198,18 +126,8 @@
           number datatype.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const getSum = (num1, num2) => +num1 + +num2;
-
-        console.log(getSum("20", "50"));
-
-        console.log(getSum("15", "15"));
-      </code></pre>
-      <div id="ex8" class="output-box">
-        70 <br>
-        30
-      </div>
+      <pre><code id="code8"></code></pre>
+      <div id="ex8" class="output-box"></div>
     </div>
 
 
@@ -222,18 +140,8 @@
           boolean value if String has that character at start.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const checkCharAtStart = (char1, char2) => char1.startsWith(char2);
-
-        console.log(checkCharAtStart("JavaScript", "J"));
-
-        console.log(checkCharAtStart("dcoders", "P"));
-      </code></pre>
-      <div id="ex9" class="output-box">
-        true <br>
-        false
-      </div>
+      <pre><code id="code9"></code></pre>
+      <div id="ex9" class="output-box"></div>
     </div>
 
 
@@ -246,75 +154,75 @@
           Character from string.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const getPosition = (str1, str2) => str1.indexOf(str2) + 1;
-
-        console.log(getPosition("Hello", "e"));
-
-        console.log(getPosition("TypeScript", "S"))
-      </code></pre>
-      <div id="ex10" class="output-box">
-        2 <br>
-        5
-      </div>
+      <pre><code id="code10"></code></pre>
+      <div id="ex10" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
-
-    // Ex:- 1
-
     const replaceWord = (str1, str2) => str1.replaceAll(str2, "");
 
-    console.log(replaceWord("Hello World", "o"));
+
+    var replace_word = replaceWord("Hello World", "o");
+    console.log(replace_word);
+  </script>
 
 
-
-    // Ex:- 2
-
-    const countBlackSpace = str => str.split(" ").length - 1;
-
-    console.log(countBlackSpace("TypeScript is better than JavaScript"));
-
-    console.log(countBlackSpace("Dcoders"));
-
-    console.log(countBlackSpace("Learning JavaScript is a fun and enjoyable"));
+  <script>
+    const countBlankSpace = str => str.split(" ").length - 1;
 
 
+    var blank_space1 = countBlankSpace("TypeScript is better than JavaScript");
+    console.log(blank_space1);
 
-    // Ex:- 3
 
+    var blank_space2 = countBlankSpace("Dcoders");
+    console.log(blank_space2);
+
+
+    var blank_space3 = countBlankSpace("Learning JavaScript is a fun and enjoyable");
+    console.log(blank_space3);
+  </script>
+
+
+  <script>
     const changePosition = (str1, str2) => `${str2} ${str1}`;
 
-    console.log(changePosition("Hello", "Coders"));
 
-    console.log(changePosition("Hi", "India"));
+    var change_position1 = changePosition("Hello", "Coders");
+    console.log(change_position1);
 
 
+    var change_position2 = changePosition("Hi", "India");
+    console.log(change_position2);
+  </script>
 
-    // Ex:- 4
 
+  <script>
     const replaceToUpper = str => str.replaceAll("a", "A");
 
-    console.log(replaceToUpper("I am learning Javascript"));
+
+    var replace_to_upper = replaceToUpper("I am learning Javascript");
+    console.log(replace_to_upper);
+  </script>
 
 
-
-    // Ex:- 5
-
+  <script>
     const removeLastChar = str => str.slice(0, - 1);
 
-    console.log(removeLastChar("Kites"));
 
-    console.log(removeLastChar("Global"));
+    var remove_last_char1 = removeLastChar("Kites");
+    console.log(remove_last_char1);
 
 
+    var remove_last_char2 = removeLastChar("Global");
+    console.log(remove_last_char2);
+  </script>
 
-    // Ex:- 6
 
+  <script>
     const extractNumbers = str => {
       let num = "";
 
@@ -323,53 +231,103 @@
           num += str[i];
         }
       }
+
       return num;
     };
 
-    console.log(extractNumbers("Dcoders15Lab"));
 
-    console.log(extractNumbers("India555aaa"));
+    var extract_numbers1 = extractNumbers("Dcoders15Lab");
+    console.log(extract_numbers1);
 
 
+    var extract_numbers2 = extractNumbers("India555aaa");
+    console.log(extract_numbers2);
+  </script>
 
-    // Ex:- 7
 
+  <script>
     const changeToUpper = str => str.toUpperCase();
 
-    console.log(changeToUpper("india"));
 
-    console.log(changeToUpper("dcoders"));
+    var change_to_upper1 = changeToUpper("india");
+    console.log(change_to_upper1);
 
 
+    var change_to_upper2 = changeToUpper("dcoders");
+    console.log(change_to_upper2);
+  </script>
 
-    // Ex:- 8
 
+  <script>
     const getSum = (num1, num2) => +num1 + +num2;
 
-    console.log(getSum("20", "50"));
 
-    console.log(getSum("15", "15"));
+    var get_sum1 = getSum("20", "50");
+    console.log(get_sum1);
 
 
+    var get_sum2 = getSum("15", "15");
+    console.log(get_sum2);
+  </script>
 
-    // Ex:- 9
 
+  <script>
     const checkCharAtStart = (char1, char2) => char1.startsWith(char2);
 
-    console.log(checkCharAtStart("JavaScript", "J"));
 
-    console.log(checkCharAtStart("dcoders", "P"));
+    var check_char_at_start1 = checkCharAtStart("JavaScript", "J");
+    console.log(check_char_at_start1);
 
 
+    var check_char_at_start2 = checkCharAtStart("dcoders", "P");
+    console.log(check_char_at_start2);
+  </script>
 
-    // Ex:- 10
 
+  <script>
     const getPosition = (str1, str2) => str1.indexOf(str2) + 1;
 
-    console.log(getPosition("Hello", "e"));
 
-    console.log(getPosition("TypeScript", "S"))
+    var get_position1 = getPosition("Hello", "e");
+    console.log(get_position1);
 
+
+    var get_position2 = getPosition("TypeScript", "S");
+    console.log(get_position2);
+  </script>
+
+
+
+  <script>
+    ex1.innerHTML = `${replace_word}`;
+    code1.innerText = document.querySelectorAll("script")[0].innerText;
+
+    ex2.innerHTML = `${blank_space1} <br> ${blank_space2} <br> ${blank_space3}`;
+    code2.innerText = document.querySelectorAll("script")[1].innerText;
+
+    ex3.innerHTML = `${change_position1} <br> ${change_position2}`;
+    code3.innerText = document.querySelectorAll("script")[2].innerText;
+
+    ex4.innerHTML = `${replace_to_upper}`;
+    code4.innerText = document.querySelectorAll("script")[3].innerText;
+
+    ex5.innerHTML = `${remove_last_char1} <br> ${remove_last_char2}`;
+    code5.innerText = document.querySelectorAll("script")[4].innerText;
+
+    ex6.innerHTML = `${extract_numbers1} <br> ${extract_numbers2}`;
+    code6.innerText = document.querySelectorAll("script")[5].innerText;
+
+    ex7.innerHTML = `${change_to_upper1} <br> ${change_to_upper2}`;
+    code7.innerText = document.querySelectorAll("script")[6].innerText;
+
+    ex8.innerHTML = `${get_sum1} <br> ${get_sum2}`;
+    code8.innerText = document.querySelectorAll("script")[7].innerText;
+
+    ex9.innerHTML = `${check_char_at_start1} <br> ${check_char_at_start2}`;
+    code9.innerText = document.querySelectorAll("script")[8].innerText;
+
+    ex10.innerHTML = `${get_position1} <br> ${get_position2}`;
+    code10.innerText = document.querySelectorAll("script")[9].innerText;
   </script>
 
 

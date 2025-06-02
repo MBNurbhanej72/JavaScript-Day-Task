@@ -27,71 +27,13 @@
   <div class="container">
     <h1>Form With Local Storage</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create a form with name and email filed and add a button.</li> <br>
         <li> Check proper validation for name and email.</li> <br>
         <li> If I press add button then save data in local storage in array.</li>
       </ul>
       <br>
-      <pre>
-        <code>
-          const name = document.querySelector("#name");
-
-          const email = document.querySelector("#email");
-
-          const nameError = document.querySelector(".nameError");
-
-          const emailError = document.querySelector(".emailError");
-
-          const submitBtn = document.querySelector("#submitBtn");
-
-
-          function handleSubmitData(event) {
-            event.preventDefault();
-
-            let isValid = true;
-
-            if (!name.value.trim()) {
-              nameError.style.display = "block";
-              isValid = false;
-            } else {
-              nameError.style.display = "none";
-            }
-
-            if (!email.value.trim()) {
-              emailError.style.display = "block";
-              isValid = false;
-            } else {
-              emailError.style.display = "none";
-            }
-
-            if (isValid) {
-              var id = Math.random().toString(16).slice(2);
-
-              const users = JSON.parse(localStorage.getItem("Users")) || [];
-
-              const userData = {
-                id: id,
-                name: name.value,
-                email: email.value
-              };
-
-              users.push(userData);
-
-              localStorage.setItem("Users", JSON.stringify(users));
-
-              resetAllField();
-            }
-          }
-
-
-          function resetAllField() {
-            name.value = "";
-            email.value = "";
-          }
-        </code>
-      </pre>
+      <pre><code id="code"></code></pre>
       <br>
       <br>
       <br>
@@ -119,7 +61,6 @@
 
 
   <script>
-
     const name = document.querySelector("#name");
 
     const email = document.querySelector("#email");
@@ -131,8 +72,6 @@
     const submitBtn = document.querySelector("#submitBtn");
 
 
-
-
     function handleSubmitData(event) {
       event.preventDefault();
 
@@ -141,13 +80,16 @@
 
       if (!name.value.trim()) {
         nameError.style.display = "block";
+
         isValid = false;
       } else {
         nameError.style.display = "none";
       }
 
+
       if (!email.value.trim()) {
         emailError.style.display = "block";
+
         isValid = false;
       } else {
         emailError.style.display = "none";
@@ -165,22 +107,28 @@
           email: email.value
         };
 
+
         users.push(userData);
 
         localStorage.setItem("Users", JSON.stringify(users));
 
         resetAllField();
+
       }
+
     }
-
-
 
 
     function resetAllField() {
       name.value = "";
       email.value = "";
     }
+  </script>
 
+
+
+  <script>
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

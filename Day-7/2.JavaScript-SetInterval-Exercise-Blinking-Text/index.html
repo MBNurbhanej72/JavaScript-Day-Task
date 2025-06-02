@@ -27,7 +27,6 @@
   <div class="container">
     <h1>Blinking Text</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create a simple HTML element and make its text blink continuously using setInterval.</li>
         <br>
@@ -38,17 +37,9 @@
         <li> So like blinking.</li>
       </ul>
       <br>
-      <pre>
-        <code>
-          const text = document.getElementById("text");
-
-          setInterval(() => {
-            text.classList.toggle("activeText");
-          }, 1000);
-        </code>
-      </pre>
+      <pre><code id="code"></code></pre>
       <div id="ex1" class="output-box">
-        <p id="text">Hello JavaScript</p>
+        <p id="text"></p>
       </div>
     </div>
   </div>
@@ -56,13 +47,18 @@
 
 
   <script>
-
     const text = document.getElementById("text");
 
     setInterval(() => {
       text.classList.toggle("activeText");
     }, 1000);
+  </script>
 
+
+
+  <script>
+    text.innerHTML = `Hello JavaScript`;
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

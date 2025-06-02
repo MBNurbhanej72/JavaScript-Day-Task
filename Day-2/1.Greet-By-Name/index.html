@@ -24,7 +24,6 @@
   <div class="container">
     <h1>Greet By Name</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create a function greet(name).</li>
         <br>
@@ -35,30 +34,28 @@
         <li> console.log("Hello, " + name + "!");</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        function greet(name) {
-          console.log("Hello, " + name + "!");
-        }
-  
-        greet("MohammadAli")
-      </code></pre>
-      <div id="ex1" class="output-box">Hello, MohammadAli!</div>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
-
     function greet(name) {
-      console.log("Hello, " + name + "!");
+      return "Hello, " + name + "!";
     }
 
-    greet("MohammadAli")
 
+    const myName = greet("MohammadAli");
+    console.log(myName);
   </script>
 
+
+  <script>
+    ex1.innerHTML = `${myName}`;
+    code.innerText = document.querySelector("script").innerText
+  </script>
 
 
 </body>

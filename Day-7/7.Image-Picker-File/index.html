@@ -7,7 +7,7 @@
   <title>Image Picker File</title>
 
   <!-- =====  Custom CSS  ===== -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/style.css">
 
   <!-- =====  Favicon Link ===== -->
   <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
@@ -26,6 +26,9 @@
 
   <div class="container">
     <h1>Image Picker File</h1>
+    <br>
+    <pre><code id="code"></code></pre>
+
     <div class="main">
 
       <div class="sectionOne">
@@ -192,8 +195,8 @@
 
 
   <script>
-
     const myFile = document.getElementById("myFile");
+
     const myImage = document.getElementById("myImage");
 
     const imgDiv = document.querySelector(".image-div");
@@ -214,10 +217,11 @@
     });
 
 
-
     imgDiv.addEventListener("click", (e) => {
       const image = e.target; // Clicked Image
+
       const label = e.target.parentElement;
+
 
       image.addEventListener("change", (e) => {
         const img = e.target.files[0];
@@ -228,26 +232,39 @@
 
         const reader = new FileReader();
 
+
         reader.onload = (e) => {
           const prev = image.previousElementSibling;
+
           const img = prev.querySelector("img");
+
           img.src = e.target.result;
+
           cancelIcon.style.display = "block";
+
           prev.style.pointerEvents = "none";
         };
 
+
         reader.readAsDataURL(img);
+
 
         cancelIcon.addEventListener("click", (e) => {
           img.src = "assets/images/null-img.png";
+
           console.log("hello");
         });
+
       });
+
     });
-
-
   </script>
 
+
+
+  <script>
+    code.innerText = document.querySelector("script").innerText
+  </script>
 
 
   <!-- =====  Font Awesome JS ===== -->

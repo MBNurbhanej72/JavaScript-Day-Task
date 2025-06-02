@@ -24,62 +24,61 @@
   <div class="container">
     <h1>Item Availability</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
-      <p>● Create variables itemInStock and isSubscribed. <br>
-        ● Use the && operator to log "You can purchase this item" if both conditions are true. <br> ● Otherwise, provide
-        a
-        reason
-        why they cannot purchase. <br>
-        ● If itemInStock is true and isSubscribed is true then print message "You can purchase this item" <br>
-        ● If itemInStock is false then print "The item is out of stock" <br>
-        ● If isSubscribed is false then print message "You need to be subscribed" <br>
-        ● Handle via function all code on clicking button
-
-      </p>
+      <ul>
+        <li> Create variables itemInStock and isSubscribed.</li>
+        <br>
+        <li> Use the && operator to log "You can purchase this item" if both conditions are true.</li>
+        <br>
+        <li> Otherwise, provide a reason why they cannot purchase.</li>
+        <br>
+        <li> If itemInStock is true and isSubscribed is true then print message "You can purchase this item".</li>
+        <br>
+        <li> If itemInStock is false then print "The item is out of stock".</li>
+        <br>
+        <li> If isSubscribed is false then print message "You need to be subscribed".</li>
+        <br>
+        <li> Handle via function all code on clicking button.</li>
+      </ul>
       <br>
-      <pre>
-      <code>   
-        let itemInStock = true;
-
-        let isSubscribed = false;
-
-        function checkStockOrSubscribed() {
-          if (itemInStock == true && isSubscribed == true) {
-            console.log("You can purchase this item");
-          } else if (itemInStock == false && isSubscribed == true) {
-            console.log("The item is out of stock");
-          } else if (itemInStock == true && isSubscribed == false) {
-            console.log("You need to be subscribed");
-          } else {
-            console.log("You can't purchase this item");
-          }
-        }
-      </code></pre>
-      <div id="ex1" class="output-box">You need to be subscribed</div>
-      <button class="output-box-btn" onclick="checkStockOrSubscribed()">Click To Output In Console</button>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
+      <button class="output-box-btn" onclick="checkStockOrSubscribed(), stockOrsubscribed()">Click To Output</button>
     </div>
   </div>
 
 
 
   <script>
-
     let itemInStock = true;
 
     let isSubscribed = false;
 
+
     function checkStockOrSubscribed() {
       if (itemInStock == true && isSubscribed == true) {
-        console.log("You can purchase this item");
+        return "You can purchase this item";
       } else if (itemInStock == false && isSubscribed == true) {
-        console.log("The item is out of stock");
+        return "The item is out of stock";
       } else if (itemInStock == true && isSubscribed == false) {
-        console.log("You need to be subscribed");
+        return "You need to be subscribed";
       } else {
-        console.log("You can't purchase this item");
+        return "You can't purchase this item";
       }
     }
 
+
+    var stock_subscribed = checkStockOrSubscribed();
+    console.log(stock_subscribed);
+  </script>
+
+
+
+  <script>
+    function stockOrsubscribed() {
+      ex1.innerHTML = `${stock_subscribed}`;
+    }
+
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

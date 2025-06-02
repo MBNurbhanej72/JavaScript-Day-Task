@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flavor Choice</title>
+  <title>Flavour Choice</title>
 
   <!-- =====  Custom CSS  ===== -->
   <link rel="stylesheet" href="style.css">
@@ -22,55 +22,62 @@
 
 
   <div class="container">
-    <h1>Flavor Choice</h1>
+    <h1>Flavour Choice</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
-      <p>● Create variables likesChocolate and likesVanilla <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● let likesChocolate = false; <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● let likesVanilla = true; <br>
-        ● Create a function and call oncliking button <br>
-        ● Inside this function use the || operator to log "Here's your ice cream" <br> ● If at least one flavor
-        preference
-        is
-        true. <br> ● Otherwise, log "Sorry, we don't have a flavor for you". <br>
-        ● Change after all two let (variables) value to false and check condition
-      </p>
+      <ul>
+        <li> Create variables likesChocolate and likesVanilla.</li>
+        <ul>
+          <li>let likesChocolate = false;</li>
+        </ul>
+        <ul>
+          <li>let likesVanilla = true;</li>
+        </ul>
+        <br>
+        <li> Create a function and call oncliking button.</li> <br>
+        <li> Inside this function use the || operator to log "Here's your ice cream".</li> <br>
+        <li> If at least one flavour
+          preference
+          is
+          true.</li> <br>
+        <li> Otherwise, log "Sorry, we don't have a flavour for you".</li> <br>
+        <li> Change after all two let (variables) value to false and check condition.</li>
+      </ul>
       <br>
-      <pre>
-      <code>   
-        let likesChocolate = false;
-
-        let likesVanilla = true;
-
-        function checkFlavour() {
-          if (likesChocolate || likesVanilla) {
-            console.log("Here's your ice cream");
-          } else {
-            console.log("Sorry, we don't have a flavor for you");
-          }
-        }
-      </code></pre>
-      <div id="ex1" class="output-box">Here's your ice cream</div>
-      <button class="output-box-btn" onclick="checkFlavour()">Click To Output In Console</button>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
+      <button class="output-box-btn" onclick="checkFlavour(), getFlavour()">Click To Output</button>
     </div>
   </div>
 
 
 
   <script>
-
     let likesChocolate = false;
 
     let likesVanilla = true;
 
+
     function checkFlavour() {
       if (likesChocolate || likesVanilla) {
-        console.log("Here's your ice cream");
+        return "Here's your ice cream";
       } else {
-        console.log("Sorry, we don't have a flavor for you");
+        return "Sorry, we don't have a flavour for you";
       }
     }
 
+
+    var flavour = checkFlavour();
+    console.log(flavour);
+  </script>
+
+
+
+  <script>
+    function getFlavour() {
+      ex1.innerHTML = `${flavour}`;
+    }
+
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

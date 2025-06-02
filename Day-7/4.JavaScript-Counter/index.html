@@ -27,7 +27,6 @@
   <div class="container">
     <h1>JavaScript Counter</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Need to make a counter using setInterval.</li>
         <br>
@@ -57,38 +56,9 @@
         </ul>
       </ul>
       <br>
-      <pre>
-        <code>
-          const box = document.querySelector(".output-box");
-          const btn1 = document.querySelector(".btn1");
-          const btn2 = document.querySelector(".btn2");
-          const btn3 = document.querySelector(".btn3");
-
-          var counter = 0;
-
-          var interval;
-
-          box.innerText = counter;
-
-          function startCounter() {
-            interval = setInterval(() => {
-              counter++;
-              box.innerText = counter;
-            }, 1000);
-          }
-
-          function stopCounter() {
-            clearInterval(interval);
-          }
-
-          function resetCounter() {
-            counter = 0;
-            box.innerText = counter;
-          }
-        </code>
-      </pre>
-      <div id="ex1" class="output-box"></div> <br>
-      <div style="display: flex; gap: 50px;">
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
+      <div style="display: flex; flex-wrap: wrap;">
         <button class="output-box-btn btn1" onclick="startCounter()">Start</button>
         <button class="output-box-btn btn2" onclick="stopCounter()">Stop</button>
         <button class="output-box-btn btn3" onclick="resetCounter()">Reset</button>
@@ -99,17 +69,23 @@
 
 
   <script>
-
     const box = document.querySelector(".output-box");
+
     const btn1 = document.querySelector(".btn1");
+
     const btn2 = document.querySelector(".btn2");
+
     const btn3 = document.querySelector(".btn3");
+
 
     var counter = 0;
 
+
     var interval;
 
+
     box.innerText = counter;
+
 
     function startCounter() {
       interval = setInterval(() => {
@@ -118,15 +94,22 @@
       }, 1000);
     }
 
+
     function stopCounter() {
       clearInterval(interval);
     }
+
 
     function resetCounter() {
       counter = 0;
       box.innerText = counter;
     }
+  </script>
 
+
+
+  <script>
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

@@ -24,7 +24,6 @@
   <div class="container">
     <h1>Grade Calculator</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create variable and assign any numbers between 0 to 100.</li>
         <br>
@@ -69,57 +68,49 @@
         <li> Create a button for calling function.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        let marks = 95;
-
-        function checkMarks() {
-          if (marks > 100) {
-            console.log("This is not valid number");
-          } else if (marks >= 90 && marks <= 100) {
-            console.log("Your grade is A");
-          } else if (marks >= 80 && marks <= 89) {
-            console.log("Your grade is B");
-          } else if (marks >= 70 && marks <= 79) {
-            console.log("Your grade is C");
-          } else if (marks >= 60 && marks <= 69) {
-            console.log("Your grade is D");
-          } else if (marks >= 0 && marks <= 59) {
-            console.log("Your grade is F");
-          } else {
-            console.log("This is not valid number");
-          }
-        }
-      </code></pre>
-      <div id="ex1" class="output-box">Your grade is A</div>
-      <button class="output-box-btn" onclick="checkMarks()">Click To Output In Console</button>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
+      <button class="output-box-btn" onclick="getMarks()">Click To Output</button>
     </div>
   </div>
 
 
 
   <script>
-
     let marks = 95;
 
-    function checkMarks() {
+
+    function checkMarks(marks) {
       if (marks > 100) {
-        console.log("This is not valid number");
+        return "This is not a valid number";
       } else if (marks >= 90 && marks <= 100) {
-        console.log("Your grade is A");
+        return "Your grade is A";
       } else if (marks >= 80 && marks <= 89) {
-        console.log("Your grade is B");
+        return "Your grade is B";
       } else if (marks >= 70 && marks <= 79) {
-        console.log("Your grade is C");
+        return "Your grade is C";
       } else if (marks >= 60 && marks <= 69) {
-        console.log("Your grade is D");
+        return "Your grade is D";
       } else if (marks >= 0 && marks <= 59) {
-        console.log("Your grade is F");
+        return "Your grade is F";
       } else {
-        console.log("This is not valid number");
+        return "This is not a valid number";
       }
     }
 
+
+    var getGrade = checkMarks(marks);
+    console.log(getGrade);
+  </script>
+
+
+
+  <script>
+    function getMarks() {
+      ex1.innerHTML = checkMarks(marks);
+    }
+
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

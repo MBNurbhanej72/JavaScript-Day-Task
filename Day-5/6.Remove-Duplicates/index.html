@@ -24,7 +24,6 @@
   <div class="container">
     <h1>Remove Duplicates (Using includes())</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create an array like this const numbers = [1, 2, 2, 3, 4, 1];</li> <br>
         <li> Write a function that takes an array as parameter and print a new array containing only
@@ -35,33 +34,16 @@
         <li> Final result will be console.log(uniqueNumbers); // Output: [1, 2, 3, 4];</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const numbers = [1, 2, 2, 3, 4, 1];
-
-        function removeDuplicateValue(num) {
-          const uniqueNumbers = [];
-
-          for (let i = 0; i < num.length; i++) {
-
-            if (!uniqueNumbers.includes(num[i])) {
-              uniqueNumbers.push(num[i]);
-            }
-          }
-          console.log(uniqueNumbers);
-        }
-
-        removeDuplicateValue(numbers)
-      </code></pre>
-      <div id="ex1" class="output-box">[1,2,3,4]</div>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
-
     const numbers = [1, 2, 2, 3, 4, 1];
+
 
     function removeDuplicateValue(num) {
       const uniqueNumbers = [];
@@ -72,11 +54,20 @@
           uniqueNumbers.push(num[i]);
         }
       }
-      console.log(uniqueNumbers);
+
+      return uniqueNumbers;
     }
 
-    removeDuplicateValue(numbers)
 
+    var remove_duplicate_value = removeDuplicateValue(numbers);
+    console.log(remove_duplicate_value)
+  </script>
+
+
+
+  <script>
+    ex1.innerHTML = `${JSON.stringify(remove_duplicate_value)}`;
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

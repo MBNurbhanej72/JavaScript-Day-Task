@@ -35,16 +35,15 @@
       </p>
       <br>
       <pre>
-      <code>   
-        for (let i = 0; i <= 5; i++) {
+    <code>   
+    for (let i = 0; i <= 5; i++) {
+      for (let j = 0; j < i; j++) {
+        document.write(" * ");
+      }
 
-          for (let j = 0; j < i; j++) {
-            document.write(" * ");
-          }
-
-          document.write("< br >");
-        }
-      </code></pre>
+      document.write("< br >");
+    }
+    </code></pre>
       <div id="ex1" class="output-box" style="text-align: left;">* <br>
         * * <br>
         * * * <br>
@@ -63,16 +62,15 @@
       </p>
       <br>
       <pre>
-      <code>   
-        for (let i = 5; i >= 1; i- -) {
+    <code>   
+    for (let i = 5; i >= 1; i- -) {
+      for (let j = 0; j < i; j++) {
+        document.write(" * ");
+      }
 
-          for (let j = 0; j < i; j++) {
-            document.write(" * ");
-          }
-
-          document.write("< br >");
-        }
-      </code></pre>
+      document.write("< br >");
+    }
+    </code></pre>
       <div id="ex1" class="output-box" style="text-align: left;">* * * * * <br>
         * * * * <br>
         * * * <br>
@@ -91,15 +89,15 @@
       </p>
       <br>
       <pre>
-      <code>   
-        for (let i = 1; i < 10; i += 2) {
+    <code>   
+    for (let i = 1; i < 10; i += 2) {
+      for (let j = 0; j < i; j++) {
+        document.write(" * ");
+      }
 
-          for (let j = 0; j < i; j++) {
-            document.write(" * ");
-          }
-          document.write("< br >");
-        }
-      </code></pre>
+      document.write("< br >");
+    }
+    </code></pre>
       <div id="ex1" class="output-box" style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*
         <br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* * * <br>
@@ -120,15 +118,15 @@
       </p>
       <br>
       <pre>
-      <code>   
-        for (let i = 10; i > 0; i -= 2) {
-
-          for (let j = 0; j < i; j++) {
-            document.write(" * ");
-          }
-          document.write("< br >");
-        }
-      </code></pre>
+    <code>   
+    for (let i = 10; i > 0; i -= 2) {
+      for (let j = 0; j < i; j++) {
+        document.write(" * ");
+      }
+      
+      document.write("< br >");
+    }
+    </code></pre>
       <div id="ex1" class="output-box" style="text-align: left;">* * * * * * * * * <br>
         &nbsp;&nbsp;&nbsp;* * * * * * * <br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* * * * * <br>
@@ -148,15 +146,15 @@
       </p>
       <br>
       <pre>
-      <code>   
-        for (let i = 1; i <= 5; i++) {
+    <code>   
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j <= 5; j++) {
+        document.write(" # ");
+      }
 
-          for (let j = 1; j <= 5; j++) {
-            document.write(" # ");
-          }
-          document.write("< br >");
-        }
-      </code></pre>
+      document.write("< br >");
+    }
+    </code></pre>
       <div id="ex1" class="output-box" style="text-align: left;"># # # # # <br>
         # # # # # <br>
         # # # # # <br>
@@ -176,15 +174,15 @@
       </p>
       <br>
       <pre>
-      <code>   
-        for (let i = 1; i <= 5; i++) {
+    <code>   
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j <= 5; j++) {
+        document.write(" $ ");
+      }
 
-          for (let j = 1; j <= 5; j++) {
-            document.write(" $ ");
-          }
-          document.write("< br >");
-        }
-      </code></pre>
+      document.write("< br >");
+    }
+    </code></pre>
       <div id="ex1" class="output-box" style="text-align: left;">$ $ $ $ $ <br>
         $ $ $ $ $ <br>
         $ $ $ $ $ <br>
@@ -204,15 +202,15 @@
       </p>
       <br>
       <pre>
-      <code>   
-        for (let i = 1; i <= 5; i++) {
+    <code>   
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j <= 5; j++) {
+        document.write(" & ");
+      }
 
-          for (let j = 1; j <= 5; j++) {
-            document.write(" & ");
-          }
-          document.write("< br >");
-        }
-      </code></pre>
+      document.write("< br >");
+    }
+    </code></pre>
       <div id="ex1" class="output-box" style="text-align: left;">& & & & & <br>
         & & & & & <br>
         & & & & & <br>
@@ -236,23 +234,23 @@
       </p>
       <br>
       <pre>
-      <code>   
-        for (let i = 1; i < 9; i += 2) {
+    <code>   
+    for (let i = 1; i < 9; i += 2) {
+      for (let j = 0; j < i; j++) {
+        document.write(" * ");
+      }
 
-          for (let j = 0; j < i; j++) {
-            document.write(" * ");
-          }
-          document.write("< br >");
-        }
-  
-        for (let i = 9; i > 0; i -= 2) {
-  
-          for (let j = 0; j < i; j++) {
-            document.write(" * ");
-          }
-          document.write("< br >");
-        }
-      </code></pre>
+      document.write("< br >");
+    }
+      
+    for (let i = 9; i > 0; i -= 2) {
+      for (let j = 0; j < i; j++) {
+        document.write(" * ");
+      }
+
+      document.write("< br >");
+    }
+    </code></pre>
       <div id="ex1" class="output-box" style="text-align: left;">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* <br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* * * <br>
@@ -285,18 +283,19 @@
       </p>
       <br>
       <pre>
-      <code>   
-        for (let i = 0; i < 5; i++) {
-          for (let j = 0; j < 5; j++) {
-            if (i == 0 || i == 4 || j == 0 || j == 4) {
-              document.write("*");
-            } else {
-              document.write("& nbsp;& nbsp;");
-            }
-          }
-          document.write("< br >");
+    <code>   
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < 5; j++) {
+        if (i == 0 || i == 4 || j == 0 || j == 4) {
+          document.write("*");
+        } else {
+          document.write("& nbsp;& nbsp;");
         }
-      </code></pre>
+      }
+
+      document.write("< br >");
+    }
+    </code></pre>
       <div id="ex1" class="output-box" style="text-align: left;">***** <br>
         *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>
         *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>
@@ -315,17 +314,18 @@
       </p>
       <br>
       <pre>
-      <code>   
-        for (let i = 1; i < 5; i++) {
-          for (let s = 4; s >= 0; s--) {
-            document.write("& nbsp;& nbsp;");
-          }
-          for (let j = 1; j <= i; j++) {
-            document.write("& nbsp;& nbsp;", i);
-          }
-          document.write("< br >");
-        }
-      </code></pre>
+    <code>   
+    for (let i = 1; i < 5; i++) {
+      for (let s = 4; s >= 0; s--) {
+        document.write("& nbsp;& nbsp;");
+      }
+      for (let j = 1; j <= i; j++) {
+        document.write("& nbsp;& nbsp;", i);
+      }
+
+      document.write("< br >");
+    }
+    </code></pre>
       <div id="ex1" class="output-box" style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;1 <br>
         &nbsp;&nbsp;2 2 <br>
         &nbsp;3 3 3 <br>
@@ -343,14 +343,14 @@
       </p>
       <br>
       <pre>
-      <code>   
-        for (let i = 1; i < 5; i++) {
-          for (let j = 1; j <= i; j++) {
-            document.write(j, "& nbsp;& nbsp;");
-          }
-          document.write("< br >");
-        }
-      </code></pre>
+    <code>   
+    for (let i = 1; i < 5; i++) {
+      for (let j = 1; j <= i; j++) {
+        document.write(j, "& nbsp;& nbsp;");
+      }
+      document.write("< br >");
+    }
+    </code></pre>
       <div id="ex1" class="output-box" style="text-align: left;">1 <br>
         1 2 <br>
         1 2 3 <br>
@@ -368,14 +368,15 @@
       </p>
       <br>
       <pre>
-      <code>   
-        for (let i = 5; i > 1; i--) {
-          for (let j = 1; j < i; j++) {
-            document.write(j, "& nbsp;& nbsp;");
-          }
-          document.write("< br >");
-        }
-      </code></pre>
+    <code>   
+    for (let i = 5; i > 1; i--) {
+      for (let j = 1; j < i; j++) {
+        document.write(j, "& nbsp;& nbsp;");
+      }
+
+      document.write("< br >");
+    }
+    </code></pre>
       <div id="ex1" class="output-box" style="text-align: left;">1 2 3 4 <br>
         1 2 3 <br>
         1 2 <br>
@@ -393,18 +394,19 @@
       </p>
       <br>
       <pre>
-      <code>   
-        for (let i = 1; i < 5; i++) {
-          for (let j = 1; j <= i; j++) {
-            if (j % 2 == 0) {
-              document.write("0", "& nbsp;& nbsp;");
-            } else {
-              document.write("1", "& nbsp;& nbsp;");
-            }
-          }
-          document.write("< br >");
+    <code>   
+    for (let i = 1; i < 5; i++) {
+      for (let j = 1; j <= i; j++) {
+        if (j % 2 == 0) {
+          document.write("0", "& nbsp;& nbsp;");
+        } else {
+          document.write("1", "& nbsp;& nbsp;");
         }
-      </code></pre>
+      }
+      
+      document.write("< br >");
+    }
+    </code></pre>
       <div id="ex1" class="output-box" style="text-align: left;">1 <br>
         1 0 <br>
         1 0 1 <br>

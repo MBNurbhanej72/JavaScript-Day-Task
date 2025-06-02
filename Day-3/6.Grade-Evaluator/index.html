@@ -24,72 +24,75 @@
   <div class="container">
     <h1>Grade Evaluator</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
-      <p>● Create a variable grade with a letter grade <br>
-        ● Assign any one value from this ('A', 'B', 'C', 'D', 'F'). <br>
-        ● Se a switch statement to output a message: <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● "Excellent" for 'A' <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● "Good" for 'B' <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● "Satisfactory" for 'C' <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● "Needs improvement" for 'D' <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● "Failed" for 'F' <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● Include a default case for an invalid grade.
-      </p>
+      <ul>
+        <li> Create a variable grade with a letter grade.</li>
+        <br>
+        <li> Assign any one value from this ('A', 'B', 'C', 'D', 'F').</li>
+        <br>
+        <li> Se a switch statement to output a message:</li>
+        <ul>
+          <li>"Excellent" for 'A' </li>
+        </ul>
+        <ul>
+          <li>"Good" for 'B' </li>
+        </ul>
+        <ul>
+          <li>"Satisfactory" for 'C' </li>
+        </ul>
+        <ul>
+          <li>"Needs improvement" for 'D'</li>
+        </ul>
+        <ul>
+          <li>"Failed" for 'F' </li>
+        </ul>
+        <ul>
+          <li>Include a default case for an invalid grade.</li>
+        </ul>
+      </ul>
       <br>
-      <pre>
-      <code>   
-        let grade = "B";
-
-        switch (grade) {
-          case "A":
-            console.log("Excellent");
-            break;
-          case "B":
-            console.log("Good");
-            break;
-          case "C":
-            console.log("Satisfactory");
-            break;
-          case "D":
-            console.log("Needs improvement");
-            break;
-          case "F":
-            console.log("Failed");
-            break;
-          default:
-            console.log("Invalid Grade");
-        }
-      </code></pre>
-      <div id="ex1" class="output-box">Good</div>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
-
     let grade = "B";
 
-    switch (grade) {
-      case "A":
-        console.log("Excellent");
-        break;
-      case "B":
-        console.log("Good");
-        break;
-      case "C":
-        console.log("Satisfactory");
-        break;
-      case "D":
-        console.log("Needs improvement");
-        break;
-      case "F":
-        console.log("Failed");
-        break;
-      default:
-        console.log("Invalid Grade");
+
+    function checkGrade(grade) {
+      switch (grade) {
+        case "A":
+          return "Excellent";
+          break;
+        case "B":
+          return "Good";
+          break;
+        case "C":
+          return "Satisfactory";
+          break;
+        case "D":
+          return "Needs improvement";
+          break;
+        case "F":
+          return "Failed";
+          break;
+        default:
+          return "Invalid Grade";
+      }
     }
 
+
+    var getGrade = checkGrade(grade);
+    console.log(getGrade)
+  </script>
+
+
+
+  <script>
+    ex1.innerHTML = `${getGrade}`;
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

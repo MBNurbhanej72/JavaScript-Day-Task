@@ -24,7 +24,6 @@
   <div class="container">
     <h1>Remove All Occurrences of a Substring</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Write a function that takes a string and a substring as parameters.</li>
         <br>
@@ -33,36 +32,35 @@
           string and print new string in console.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const testStr = "This is a test string";
-        const subStr = "is";
-
-        function removeStr(testStr, subStr) {
-          const newStr = testStr.replaceAll(subStr, "");
-          console.log(newStr);
-        }
-
-        removeStr(testStr, subStr)
-      </code></pre>
-      <div id="ex1" class="output-box">Th a test string</div>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
-
     const testStr = "This is a test string";
+
     const subStr = "is";
+
 
     function removeStr(testStr, subStr) {
       const newStr = testStr.replaceAll(subStr, "");
-      console.log(newStr);
+
+      return newStr;
     }
 
-    removeStr(testStr, subStr)
 
+    var remove_str = removeStr(testStr, subStr);
+    console.log(remove_str);
+  </script>
+
+
+
+  <script>
+    ex1.innerHTML = `${remove_str}`;
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

@@ -24,7 +24,6 @@
   <div class="container">
     <h1>Check Discount Based On Age</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create object with name and age value.</li>
         <br>
@@ -66,59 +65,50 @@
         <li> Click button should create function.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        let personDetail = {
-          name: "MB",
-          age: 20
-        };
-  
-        function checkDiscount() {
-          if (personDetail.age > 50) {
-            console.log(personDetail.name + " Sorry, No Discount Available.");
-          } else if (personDetail.age >= 40 && personDetail.age <= 50) {
-            console.log(personDetail.name + " You are eligible for a 40% discount!");
-          } else if (personDetail.age >= 30 && personDetail.age <= 39) {
-            console.log(personDetail.name + " You are eligible for a 30% discount!");
-          } else if (personDetail.age >= 20 && personDetail.age <= 29) {
-            console.log(personDetail.name + " You are eligible for a 20% discount!");
-          } else if (personDetail.age >= 0 && personDetail.age <= 19) {
-            console.log(personDetail.name + " You are eligible for a 10% discount!");
-          } else {
-            console.log("This is not valid age");
-          }
-        }
-      </code></pre>
-      <div id="ex1" class="output-box">MB You are eligible for a 20% discount!</div>
-      <button class="output-box-btn" onclick="checkDiscount()">Click To Output In Console</button>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
+      <button class="output-box-btn" onclick="getDiscount()">Click To Output</button>
     </div>
   </div>
 
 
 
   <script>
-
     let personDetail = {
       name: "MB",
       age: 20
     };
 
-    function checkDiscount() {
+
+    function checkDiscount(personDetail) {
       if (personDetail.age > 50) {
-        console.log(personDetail.name + " Sorry, No Discount Available.");
+        return personDetail.name + " Sorry, No Discount Available.";
       } else if (personDetail.age >= 40 && personDetail.age <= 50) {
-        console.log(personDetail.name + " You are eligible for a 40% discount!");
+        return personDetail.name + " You are eligible for a 40% discount!";
       } else if (personDetail.age >= 30 && personDetail.age <= 39) {
-        console.log(personDetail.name + " You are eligible for a 30% discount!");
+        return personDetail.name + " You are eligible for a 30% discount!";
       } else if (personDetail.age >= 20 && personDetail.age <= 29) {
-        console.log(personDetail.name + " You are eligible for a 20% discount!");
+        return personDetail.name + " You are eligible for a 20% discount!";
       } else if (personDetail.age >= 0 && personDetail.age <= 19) {
-        console.log(personDetail.name + " You are eligible for a 10% discount!");
+        return personDetail.name + " You are eligible for a 10% discount!";
       } else {
-        console.log("This is not valid age");
+        return "This is not valid age";
       }
     }
 
+
+    var discount = checkDiscount(personDetail);
+    console.log(discount);
+  </script>
+
+
+
+  <script>
+    function getDiscount() {
+      ex1.innerHTML = `${discount}`;
+    }
+
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

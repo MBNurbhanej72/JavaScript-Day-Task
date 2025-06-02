@@ -32,13 +32,8 @@
         <li> Calculate and print the sum of num1 and num2.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        let num1 = 10;
-        let num2 = 20;
-        console.log(num1 + num2);
-      </code></pre>
-      <div id="ex1" class="output-box">30</div>
+      <pre><code id="code1"></code></pre>
+      <div id="ex1" class="output-box"></div>
     </div>
 
 
@@ -52,13 +47,8 @@
         <li> Calculate and print the difference between num3 and num4.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        let num3 = 30;
-        let num4 = 10;
-        console.log(num3 - num4);
-      </code></pre>
-      <div id="ex2" class="output-box">20</div>
+      <pre><code id="code2"></code></pre>
+      <div id="ex2" class="output-box"></div>
     </div>
 
 
@@ -72,13 +62,8 @@
         <li> Calculate and print the multiplication of num5 and num6.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        let num5 = 30;
-        let num6 = 10;
-        console.log(num5 * num6);
-      </code></pre>
-      <div id="ex3" class="output-box">300</div>
+      <pre><code id="code3"></code></pre>
+      <div id="ex3" class="output-box"></div>
     </div>
 
 
@@ -92,13 +77,8 @@
         <li> Calculate and print the result of dividing num7 by num8.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        let num7 = 30;
-        let num8 = 10;
-        console.log(num7 / num8);
-      </code></pre>
-      <div id="ex4" class="output-box">3</div>
+      <pre><code id="code4"></code></pre>
+      <div id="ex4" class="output-box"></div>
     </div>
 
 
@@ -112,13 +92,8 @@
         <li> Calculate and print the when num9 is divided by num10.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        let num9 = 30;
-        let num10 = 10;
-        console.log(num10 / num9);
-      </code></pre>
-      <div id="ex5" class="output-box">0.3333333333333333</div>
+      <pre><code id="code5"></code></pre>
+      <div id="ex5" class="output-box"></div>
     </div>
 
 
@@ -132,12 +107,8 @@
         <li> Increment num11 by 1 and print the result.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        let num11 = 10;
-        console.log(num11 + 1);
-      </code></pre>
-      <div id="ex6" class="output-box">11</div>
+      <pre><code id="code6"></code></pre>
+      <div id="ex6" class="output-box"></div>
     </div>
 
 
@@ -151,53 +122,93 @@
         <li> Decrement num12 by 1 and print the result.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        let num12 = 11;
-        console.log(num12 - 1);
-      </code></pre>
-      <div id="ex7" class="output-box">10</div>
+      <pre><code id="code7"></code></pre>
+      <div id="ex7" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
-
-    // Ex:- 1
     let num1 = 10;
+
     let num2 = 20;
+
     console.log(num1 + num2);
+  </script>
 
-    // Ex:- 2
+
+  <script>
     let num3 = 30;
+
     let num4 = 10;
+
     console.log(num3 - num4);
+  </script>
 
-    // Ex:- 3
+
+  <script>
     let num5 = 30;
+
     let num6 = 10;
+
     console.log(num5 * num6);
+  </script>
 
-    // Ex:- 4
+
+  <script>
     let num7 = 30;
+
     let num8 = 10;
+
     console.log(num7 / num8);
+  </script>
 
-    // Ex:- 5
+
+  <script>
     let num9 = 30;
+
     let num10 = 10;
+
     console.log(num10 / num9);
+  </script>
 
-    // Ex:- 6
+
+  <script>
     let num11 = 10;
+
     console.log(num11 + 1);
+  </script>
 
-    // Ex:- 7
+  <script>
     let num12 = 11;
+
     console.log(num12 - 1);
+  </script>
 
 
+
+  <script>
+    ex1.innerHTML = `${num1 + num2}`;
+    code1.innerText = document.querySelectorAll("script")[0].innerText;
+
+    ex2.innerHTML = `${num3 - num4}`;
+    code2.innerText = document.querySelectorAll("script")[1].innerText;
+
+    ex3.innerHTML = `${num5 * num6}`;
+    code3.innerText = document.querySelectorAll("script")[2].innerText;
+
+    ex4.innerHTML = `${num7 / num8}`;
+    code4.innerText = document.querySelectorAll("script")[3].innerText;
+
+    ex5.innerHTML = `${num10 / num9}`;
+    code5.innerText = document.querySelectorAll("script")[4].innerText;
+
+    ex6.innerHTML = `${num11 + 1}`;
+    code6.innerText = document.querySelectorAll("script")[5].innerText;
+
+    ex7.innerHTML = `${num12 - 1}`;
+    code7.innerText = document.querySelectorAll("script")[6].innerText;
   </script>
 
 

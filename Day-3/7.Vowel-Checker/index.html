@@ -24,71 +24,59 @@
   <div class="container">
     <h1>Vowel Checker</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
-      <p>● Create a variable letter. <br>
-
-        ● Use a switch statement to determine if the letter is a vowel (use lowercase). <br> ● Output a message
-        indicating
-        if
-        it's a vowel or not. <br>
-
-        ● Hint - a, e, i, o, u, is vowel
-      </p>
+      <ul>
+        <li> Create a variable letter.</li>
+        <br>
+        <li> Use a switch statement to determine if the letter is a vowel (use lowercase).</li>
+        <br>
+        <li> Output a message indicating if it's a vowel or not.</li>
+        <br>
+        <li> Hint - a, e, i, o, u, is vowel.</li>
+      </ul>
       <br>
-      <pre>
-      <code>   
-        let letter = "m";
-
-        switch (letter) {
-          case "a":
-            console.log("Letter is vowel");
-            break;
-          case "e":
-            console.log("Letter is vowel");
-            break;
-          case "i":
-            console.log("Letter is vowel");
-            break;
-          case "o":
-            console.log("Letter is vowel");
-            break;
-          case "u":
-            console.log("Letter is vowel");
-            break;
-          default:
-            console.log("Letter is not vowel");
-        }
-      </code></pre>
-      <div id="ex1" class="output-box">Letter is not vowel</div>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
-
     let letter = "m";
 
-    switch (letter) {
-      case "a":
-        console.log("Letter is vowel");
-        break;
-      case "e":
-        console.log("Letter is vowel");
-        break;
-      case "i":
-        console.log("Letter is vowel");
-        break;
-      case "o":
-        console.log("Letter is vowel");
-        break;
-      case "u":
-        console.log("Letter is vowel");
-        break;
-      default:
-        console.log("Letter is not vowel");
+
+    function checkVowel(letter) {
+      switch (letter) {
+        case "a":
+          return "Letter is vowel";
+          break;
+        case "e":
+          return "Letter is vowel";
+          break;
+        case "i":
+          return "Letter is vowel";
+          break;
+        case "o":
+          return "Letter is vowel";
+          break;
+        case "u":
+          return "Letter is vowel";
+          break;
+        default:
+          return "Letter is not vowel";
+      }
     }
 
+
+    var VowelOrNot = checkVowel(letter);
+    console.log(VowelOrNot);
+  </script>
+
+
+
+  <script>
+    ex1.innerHTML = `${VowelOrNot}`;
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

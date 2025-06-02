@@ -24,7 +24,6 @@
   <div class="container">
     <h1>Power of a Number</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create a function calculatePower(base, exponent).</li>
         <br>
@@ -34,33 +33,35 @@
           exponent.</li>
         <br>
         <li> Log the calculated power.</li>
-        <br>
-        <li> Call the function with different values for base and exponent.</li>
-
       </ul>
       <br>
-      <pre>
-      <code>   
-        function calculatePower(base, exponent) {
-          console.log(base ** exponent);
-        }
-  
-        calculatePower(4, 6)
-      </code></pre>
-      <div id="ex1" class="output-box">The Base : 4 and Exponential by 6 is : 4096</div>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
+    var base = 4;
+
+    var exponent = 6;
+
 
     function calculatePower(base, exponent) {
-      console.log(base ** exponent);
+      return base ** exponent;
     }
 
-    calculatePower(4, 6)
 
+    var getPower = calculatePower(base, exponent);
+    console.log(getPower);
+  </script>
+
+
+
+  <script>
+    ex1.innerHTML = `The Base is ${base} and Exponential by ${exponent} is = ${getPower}`;
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

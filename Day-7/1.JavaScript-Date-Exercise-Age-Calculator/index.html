@@ -27,7 +27,6 @@
   <div class="container">
     <h1>Age Calculator</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create a JavaScript function that calculates a person's age in years based on their
           birthdate.</li>
@@ -35,43 +34,40 @@
         <li> function calculateAge(birthdate) { // ...};</li>
       </ul>
       <br>
-      <pre>
-        <code>
-          function calculateAge(birthdate) {
-            const date = new Date();
-            const currentYear = date.getFullYear();
-
-            const birthday = new Date(birthdate);
-            const birthdayYear = birthday.getFullYear();
-
-            const age = currentYear - birthdayYear;
-            console.log(age);
-          }
-
-          calculateAge("2005")
-        </code>
-      </pre>
-      <div id="ex1" class="output-box">20</div>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
-
     function calculateAge(birthdate) {
       const date = new Date();
+
       const currentYear = date.getFullYear();
 
+
       const birthday = new Date(birthdate);
+
       const birthdayYear = birthday.getFullYear();
 
+
       const age = currentYear - birthdayYear;
-      console.log(age);
+
+      return age;
     }
 
-    calculateAge("2005")
 
+    var calculate_age = calculateAge("2005");
+    console.log(calculate_age)
+  </script>
+
+
+
+  <script>
+    ex1.innerHTML = `${calculate_age}`;
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

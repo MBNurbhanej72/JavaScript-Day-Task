@@ -13,11 +13,18 @@
   --text-color: #a1cca5;
 }
 
+body::selection,
+code::selection {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
 body {
   background: var(--bg-color);
   color: var(--text-color);
   text-align: center;
   padding: 40px;
+  padding-bottom: 0;
 }
 
 .container {
@@ -45,7 +52,7 @@ pre {
   border-radius: 10px;
   color: var(--bg-color);
   font-weight: 600;
-  padding: 15px;
+  padding-right: 20px;
   text-align: left;
   overflow-x: auto;
   font-size: 18px;
@@ -60,17 +67,20 @@ pre::-webkit-scrollbar {
   border-radius: 10px;
   border: 2px solid var(--text-color);
   box-shadow: 5px 5px 0px var(--text-color);
-  margin-top: 20px;
+  margin-top: 25px;
   color: var(--text-color);
   font-weight: 500;
+  font-size: 18px;
 }
 
 .output-box-btn {
   padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
   border-radius: 10px;
   border: 2px solid var(--text-color);
   box-shadow: 5px 5px 0px var(--text-color);
-  margin-top: 20px;
+  margin-top: 25px;
   color: var(--text-color);
   background-color: var(--bg-color);
   transition: all 0.5s;
@@ -97,184 +107,12 @@ h2 {
   margin-bottom: 10px;
 }
 
-.codePara {
+ul::selection,
+h2::selection,
+.output-box::selection,
+.output-box-btn::selection {
   background-color: var(--text-color);
-  border-radius: 10px;
   color: var(--bg-color);
-  padding: 20px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-input,
-textarea,
-select {
-  outline: none;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: var(--text-color);
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  box-shadow:
-    5px 5px 0px var(--text-color),
-    0 0 0px 1000px var(--bg-color) inset !important;
-
-  -webkit-box-shadow:
-    5px 5px 0px var(--text-color),
-    0 0 0px 1000px var(--bg-color) inset !important;
-
-  background-color: var(--bg-color) !important;
-  -webkit-text-fill-color: var(--text-color) !important;
-  transition: background-color 5000s ease-in-out 0s;
-  color: var(--text-color);
-}
-
-textarea {
-  max-width: 100%;
-}
-
-#name,
-#email,
-#password,
-#address {
-  width: 100%;
-  margin-top: 8px;
-  margin-bottom: 15px;
-}
-
-.name,
-.email,
-.password,
-.address,
-.sports,
-.gender,
-.country {
-  margin-bottom: 35px;
-}
-
-.nameError,
-.emailError,
-.passwordError,
-.addressError,
-.sportsError,
-.genderError,
-.countryError {
-  display: none;
-  color: var(--text-color);
-}
-
-.sports p,
-.gender p,
-.country p {
-  margin-bottom: 10px;
-}
-
-.sports input,
-.gender input,
-.country input {
-  margin-bottom: 10px;
-  margin-right: 10px;
-}
-
-#baseball,
-#other,
-select {
-  margin-bottom: 15px;
-}
-
-#resetBtn,
-#submitBtn {
-  margin: 0;
-  width: 150px;
-}
-
-select {
-  width: 100%;
-  background-color: var(--bg-color);
-}
-
-.btnDiv {
-  display: flex;
-  justify-content: space-between;
-}
-
-.label {
-  cursor: pointer;
-  margin-bottom: 10px;
-  display: inline-block;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  display: none;
-}
-
-input[type="checkbox"]+label::before,
-input[type="radio"]+label::before {
-  content: "";
-  cursor: pointer;
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border: 1px solid var(--text-color);
-  border-radius: 3px;
-  margin-right: 10px;
-  vertical-align: middle;
-  background-color: transparent;
-}
-
-input[type="radio"]+label::before {
-  border-radius: 10px;
-}
-
-input[type="checkbox"]:checked+label::before,
-input[type="radio"]:checked+label::before {
-  background-color: var(--text-color);
-}
-
-.allData {
-  margin-top: 150px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  padding: 20px 10px;
-  text-align: left;
-  border-bottom: 2px solid var(--text-color);
-  word-break: break-word;
-  white-space: normal;
-}
-
-th {
-  font-weight: 700;
-  color: var(--text-color);
-  white-space: nowrap;
-}
-
-p {
-  color: var(--text-color);
-  font-weight: 600;
-}
-
-label[for="name"],
-label[for="email"],
-label[for="password"],
-label[for="address"] {
-  font-weight: 600;
-  color: var(--text-color);
 }
 
 
@@ -285,6 +123,13 @@ label[for="address"] {
 
   h1 {
     padding: 10px 10px;
+  }
+
+  ul,
+  pre,
+  .output-box,
+  .output-box-btn {
+    font-size: 16px;
   }
 
 }

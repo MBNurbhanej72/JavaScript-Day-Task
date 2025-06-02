@@ -24,7 +24,6 @@
   <div class="container">
     <h1>Function Parameter and Argument</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create a function that's take two parameter and this function need to concat this parameter and log.</li>
         <br>
@@ -33,28 +32,28 @@
         <li> Pass argument when function calls.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        function concatNumber(num1, num2) {
-          console.log(num1 + num2);
-        }
-  
-        concatNumber(20, 5)
-      </code></pre>
-      <div id="ex1" class="output-box">25</div>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
-
     function concatNumber(num1, num2) {
-      console.log(num1 + num2);
+      return num1 + num2;
     }
 
-    concatNumber(20, 5)
 
+    var getNum = concatNumber(20, 5);
+    console.log(getNum);
+  </script>
+
+
+
+  <script>
+    ex1.innerHTML = `${getNum}`;
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

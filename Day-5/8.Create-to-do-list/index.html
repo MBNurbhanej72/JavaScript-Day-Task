@@ -27,7 +27,6 @@
   <div class="container">
     <h1>Create to do list</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create a Input for typing a value.</li>
         <br>
@@ -40,54 +39,7 @@
         <li> Show all value below of the button.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const input = document.getElementById("myInput");
-        const dataContain = document.getElementById("dataContain");
-    
-        dataContain.innerText = "No Data Found!";
-    
-        function addValue() {
-    
-          if (input.value.trim().length === 0) {
-            alert("No Text Added");
-            return;
-          }
-    
-          if (dataContain.innerText === "No Data Found!") {
-            dataContain.innerText = "";
-          }
-    
-          const createDiv = document.createElement("div");
-    
-          dataContain.append(createDiv);
-    
-          var id = Math.random().toString(16).slice(2);
-    
-          const myHTMLCode = `
-          &lt;div id=${id} class="valueDiv"&gt;
-              &lt;i class="fa-solid fa-trash" onclick="removeData('${id}')" style="cursor:pointer"&gt;&lt;/i&gt;
-              &lt;p id="pTag"&gt;${input.value}&lt;/p&gt;
-          &lt;/div&gt;
-          `;
-    
-          createDiv.insertAdjacentHTML("beforeend", myHTMLCode);
-    
-          input.value = "";
-    
-        }
-    
-        function removeData(id) {
-          const task = document.getElementById(id);
-          if (task) {
-            task.remove();
-          }
-    
-          if (dataContain.querySelectorAll(".valueDiv").length === 0) {
-            dataContain.innerText = "No Data Found!";
-          }
-        }
-      </code></pre>
+      <pre><code id="code"></code></pre>
       <br>
       <br>
       <br>
@@ -98,6 +50,7 @@
           <input type="text" placeholder="Some words" id="myInput">
           <button onclick="addValue()">+</button>
         </div>
+        <br>
         <hr>
         <div id="dataContain"></div>
       </div>
@@ -108,28 +61,35 @@
 
 
   <script>
-
     const input = document.getElementById("myInput");
+
     const dataContain = document.getElementById("dataContain");
+
 
     dataContain.innerText = "No Data Found!";
 
-    function addValue() {
 
+    function addValue() {
       if (input.value.trim().length === 0) {
         alert("No Text Added");
+
         return;
       }
+
 
       if (dataContain.innerText === "No Data Found!") {
         dataContain.innerText = "";
       }
 
+
       const createDiv = document.createElement("div");
+
 
       dataContain.append(createDiv);
 
+
       var id = Math.random().toString(16).slice(2);
+
 
       const myHTMLCode = `
       <div id=${id} class="valueDiv">
@@ -138,14 +98,17 @@
       </div>
       `;
 
+
       createDiv.insertAdjacentHTML("beforeend", myHTMLCode);
 
-      input.value = "";
 
+      input.value = "";
     }
+
 
     function removeData(id) {
       const task = document.getElementById(id);
+
       if (task) {
         task.remove();
       }
@@ -154,7 +117,12 @@
         dataContain.innerText = "No Data Found!";
       }
     }
+  </script>
 
+
+
+  <script>
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

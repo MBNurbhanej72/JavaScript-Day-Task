@@ -13,6 +13,12 @@
   --text-color: #a1cca5;
 }
 
+body::selection,
+code::selection {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -46,6 +52,7 @@ body {
   text-decoration: none;
   color: var(--bg-color);
   box-shadow: inset rgba(7, 37, 31, 0.32) -5px -5px 0px 0px;
+  font-weight: 600;
 }
 
 .task:last-child {
@@ -54,6 +61,7 @@ body {
 
 .task:hover {
   scale: 0.95;
+  box-shadow: inset rgba(7, 37, 31, 0.32) -3px -3px 0px 0px;
 }
 
 

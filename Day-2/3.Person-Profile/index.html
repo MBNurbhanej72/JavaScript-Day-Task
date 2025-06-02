@@ -24,7 +24,6 @@
   <div class="container">
     <h1>Person Profile</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create variable with object. </li>
         <ul>
@@ -47,35 +46,38 @@
         <li> Create a button to execute this function.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        let person = {
-          firstName: "MohammadAli",
-          lastName: "Nurbhanej"
-        };
-  
-        function personFullName() {
-          console.log(person.firstName, person.lastName);
-        }
-      </code></pre>
-      <div id="ex1" class="output-box">MohammadAli Nurbhanej</div>
-      <button class="output-box-btn" onclick="personFullName()">Click To Output In Console</button>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
+      <button class="output-box-btn" onclick="getName(person)">Click To Output</button>
     </div>
   </div>
 
 
 
   <script>
-
     let person = {
       firstName: "MohammadAli",
       lastName: "Nurbhanej"
     };
 
-    function personFullName() {
-      console.log(person.firstName, person.lastName);
+
+    function personFullName(person) {
+      return `${person.firstName} ${person.lastName}`;
     }
 
+
+    var person_full_name = personFullName(person);
+    console.log(person_full_name);
+  </script>
+
+
+
+  <script>
+    function getName() {
+      ex1.innerHTML = `${person.firstName} ${person.lastName}`;
+    }
+
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

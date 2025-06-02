@@ -13,11 +13,18 @@
   --text-color: #a1cca5;
 }
 
+body::selection,
+.codePara::selection {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
 body {
   background: var(--bg-color);
   color: var(--text-color);
   text-align: center;
   padding: 40px;
+  padding-bottom: 0;
 }
 
 .container {
@@ -44,7 +51,7 @@ pre {
   border-radius: 10px;
   color: var(--bg-color);
   font-weight: 600;
-  padding: 15px;
+  padding-right: 20px;
   text-align: left;
   overflow-x: auto;
   font-size: 18px;
@@ -59,17 +66,20 @@ pre::-webkit-scrollbar {
   border-radius: 10px;
   border: 2px solid var(--text-color);
   box-shadow: 5px 5px 0px var(--text-color);
-  margin-top: 20px;
+  margin-top: 25px;
   color: var(--text-color);
   font-weight: 500;
+  font-size: 18px;
 }
 
 .output-box-btn {
   padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
   border-radius: 10px;
   border: 2px solid var(--text-color);
   box-shadow: 5px 5px 0px var(--text-color);
-  margin-top: 20px;
+  margin-top: 25px;
   color: var(--text-color);
   background-color: var(--bg-color);
   transition: all 0.5s;
@@ -100,9 +110,10 @@ h2 {
   background-color: var(--text-color);
   border-radius: 10px;
   color: var(--bg-color);
-  padding: 20px;
+  padding: 26px 20px;
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 0;
 }
 
 input,
@@ -276,6 +287,20 @@ label[for="address"] {
   color: var(--text-color);
 }
 
+span::selection,
+th::selection,
+td::selection,
+p::selection,
+input::selection,
+label::selection,
+ul::selection,
+h2::selection,
+.output-box::selection,
+.output-box-btn::selection {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
 
 
 /** =====  Start Media Queries Section  ===== **/
@@ -284,6 +309,13 @@ label[for="address"] {
 
   h1 {
     padding: 10px 10px;
+  }
+
+  ul,
+  pre,
+  .output-box,
+  .output-box-btn {
+    font-size: 16px;
   }
 
 }

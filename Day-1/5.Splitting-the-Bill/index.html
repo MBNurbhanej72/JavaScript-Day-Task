@@ -24,7 +24,6 @@
   <div class="container">
     <h1>Splitting The Bill</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> You go out for dinner with friends. The total bill comes to $75.</li>
         <br>
@@ -33,28 +32,26 @@
         <li> Calculate how much each person needs to pay.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        let bill = 75;
-
-        let frnd = 5;
-
-        console.log(bill / frnd);
-      </code></pre>
-      <div id="ex1" class="output-box">15</div>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
-
     let bill = 75;
 
     let frnd = 5;
 
     console.log(bill / frnd);
+  </script>
 
+
+
+  <script>
+    ex1.innerHTML = `${bill / frnd}`;
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

@@ -24,22 +24,12 @@
   <div class="container">
     <h1>Real-time Character Count</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create a form with a text area for entering a message. Use JavaScript to display a character count next to
           the text area that updates dynamically as the user types.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const text = document.getElementById("myTextArea");
-        const p = document.querySelector(".pTag");
-
-        function showData() {
-          const finalText = text.value.length;
-          p.innerHTML = `Character Count: ${finalText}`;
-        }
-      </code></pre>
+      <pre><code id="code"></code></pre>
       <form>
         <textarea id="myTextArea" class="output-box" placeholder="Enter your text" oninput="showData()"></textarea>
         <p class="pTag">Character Count: 0</p>
@@ -50,15 +40,22 @@
 
 
   <script>
-
     const text = document.getElementById("myTextArea");
+
     const p = document.querySelector(".pTag");
+
 
     function showData() {
       const finalText = text.value.length;
+
       p.innerHTML = `Character Count: ${finalText}`;
     }
+  </script>
 
+
+
+  <script>
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

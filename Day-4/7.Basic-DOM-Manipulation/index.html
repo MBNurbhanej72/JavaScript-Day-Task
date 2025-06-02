@@ -31,6 +31,7 @@
         <li>Change the background color of the entire webpage when a button is clicked.</li>
       </ul>
       <br>
+      <pre><code id="code1"></code></pre>
       <button class="output-box-btn" onclick="changeBgColor()">Click To Change The Background Colour</button>
     </div>
 
@@ -41,6 +42,7 @@
         <li> Create a list of items. When a user clicks on an item, change its font style (e.g., bold, italic).</li>
       </ul>
       <br>
+      <pre><code id="code2"></code></pre>
       <div id="ex1" class="output-box">
         <span>Click Any Fruit</span> <br> <br>
         <span id="apple" onclick="appleFont()">Apple</span> <br>
@@ -59,6 +61,7 @@
           paragraph element.</li>
       </ul>
       <br>
+      <pre><code id="code3"></code></pre>
       <div>
         <div class="form-main">
           <input type="text" class="output-box" id="inputValue" placeholder="Enter your name" autocomplete="off">
@@ -73,45 +76,64 @@
 
 
   <script>
-
-    // Ex:- 1
     function changeBgColor() {
-      const body = document.body.style.backgroundColor = "#6f967a";
+      document.body.style.backgroundColor = "#6f967a";
     }
+  </script>
 
 
-    // Ex:- 2
+  <script>
     const apple = document.getElementById("apple");
+
     const banana = document.getElementById("banana");
+
     const mango = document.getElementById("mango");
+
     const grapes = document.getElementById("grapes");
+
 
     function appleFont() {
       apple.style.fontStyle = "italic";
     }
 
+
     function bananaFont() {
       banana.style.fontStyle = "italic";
     }
+
 
     function mangoFont() {
       mango.style.fontStyle = "italic";
     }
 
+
     function grapesFont() {
       grapes.style.fontStyle = "italic";
     }
+  </script>
 
 
-    // Ex:- 3
+  <script>
     const inputValue = document.getElementById("inputValue");
+
     const addInputData = document.getElementById("addInputData");
+
 
     function submitName() {
       const inputData = inputValue.value;
+
       addInputData.innerText = inputData;
     }
+  </script>
 
+
+
+  <script>
+    code1.innerText = document.querySelectorAll("script")[0].innerText;
+
+    code2.innerText = document.querySelectorAll("script")[1].innerText;
+
+    code3.innerText = document.querySelectorAll("script")[2].innerText
   </script>
 
 

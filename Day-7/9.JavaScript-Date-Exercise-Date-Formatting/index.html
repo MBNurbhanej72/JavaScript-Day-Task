@@ -27,7 +27,6 @@
   <div class="container">
     <h1>Date Formatting</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create a JavaScript function that formats a date according to a specified format string.</li><br>
         <li> date: A Date object representing the date to be formatted.</li> <br>
@@ -37,28 +36,7 @@
         <li> function formatDate(date, formatString) { // ... };</li>
       </ul>
       <br>
-      <pre>
-        <code>
-          const currDate = new Date();
-          const formatString = "DD/MM/YYYY";
-
-          const output = document.querySelector(".output-box");
-
-          function formatDate(date, formatString) {
-            const day = date.getDate();
-            const month = date.getMonth();
-            const year = date.getFullYear();
-
-            const arr = `${day}/${month + 1}/${year}`;
-
-            const data = formatString.replace("DD/MM/YYYY", arr);
-            console.log(data);
-            output.innerHTML = data;
-          }
-
-          formatDate(currDate, formatString)
-        </code>
-      </pre>
+      <pre><code id="code"></code></pre>
       <div class="output-box"></div>
     </div>
   </div>
@@ -66,26 +44,40 @@
 
 
   <script>
-
     const currDate = new Date();
+
     const formatString = "DD/MM/YYYY";
+
 
     const output = document.querySelector(".output-box");
 
+
     function formatDate(date, formatString) {
       const day = date.getDate();
+
       const month = date.getMonth();
+
       const year = date.getFullYear();
+
 
       const arr = `${day}/${month + 1}/${year}`;
 
+
       const data = formatString.replace("DD/MM/YYYY", arr);
+
       console.log(data);
+
       output.innerHTML = data;
     }
 
-    formatDate(currDate, formatString)
 
+    formatDate(currDate, formatString)
+  </script>
+
+
+
+  <script>
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

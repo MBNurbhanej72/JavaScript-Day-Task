@@ -24,7 +24,6 @@
   <div class="container">
     <h1>Check Positive, Negative and Zero number</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create a variable with any number.</li>
         <br>
@@ -43,45 +42,43 @@
         <li> Create a button and on click event to call the function.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        let num = 30;
-
-        function checkNumber() {
-          if (num == 0) {
-            console.log("The number is zero.");
-          } else if (num > 0) {
-            console.log("The number is positive.");
-          } else if (num < 0) {
-            console.log("The number is negative.");
-          } else {
-            console.log("This is not valid number");
-          }
-        }
-      </code></pre>
-      <div id="ex1" class="output-box">The number is positive.</div>
-      <button class="output-box-btn" onclick="checkNumber()">Click To Output In Console</button>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
+      <button class="output-box-btn" onclick="myNum()">Click To Output</button>
     </div>
   </div>
 
 
 
   <script>
-
     let num = 30;
 
-    function checkNumber() {
+
+    function checkNumber(num) {
       if (num == 0) {
-        console.log("The number is zero.");
+        return "The number is zero.";
       } else if (num > 0) {
-        console.log("The number is positive.");
+        return "The number is positive.";
       } else if (num < 0) {
-        console.log("The number is negative.");
+        return "The number is negative.";
       } else {
-        console.log("This is not valid number");
+        return "This is not valid number";
       }
     }
 
+
+    var getNum = checkNumber(num);
+    console.log(getNum);
+  </script>
+
+
+
+  <script>
+    function myNum() {
+      ex1.innerHTML = `${getNum}`;
+    }
+
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

@@ -24,7 +24,6 @@
   <div class="container">
     <h1>Even or Odd</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create any variable with number.</li>
         <br>
@@ -39,40 +38,35 @@
         <li> Create button and add on click event this created function.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        let number = 10;
-
-        function checkEvenOdd() {
-          if (number % 2 == 0) {
-            console.log("Number is Even");
-          } else {
-            console.log("Number is Odd");
-          }
-        }
-
-        checkEvenOdd()
-      </code></pre>
-      <div id="ex1" class="output-box">Number is Even</div>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
+    let number = 72;
 
-    let number = 10;
 
-    function checkEvenOdd() {
+    function checkEvenOdd(number) {
       if (number % 2 == 0) {
-        console.log("Number is Even");
+        return "Number is Even";
       } else {
-        console.log("Number is Odd");
+        return "Number is Odd";
       }
     }
 
-    checkEvenOdd()
 
+    var even_odd = checkEvenOdd(number);
+    console.log(even_odd);
+  </script>
+
+
+
+  <script>
+    ex1.innerHTML = `${even_odd}`;
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

@@ -24,26 +24,14 @@
   <div class="container">
     <h1>Dynamic Counter</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Have a button that, when clicked, increments a counter displayed on console log.</li>
         <br>
         <li> You'll need a function to handle the incrementing and updating the display.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        let count = 0;
-
-        function handleIncrement() {
-
-        count = count + 1;
-
-        console.log(count);
-
-        }
-      </code></pre>
-      <div id="ex1" class="output-box">Output in Console</div>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box">0</div>
       <button class="output-box-btn" onclick="handleIncrement()">Click To Increment</button>
     </div>
   </div>
@@ -51,17 +39,23 @@
 
 
   <script>
+    var count = 0;
 
-    let count = 0;
 
     function handleIncrement() {
-
-      count = count + 1;
+      count++;
 
       console.log(count);
 
+      ex1.innerHTML = `${count}`;
     }
+  </script>
 
+
+
+  <script>
+    console.log(count);
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

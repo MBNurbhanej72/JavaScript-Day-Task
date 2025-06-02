@@ -24,39 +24,37 @@
   <div class="container">
     <h1>Simple Substring Search</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Write a function that takes a string and a substring as parameter.</li>
         <br>
         <li> It should print true if the substring is found anywhere in the string, false otherwise.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        const myStr = "Hello JS";
-
-        function checkStr(str, subStr = "Hello") {
-          console.log(str.includes(subStr));
-        }
-
-        checkStr(myStr)
-      </code></pre>
-      <div id="ex1" class="output-box">true</div>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
     </div>
   </div>
 
 
 
   <script>
-
     const myStr = "Hello JS";
 
+
     function checkStr(str, subStr = "Hello") {
-      console.log(str.includes(subStr));
+      return str.includes(subStr);
     }
 
-    checkStr(myStr)
 
+    var check_str = checkStr(myStr);
+    console.log(check_str);
+  </script>
+
+
+
+  <script>
+    ex1.innerHTML = `${check_str}`;
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 

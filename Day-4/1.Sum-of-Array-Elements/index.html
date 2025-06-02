@@ -24,7 +24,6 @@
   <div class="container">
     <h1>Sum of Array Elements</h1>
     <div class="section">
-      <h2>Exercise 1</h2>
       <ul>
         <li> Create a function and call on clicking button.</li>
         <br>
@@ -33,29 +32,15 @@
         <li> Sum all numbers inside array using for loop and print final result in console.</li>
       </ul>
       <br>
-      <pre>
-      <code>   
-        function sumNum() {
-          const numbers = [5, 12, 8, 130, 44];
-    
-          let sum = 0;
-    
-          for (let i = 0; i < numbers.length; i++) {
-            sum = sum + numbers[i];
-          }
-    
-          console.log(sum);
-        }
-      </code></pre>
-      <div id="ex1" class="output-box">199</div>
-      <button class="output-box-btn" onclick="sumNum()">Click To Output In Console</button>
+      <pre><code id="code"></code></pre>
+      <div id="ex1" class="output-box"></div>
+      <button class="output-box-btn" onclick="sumNum(), getSum()">Click To Output</button>
     </div>
   </div>
 
 
 
   <script>
-
     function sumNum() {
       const numbers = [5, 12, 8, 130, 44];
 
@@ -65,9 +50,22 @@
         sum = sum + numbers[i];
       }
 
-      console.log(sum);
+      return sum;
     }
 
+
+    var get_sum = sumNum();
+    console.log(get_sum);
+  </script>
+
+
+
+  <script>
+    function getSum() {
+      ex1.innerHTML = `${get_sum}`;
+    }
+
+    code.innerText = document.querySelector("script").innerText
   </script>
 
 
