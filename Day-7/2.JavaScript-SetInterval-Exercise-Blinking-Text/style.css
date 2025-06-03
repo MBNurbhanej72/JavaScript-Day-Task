@@ -52,7 +52,7 @@ pre {
   border-radius: 10px;
   color: var(--bg-color);
   font-weight: 600;
-  padding-right: 20px;
+  padding-right: 22px;
   text-align: left;
   overflow-x: auto;
   font-size: 18px;
@@ -126,7 +126,8 @@ h2::selection,
 @media only screen and (max-width: 576px) {
 
   h1 {
-    padding: 10px 10px;
+    padding: 10px 20px;
+    font-size: 45px;
   }
 
   ul,
@@ -139,6 +140,8 @@ h2::selection,
 }
 
 /** =====  End Media Queries Section  ===== **/
+
+
 
 /* =====  Start Scrollbar Section  ===== */
 

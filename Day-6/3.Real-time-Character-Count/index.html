@@ -46,7 +46,7 @@
 
 
     function showData() {
-      const finalText = text.value.length;
+      const finalText = text.value.trimStart().length;
 
       p.innerHTML = `Character Count: ${finalText}`;
     }

@@ -51,7 +51,7 @@ pre {
   border-radius: 10px;
   color: var(--bg-color);
   font-weight: 600;
-  padding-right: 20px;
+  padding-right: 22px;
   text-align: left;
   overflow-x: auto;
   font-size: 18px;
@@ -104,16 +104,6 @@ ul {
 h2 {
   font-size: 28px;
   margin-bottom: 10px;
-}
-
-.codePara {
-  background-color: var(--text-color);
-  border-radius: 10px;
-  color: var(--bg-color);
-  padding: 26px 20px;
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 0;
 }
 
 input,
@@ -266,6 +256,7 @@ td {
   border-bottom: 2px solid var(--text-color);
   word-break: break-word;
   white-space: normal;
+  font-size: 15px;
 }
 
 th {
@@ -301,14 +292,33 @@ h2::selection,
   color: var(--bg-color);
 }
 
+.mobile-heading {
+  display: none;
+}
+
 
 
 /** =====  Start Media Queries Section  ===== **/
 
+@media only screen and (max-width: 768px) {
+
+  .table-main {
+    display: none;
+  }
+
+  .mobile-heading {
+    text-align: center;
+    font-size: 25px;
+    display: block;
+    margin: 50px 0 30px;
+  }
+}
+
 @media only screen and (max-width: 576px) {
 
   h1 {
-    padding: 10px 10px;
+    padding: 10px;
+    font-size: 45px;
   }
 
   ul,
@@ -318,9 +328,26 @@ h2::selection,
     font-size: 16px;
   }
 
+  th,
+  td {
+    font-size: 13px;
+  }
+
+}
+
+
+
+@media only screen and (max-width: 440px) {
+
+  .btnDiv {
+    gap: 40px;
+  }
+
 }
 
 /** =====  End Media Queries Section  ===== **/
+
+
 
 /* =====  Start Scrollbar Section  ===== */
 
