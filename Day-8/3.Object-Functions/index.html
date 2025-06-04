@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Functions</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/favicon/site.webmanifest">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Object Functions</h1>
+    <!-- Section 1  -->
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <ul>
+        <li>Create a function which checks key values of 2 objects, return a boolean value.</li>
+      </ul>
+      <br>
+      <pre><code id="code1"></code></pre>
+      <div id="ex1" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 2  -->
+    <div class="section">
+      <h2>Exercise 2</h2>
+      <ul>
+        <li>Write a JavaScript program to get the length of a JavaScript object.</li>
+      </ul>
+      <br>
+      <pre><code id="code2"></code></pre>
+      <div id="ex2" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 3  -->
+    <div class="section">
+      <h2>Exercise 3</h2>
+      <ul>
+        <li>Write a JavaScript function to get all the values of an object's values and return a single String of values
+          as an example.</li>
+      </ul>
+      <br>
+      <pre><code id="code3"></code></pre>
+      <div id="ex3" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 4  -->
+    <div class="section">
+      <h2>Exercise 4</h2>
+      <ul>
+        <li>Create a function to where I can pass Object and Property. Return Boolean value if property exists in the
+          given object.</li>
+      </ul>
+      <br>
+      <pre><code id="code4"></code></pre>
+      <div id="ex4" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 5  -->
+    <div class="section">
+      <h2>Exercise 5</h2>
+      <ul>
+        <li>Change the value of given object. Concat "yes " to the value and return new value of an object.</li>
+      </ul>
+      <br>
+      <pre><code id="code5"></code></pre>
+      <div id="ex5" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 6  -->
+    <div class="section">
+      <h2>Exercise 6</h2>
+      <ul>
+        <li>Using Destructuring method, return a value of name key from object.</li>
+      </ul>
+      <br>
+      <pre><code id="code6"></code></pre>
+      <div id="ex6" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 7  -->
+    <div class="section">
+      <h2>Exercise 7</h2>
+      <ul>
+        <li>Remove the "color" property from an object and return a string with remaining key vlaue pairs of an object.
+        </li>
+      </ul>
+      <br>
+      <pre><code id="code7"></code></pre>
+      <div id="ex7" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 8  -->
+    <div class="section">
+      <h2>Exercise 8</h2>
+      <ul>
+        <li>Create a functions which return value of city from nested object.</li>
+      </ul>
+      <br>
+      <pre><code id="code8"></code></pre>
+      <div id="ex8" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 9  -->
+    <div class="section">
+      <h2>Exercise 9</h2>
+      <ul>
+        <li>Create a functions to return an Object (show in console) from given nested Array.</li>
+      </ul>
+      <br>
+      <pre><code id="code9"></code></pre>
+      <div id="ex9" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 10  -->
+    <div class="section">
+      <h2>Exercise 10</h2>
+      <ul>
+        <li>Create a function to takes an Object and return true if value of any key is of Number Datatype.</li>
+      </ul>
+      <br>
+      <pre><code id="code10"></code></pre>
+      <div id="ex10" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 11  -->
+    <div class="section">
+      <h2>Exercise 11</h2>
+      <ul>
+        <li>Create a function which takes an Array of an Objects and return a String with ell the properties of each
+          object.</li>
+      </ul>
+      <br>
+      <pre><code id="code11"></code></pre>
+      <div id="ex11" class="output-box"></div>
+    </div>
+
+
+
+    <script>
+      let obj1 = { name: "John" };
+
+      let obj2 = { name: "John" };
+
+      let obj3 = { name: "Doe" };
+
+
+      const checkObjects = (object1, object2) => {
+        if (Object.keys(object1).length !== Object.keys(object2).length) return false;
+
+        return Object.keys(object1).every(e => e in object2 && object1[e] === object2[e]);
+      };
+
+
+      var check_objects1 = checkObjects(obj1, obj2);
+      console.log(check_objects1);
+
+
+      var check_objects2 = checkObjects(obj1, obj3);
+      console.log(check_objects2);
+    </script>
+
+
+    <script>
+      var students = {
+        name: "John Doe",
+        class: "JavaScript",
+        rollno: 12
+      };
+
+      console.log(Object.keys(students).length);
+    </script>
+
+
+    <script>
+      let bio = {
+        name: "Dcoders",
+        course: "JavaScript"
+      };
+
+
+      const joinValues = obj => Object.values(bio).join(" ");
+
+
+      var join_values = joinValues(bio);
+      console.log(join_values);
+    </script>
+
+
+    <script>
+      const checkKey = (obj, key) => key in obj;
+
+
+      var check_key1 = checkKey({ name: "abc" }, "name");
+      console.log(check_key1);
+
+
+      var check_key2 = checkKey({ age: 10, color: "red" }, "course");
+      console.log(check_key2)
+    </script>
+
+
+    <script>
+      let changeValue = { name: "dcoders" };
+
+      console.log(`yes ${changeValue.name}`)
+    </script>
+
+
+    <script>
+      let getName = {
+        age: 20,
+        course: "JavaScript",
+        name: "John Doe"
+      };
+
+
+      var { name } = getName;
+      console.log(name)
+    </script>
+
+
+    <script>
+      var removeKey = { name: "John Doe", age: 20, color: "pink" };
+
+      delete removeKey.color;
+
+      console.log(Object.entries(removeKey).flat(Infinity).join(" "))
+    </script>
+
+
+    <script>
+      let person = {
+        name: "John Doe",
+        address: {
+          city: "Springfield",
+        }
+      };
+
+
+      const getCity = obj => obj.address.city;
+
+
+      var get_city = getCity(person);
+      console.log(get_city);
+    </script>
+
+
+    <script>
+      let getObj = [["age", 20], ["color", "red"]];
+
+
+      const getObject = obj => Object.fromEntries(obj);
+
+
+      var get_object = getObject(getObj);
+      console.log(get_object);
+    </script>
+
+
+    <script>
+      const checkNumValue = obj => {
+        let myObj = Object.keys(obj);
+
+        for (const key of myObj) {
+          if (typeof obj[key] === "number") {
+            return true;
+          }
+        }
+
+        return false;
+      };
+
+
+      var check_Num_Value1 = checkNumValue({ age: 20 });
+      console.log(check_Num_Value1);
+
+
+      var check_Num_Value2 = checkNumValue({ age: "20" });
+      console.log(check_Num_Value2);
+    </script>
+
+
+    <script>
+      const getStr = obj => {
+        let [object1, object2] = obj;
+
+        let joinTwoObject = Object.assign(object1, object2);
+
+        return Object.keys(joinTwoObject).join(" ");
+      };
+
+
+      var get_str = getStr([{ name: "John", age: 20 }, { type: "vehicle", model: "car" }]);
+      console.log(get_str);
+    </script>
+
+
+
+    <script>
+      ex1.innerHTML = `${check_objects1} <br> ${check_objects2}`;
+      code1.innerText = document.querySelectorAll("script")[0].innerText;
+
+      ex2.innerHTML = `${Object.keys(students).length}`;
+      code2.innerText = document.querySelectorAll("script")[1].innerText;
+
+      ex3.innerHTML = `${join_values}`;
+      code3.innerText = document.querySelectorAll("script")[2].innerText;
+
+      ex4.innerHTML = `${check_key1} <br> ${check_key2}`;
+      code4.innerText = document.querySelectorAll("script")[3].innerText;
+
+      ex5.innerHTML = `yes ${changeValue.name}`;
+      code5.innerText = document.querySelectorAll("script")[4].innerText;
+
+      ex6.innerHTML = `${name}`;
+      code6.innerText = document.querySelectorAll("script")[5].innerText;
+
+      ex7.innerHTML = `${Object.entries(removeKey).flat(Infinity).join(" ")}`;
+      code7.innerText = document.querySelectorAll("script")[6].innerText;
+
+      ex8.innerHTML = `${get_city}`;
+      code8.innerText = document.querySelectorAll("script")[7].innerText;
+
+      ex9.innerHTML = `${JSON.stringify(get_object)}`;
+      code9.innerText = document.querySelectorAll("script")[8].innerText;
+
+      ex10.innerHTML = `${check_Num_Value1} <br> ${check_Num_Value2}`;
+      code10.innerText = document.querySelectorAll("script")[9].innerText;
+
+      ex11.innerHTML = `${get_str}`;
+      code11.innerText = document.querySelectorAll("script")[10].innerText;
+    </script>
+
+
+
+</body>
+
+</html>
