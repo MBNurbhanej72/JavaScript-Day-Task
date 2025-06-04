@@ -40,12 +40,12 @@
         </div>
       </div>
 
+
       <div class="sectionTwo">
         <div class="image-div">
 
           <label for="image1">
             <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
           </label>
 
           <input type="file" id="image1" class="fileInput" accept="image/*">
@@ -53,7 +53,6 @@
 
           <label for="image2">
             <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
           </label>
 
           <input type="file" id="image2" class="fileInput" accept="image/*">
@@ -61,7 +60,6 @@
 
           <label for="image3">
             <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
           </label>
 
           <input type="file" id="image3" class="fileInput" accept="image/*">
@@ -69,7 +67,6 @@
 
           <label for="image4">
             <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
           </label>
 
           <input type="file" id="image4" class="fileInput" accept="image/*">
@@ -77,7 +74,6 @@
 
           <label for="image5">
             <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
           </label>
 
           <input type="file" id="image5" class="fileInput" accept="image/*">
@@ -85,109 +81,11 @@
 
           <label for="image6">
             <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
           </label>
 
           <input type="file" id="image6" class="fileInput" accept="image/*">
 
-
-          <label for="image7">
-            <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
-          </label>
-
-          <input type="file" id="image7" class="fileInput" accept="image/*">
-
-
-          <label for="image8">
-            <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
-          </label>
-
-          <input type="file" id="image8" class="fileInput" accept="image/*">
-
-
-          <label for="image9">
-            <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
-          </label>
-
-          <input type="file" id="image9" class="fileInput" accept="image/*">
-
-
-          <label for="image10">
-            <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
-          </label>
-
-          <input type="file" id="image10" class="fileInput" accept="image/*">
-
-
-          <label for="image11">
-            <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
-          </label>
-
-          <input type="file" id="image11" class="fileInput" accept="image/*">
-
-
-          <label for="image12">
-            <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
-          </label>
-
-          <input type="file" id="image12" class="fileInput" accept="image/*">
-
-
-          <label for="image13">
-            <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
-          </label>
-
-          <input type="file" id="image13" class="fileInput" accept="image/*">
-
-
-          <label for="image14">
-            <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
-          </label>
-
-          <input type="file" id="image14" class="fileInput" accept="image/*">
-
-
-          <label for="image15">
-            <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
-          </label>
-
-          <input type="file" id="image15" class="fileInput" accept="image/*">
-
-
-          <label for="image16">
-            <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
-          </label>
-
-          <input type="file" id="image16" class="fileInput" accept="image/*">
-
-
-          <label for="image17">
-            <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
-          </label>
-
-          <input type="file" id="image17" class="fileInput" accept="image/*">
-
-
-          <label for="image18">
-            <img src="assets/images/null-img.png" alt="">
-            <i class="fa-solid fa-xmark cancelIcon"></i>
-          </label>
-
-          <input type="file" id="image18" class="fileInput" accept="image/*">
-
         </div>
-
       </div>
 
     </div>
@@ -199,6 +97,7 @@
     const myFile = document.getElementById("myFile");
 
     const myImage = document.getElementById("myImage");
+
 
     const imgDiv = document.querySelector(".image-div");
 
@@ -227,8 +126,6 @@
       image.addEventListener("change", (e) => {
         const img = e.target.files[0];
 
-        const cancelIcon = e.target.previousElementSibling.children[1];
-
         const fileInput = e.target;
 
         const reader = new FileReader();
@@ -240,22 +137,10 @@
           const img = prev.querySelector("img");
 
           img.src = e.target.result;
-
-          cancelIcon.style.display = "block";
-
-          prev.style.pointerEvents = "none";
         };
 
 
         reader.readAsDataURL(img);
-
-
-        cancelIcon.addEventListener("click", (e) => {
-          img.src = "assets/images/null-img.png";
-
-          console.log("hello");
-        });
-
       });
 
     });
