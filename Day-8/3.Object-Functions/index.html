@@ -170,6 +170,7 @@
 
 
 
+    <!-- 1 -->
     <script>
       let obj1 = { name: "John" };
 
@@ -194,6 +195,7 @@
     </script>
 
 
+    <!-- 2 -->
     <script>
       var students = {
         name: "John Doe",
@@ -205,6 +207,7 @@
     </script>
 
 
+    <!-- 3 -->
     <script>
       let bio = {
         name: "Dcoders",
@@ -220,6 +223,7 @@
     </script>
 
 
+    <!-- 4 -->
     <script>
       const checkKey = (obj, key) => key in obj;
 
@@ -233,6 +237,7 @@
     </script>
 
 
+    <!-- 5 -->
     <script>
       let changeValue = { name: "dcoders" };
 
@@ -240,6 +245,7 @@
     </script>
 
 
+    <!-- 6 -->
     <script>
       let getName = {
         age: 20,
@@ -253,6 +259,7 @@
     </script>
 
 
+    <!-- 7 -->
     <script>
       var removeKey = { name: "John Doe", age: 20, color: "pink" };
 
@@ -262,6 +269,7 @@
     </script>
 
 
+    <!-- 8 -->
     <script>
       let person = {
         name: "John Doe",
@@ -279,6 +287,7 @@
     </script>
 
 
+    <!-- 9 -->
     <script>
       let getObj = [["age", 20], ["color", "red"]];
 
@@ -291,18 +300,9 @@
     </script>
 
 
+    <!-- 10 -->
     <script>
-      const checkNumValue = obj => {
-        let myObj = Object.keys(obj);
-
-        for (const key of myObj) {
-          if (typeof obj[key] === "number") {
-            return true;
-          }
-        }
-
-        return false;
-      };
+      const checkNumValue = obj => typeof Object.values(obj)[0] === "number";
 
 
       var check_Num_Value1 = checkNumValue({ age: 20 });
@@ -314,13 +314,15 @@
     </script>
 
 
+    <!-- 11 -->
     <script>
+      var str = [];
+
+
       const getStr = obj => {
-        let [object1, object2] = obj;
+        obj.forEach(e => str.push(Object.keys(e)));
 
-        let joinTwoObject = Object.assign(object1, object2);
-
-        return Object.keys(joinTwoObject).join(" ");
+        return str.flat(Infinity).join(" ");
       };
 
 
