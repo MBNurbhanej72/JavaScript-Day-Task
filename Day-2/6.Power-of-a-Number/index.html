@@ -53,14 +53,13 @@
     }
 
 
-    var getPower = calculatePower(base, exponent);
-    console.log(getPower);
+    console.log(calculatePower(base, exponent));
   </script>
 
 
 
   <script>
-    ex1.innerHTML = `The Base is ${base} and Exponential by ${exponent} is = ${getPower}`;
+    ex1.innerHTML = `The Base is ${base} and Exponential by ${exponent} is = ${calculatePower(base, exponent)}`;
     code.innerText = document.querySelector("script").innerText
   </script>
 

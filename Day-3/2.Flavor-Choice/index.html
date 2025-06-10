@@ -45,7 +45,7 @@
       <br>
       <pre><code id="code"></code></pre>
       <div id="ex1" class="output-box"></div>
-      <button class="output-box-btn" onclick="checkFlavour(), getFlavour()">Click To Output</button>
+      <button class="output-box-btn" onclick="getFlavour(likesChocolate, likesVanilla)">Click To Output</button>
     </div>
   </div>
 
@@ -57,7 +57,7 @@
     let likesVanilla = true;
 
 
-    function checkFlavour() {
+    function checkFlavour(likesChocolate, likesVanilla) {
       if (likesChocolate || likesVanilla) {
         return "Here's your ice cream";
       } else {
@@ -66,15 +66,14 @@
     }
 
 
-    var flavour = checkFlavour();
-    console.log(flavour);
+    console.log(checkFlavour(likesChocolate, likesVanilla));
   </script>
 
 
 
   <script>
-    function getFlavour() {
-      ex1.innerHTML = `${flavour}`;
+    function getFlavour(likesChocolate, likesVanilla) {
+      ex1.innerHTML = `${checkFlavour(likesChocolate, likesVanilla)}`;
     }
 
     code.innerText = document.querySelector("script").innerText

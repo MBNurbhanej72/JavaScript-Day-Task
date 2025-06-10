@@ -161,67 +161,60 @@
 
 
 
+  <!-- 1 -->
   <script>
     const replaceWord = (str1, str2) => str1.replaceAll(str2, "");
 
 
-    var replace_word = replaceWord("Hello World", "o");
-    console.log(replace_word);
+    console.log(replaceWord("Hello World", "o"));
   </script>
 
 
+  <!-- 2 -->
   <script>
     const countBlankSpace = str => str.split(" ").length - 1;
 
 
-    var blank_space1 = countBlankSpace("TypeScript is better than JavaScript");
-    console.log(blank_space1);
+    console.log(countBlankSpace("TypeScript is better than JavaScript"));
 
+    console.log(countBlankSpace("Dcoders"));
 
-    var blank_space2 = countBlankSpace("Dcoders");
-    console.log(blank_space2);
-
-
-    var blank_space3 = countBlankSpace("Learning JavaScript is a fun and enjoyable");
-    console.log(blank_space3);
+    console.log(countBlankSpace("Learning JavaScript is a fun and enjoyable"));
   </script>
 
 
+  <!-- 3 -->
   <script>
     const changePosition = (str1, str2) => `${str2} ${str1}`;
 
 
-    var change_position1 = changePosition("Hello", "Coders");
-    console.log(change_position1);
+    console.log(changePosition("Hello", "Coders"));
 
-
-    var change_position2 = changePosition("Hi", "India");
-    console.log(change_position2);
+    console.log(changePosition("Hi", "India"));
   </script>
 
 
+  <!-- 4 -->
   <script>
     const replaceToUpper = str => str.replaceAll("a", "A");
 
 
-    var replace_to_upper = replaceToUpper("I am learning Javascript");
-    console.log(replace_to_upper);
+    console.log(replaceToUpper("I am learning Javascript"));
   </script>
 
 
+  <!-- 5 -->
   <script>
     const removeLastChar = str => str.slice(0, - 1);
 
 
-    var remove_last_char1 = removeLastChar("Kites");
-    console.log(remove_last_char1);
+    console.log(removeLastChar("Kites"));
 
-
-    var remove_last_char2 = removeLastChar("Global");
-    console.log(remove_last_char2);
+    console.log(removeLastChar("Global"));
   </script>
 
 
+  <!-- 6 -->
   <script>
     const extractNumbers = str => {
       let num = "";
@@ -236,97 +229,86 @@
     };
 
 
-    var extract_numbers1 = extractNumbers("Dcoders15Lab");
-    console.log(extract_numbers1);
+    console.log(extractNumbers("Dcoders15Lab"));
 
-
-    var extract_numbers2 = extractNumbers("India555aaa");
-    console.log(extract_numbers2);
+    console.log(extractNumbers("India555aaa"));
   </script>
 
 
+  <!-- 7 -->
   <script>
     const changeToUpper = str => str.toUpperCase();
 
 
-    var change_to_upper1 = changeToUpper("india");
-    console.log(change_to_upper1);
+    console.log(changeToUpper("india"));
 
-
-    var change_to_upper2 = changeToUpper("dcoders");
-    console.log(change_to_upper2);
+    console.log(changeToUpper("dcoders"));
   </script>
 
 
+  <!-- 8 -->
   <script>
     const getSum = (num1, num2) => +num1 + +num2;
 
 
-    var get_sum1 = getSum("20", "50");
-    console.log(get_sum1);
+    console.log(getSum("20", "50"));
 
-
-    var get_sum2 = getSum("15", "15");
-    console.log(get_sum2);
+    console.log(getSum("15", "15"));
   </script>
 
 
+  <!-- 9 -->
   <script>
     const checkCharAtStart = (char1, char2) => char1.startsWith(char2);
 
 
-    var check_char_at_start1 = checkCharAtStart("JavaScript", "J");
-    console.log(check_char_at_start1);
+    console.log(checkCharAtStart("JavaScript", "J"));
 
-
-    var check_char_at_start2 = checkCharAtStart("dcoders", "P");
-    console.log(check_char_at_start2);
+    console.log(checkCharAtStart("dcoders", "P"));
   </script>
 
 
+  <!-- 10 -->
   <script>
     const getPosition = (str1, str2) => str1.indexOf(str2) + 1;
 
 
-    var get_position1 = getPosition("Hello", "e");
-    console.log(get_position1);
+    console.log(getPosition("Hello", "e"));
 
-
-    var get_position2 = getPosition("TypeScript", "S");
-    console.log(get_position2);
+    console.log(getPosition("TypeScript", "S"));
   </script>
 
 
 
   <script>
-    ex1.innerHTML = `${replace_word}`;
+    ex1.innerHTML = `${replaceWord("Hello World", "o")}`;
     code1.innerText = document.querySelectorAll("script")[0].innerText;
 
-    ex2.innerHTML = `${blank_space1} <br> ${blank_space2} <br> ${blank_space3}`;
+    ex2.innerHTML = `${countBlankSpace("TypeScript is better than JavaScript")} <br> ${countBlankSpace("Dcoders")} <br> ${countBlankSpace("Learning JavaScript is a fun and enjoyable")}`;
     code2.innerText = document.querySelectorAll("script")[1].innerText;
 
-    ex3.innerHTML = `${change_position1} <br> ${change_position2}`;
+    ex3.innerHTML = `${changePosition("Hello", "Coders")} <br> ${changePosition("Hi", "India")}`;
     code3.innerText = document.querySelectorAll("script")[2].innerText;
 
-    ex4.innerHTML = `${replace_to_upper}`;
+    ex4.innerHTML = `${replaceToUpper("I am learning Javascript")}`;
     code4.innerText = document.querySelectorAll("script")[3].innerText;
 
-    ex5.innerHTML = `${remove_last_char1} <br> ${remove_last_char2}`;
+    ex5.innerHTML = `${removeLastChar("Kites")} <br> ${removeLastChar("Global")}`;
     code5.innerText = document.querySelectorAll("script")[4].innerText;
 
-    ex6.innerHTML = `${extract_numbers1} <br> ${extract_numbers2}`;
+    ex6.innerHTML = `${extractNumbers("Dcoders15Lab")} <br> ${extractNumbers("India555aaa")}`;
     code6.innerText = document.querySelectorAll("script")[5].innerText;
 
-    ex7.innerHTML = `${change_to_upper1} <br> ${change_to_upper2}`;
+    ex7.innerHTML = `${changeToUpper("india")} <br> ${changeToUpper("dcoders")}`;
     code7.innerText = document.querySelectorAll("script")[6].innerText;
 
-    ex8.innerHTML = `${get_sum1} <br> ${get_sum2}`;
+    ex8.innerHTML = `${getSum("20", "50")} <br> ${getSum("15", "15")}`;
     code8.innerText = document.querySelectorAll("script")[7].innerText;
 
-    ex9.innerHTML = `${check_char_at_start1} <br> ${check_char_at_start2}`;
+    ex9.innerHTML = `${checkCharAtStart("JavaScript", "J")} <br> ${checkCharAtStart("dcoders", "P")}`;
     code9.innerText = document.querySelectorAll("script")[8].innerText;
 
-    ex10.innerHTML = `${get_position1} <br> ${get_position2}`;
+    ex10.innerHTML = `${getPosition("Hello", "e")} <br> ${getPosition("TypeScript", "S")}`;
     code10.innerText = document.querySelectorAll("script")[9].innerText;
   </script>
 

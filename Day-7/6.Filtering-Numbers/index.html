@@ -91,46 +91,33 @@
 
 
 
+  <!-- 1 -->
   <script>
     const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 
-    var filterEvenNumber = myNumbers.filter((num) => num % 2 == 0);
+    console.log(myNumbers.filter((num) => num % 2 == 0));
 
-    console.log(filterEvenNumber);
+    console.log(myNumbers.filter((num) => num > 5));
 
-
-    var filterNum = myNumbers.filter((num) => num > 5);
-
-    console.log(filterNum);
-
-
-    var filterNumByThree = myNumbers.filter((num) => num % 3 == 0);
-
-    console.log(filterNumByThree);
+    console.log(myNumbers.filter((num) => num % 3 == 0));
   </script>
 
 
+  <!-- 2 -->
   <script>
     const mystr = ["banana", "mango", "blueberry", "apple", "grapes"];
 
 
-    const finalLenghtStr = mystr.filter((fruit) => fruit.length > 5);
+    console.log(mystr.filter((fruit) => fruit.length > 5));
 
-    console.log(finalLenghtStr);
+    console.log(mystr.filter((fruit) => fruit.startsWith("b")));
 
-
-    var filterStr = mystr.filter((fruit) => fruit.startsWith("b"));
-
-    console.log(filterStr);
-
-
-    var filterWord = mystr.filter((fruit) => fruit.includes("grapes"));
-
-    console.log(filterWord);
+    console.log(mystr.filter((fruit) => fruit.includes("grapes")));
   </script>
 
 
+  <!-- 3 -->
   <script>
     const myObj = [
       { name: "Abbasali", age: 35 },
@@ -139,26 +126,21 @@
     ];
 
 
-    var filterAge = myObj.filter((obj) => obj.age > 40);
+    console.log(myObj.filter((obj) => obj.age > 40));
 
-    console.log(filterAge);
-
-
-    var filterName = myObj.filter((obj) => obj.name.startsWith("A"));
-
-    console.log(filterName)
+    console.log(myObj.filter((obj) => obj.name.startsWith("A")))
   </script>
 
 
 
   <script>
-    ex1.innerHTML = `${JSON.stringify(filterEvenNumber)} <br> ${JSON.stringify(filterNum)} <br> ${JSON.stringify(filterNumByThree)}`;
+    ex1.innerHTML = `${JSON.stringify(myNumbers.filter((num) => num % 2 == 0))} <br> ${JSON.stringify(myNumbers.filter((num) => num > 5))} <br> ${JSON.stringify(myNumbers.filter((num) => num % 3 == 0))}`;
     code1.innerText = document.querySelectorAll("script")[0].innerText;
 
-    ex2.innerHTML = `${JSON.stringify(filterStr)} <br> ${JSON.stringify(filterWord)}`;
+    ex2.innerHTML = `${JSON.stringify(mystr.filter((fruit) => fruit.length > 5))} <br> ${JSON.stringify(mystr.filter((fruit) => fruit.startsWith("b")))} <br> ${JSON.stringify(mystr.filter((fruit) => fruit.includes("grapes")))}`;
     code2.innerText = document.querySelectorAll("script")[1].innerText;
 
-    ex3.innerHTML = `${JSON.stringify(filterAge)} <br> ${JSON.stringify(filterName)}`;
+    ex3.innerHTML = `${JSON.stringify(myObj.filter((obj) => obj.age > 40))} <br> ${JSON.stringify(myObj.filter((obj) => obj.name.startsWith("A")))}`;
     code3.innerText = document.querySelectorAll("script")[2].innerText;
   </script>
 

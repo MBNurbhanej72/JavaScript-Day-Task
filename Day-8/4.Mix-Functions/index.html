@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mix Functions</title>
+
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- =====  Favicon Link ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/favicon/site.webmanifest">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Mix Functions</h1>
+    <!-- Section 1  -->
+    <div class="section">
+      <h2>Exercise 1</h2>
+      <ul>
+        <li>Write a JavaScript program which receives an array of object of students and retrun only name of students in
+          an array who scored marks above 49.</li>
+      </ul>
+      <br>
+      <pre><code id="code1"></code></pre>
+      <div id="ex1" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 2  -->
+    <div class="section">
+      <h2>Exercise 2</h2>
+      <ul>
+        <li>Write a JavaScript function to which get random string, filter out duplicate characters/num and return
+          unique characters/num in an array.</li>
+      </ul>
+      <br>
+      <pre><code id="code2"></code></pre>
+      <div id="ex2" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 3  -->
+    <div class="section">
+      <h2>Exercise 3</h2>
+      <ul>
+        <li>Write a JavaScript program which receives 2 arguments. An array of characters and array of numbers. Return
+          an array of characters which matches the index in second array.</li>
+      </ul>
+      <br>
+      <pre><code id="code3"></code></pre>
+      <div id="ex3" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 4  -->
+    <div class="section">
+      <h2>Exercise 4</h2>
+      <ul>
+        <li>Write a JavaScript function that hides email addresses to prevent unauthorized access. (Display first 4
+          characters then apply ... before @ symbol)</li>
+      </ul>
+      <br>
+      <pre><code id="code4"></code></pre>
+      <div id="ex4" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 5  -->
+    <div class="section">
+      <h2>Exercise 5</h2>
+      <ul>
+        <li>Write a JavaScript function to calculate the sum of values in an array.</li>
+      </ul>
+      <br>
+      <pre><code id="code5"></code></pre>
+      <div id="ex5" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 6  -->
+    <div class="section">
+      <h2>Exercise 6</h2>
+      <ul>
+        <li>Write a JavaScript function to round up an integer value to the next multiple of 5.</li>
+      </ul>
+      <br>
+      <pre><code id="code6"></code></pre>
+      <div id="ex6" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 7  -->
+    <div class="section">
+      <h2>Exercise 7</h2>
+      <ul>
+        <li>Write a JavaScript function to which receives an array of object and index number as 2nd parameter. Remove
+          the element from an array based on index number provided and return final array.</li>
+      </ul>
+      <br>
+      <pre><code id="code7"></code></pre>
+      <div id="ex7" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 8  -->
+    <div class="section">
+      <h2>Exercise 8</h2>
+      <ul>
+        <li>Write a JavaScript function to decapitalize first letter of string and capitalise every other letters.</li>
+      </ul>
+      <br>
+      <pre><code id="code8"></code></pre>
+      <div id="ex8" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 9  -->
+    <div class="section">
+      <h2>Exercise 9</h2>
+      <ul>
+        <li>Write a JavaScript program to calculate how many numbers in the given array are less than or equal to the
+          given value.</li>
+      </ul>
+      <br>
+      <pre><code id="code9"></code></pre>
+      <div id="ex9" class="output-box"></div>
+    </div>
+
+
+
+    <!-- Section 10  -->
+    <div class="section">
+      <h2>Exercise 10</h2>
+      <ul>
+        <li>Write a JavaScript function to sort (ascending order) the given array of objects based on pricing of
+          products.</li>
+      </ul>
+      <br>
+      <pre><code id="code10"></code></pre>
+      <div id="ex10" class="output-box"></div>
+    </div>
+  </div>
+
+
+
+  <!-- 1 -->
+  <script>
+    let student = [
+      { name: "John", marks: 50 },
+      { name: "Alice", marks: 39 },
+      { name: "Harish", marks: 87 },
+      { name: "Liza", marks: 49 }
+    ];
+
+
+    var newObject = student.filter(e => e.marks > 49).map(e => e.name);
+
+
+    console.log(newObject)
+  </script>
+
+
+  <!-- 2 -->
+  <script>
+    let filterStr = "aabbccdef11255";
+
+
+    var uniqueStr = new Set([...filterStr]);
+
+
+    console.log(uniqueStr)
+  </script>
+
+
+  <!-- 3 -->
+  <script>
+    const newArr = (arr1, arr2) => arr2.map(i => arr1[i]);
+
+
+    console.log(newArr(["a", "b", "c", "d", "e"], [1, 3]))
+  </script>
+
+
+  <!-- 4 -->
+  <script>
+    const protectEmail = email => email.replace(email.split("@")[0].slice(4), "...");
+
+
+    console.log(protectEmail("dcoders_lab@example.com"))
+  </script>
+
+
+  <!-- 5 -->
+  <script>
+    const arrSum = arr => arr.filter(e => typeof e === "number").reduce((total, e) => total + e, 0);
+
+
+    console.log(arrSum([1, 30, -20, 0, 50]));
+
+    console.log(arrSum([15, 35, -5, "a", 0, -15]))
+  </script>
+
+
+  <!-- 6 -->
+  <script>
+    const integerRound5 = num => Math.ceil(num / 5) * 5;
+
+
+    console.log(integerRound5(32));
+
+    console.log(integerRound5(137))
+  </script>
+
+
+  <!-- 7 -->
+  <script>
+    const removeElement = (arr, i) => arr.toSpliced(i, 1);
+
+
+    console.log(removeElement([{ x: 1 }, { y: 2 }, { z: 3 }], 1));
+
+    console.log(removeElement([{ a: 10 }, { b: 20 }, { c: 30 }], 5))
+  </script>
+
+
+  <!-- 8 -->
+  <script>
+    const decapitalise = str => str[0].toLowerCase() + str.slice(1).toUpperCase();
+
+
+    console.log(decapitalise("Dcoders"));
+
+    console.log(decapitalise("Javascript"))
+  </script>
+
+
+  <!-- 9 -->
+  <script>
+    const countNum = (num, i) => num.filter(e => e <= i).length;
+
+
+    console.log(countNum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5));
+
+    console.log(countNum([10, 15, 25, 35, 40, 55], 30))
+  </script>
+
+
+  <!-- 10 -->
+  <script>
+    const sortProducts = arr => arr.sort((a, b) => a.price - b.price);
+
+
+    console.log(sortProducts([{ product: "phone", price: 15000 }, { product: "laptop", price: 75000 }, { product: "camera", price: 12000 }]));
+  </script>
+
+
+
+  <script>
+    ex1.innerHTML = `${JSON.stringify(newObject)}`;
+    code1.innerText = document.querySelectorAll("script")[0].innerText;
+
+    ex2.innerHTML = `${JSON.stringify([...uniqueStr])}`;
+    code2.innerText = document.querySelectorAll("script")[1].innerText;
+
+    ex3.innerHTML = `${JSON.stringify(newArr(["a", "b", "c", "d", "e"], [1, 3]))}`;
+    code3.innerText = document.querySelectorAll("script")[2].innerText;
+
+    ex4.innerHTML = `${protectEmail("dcoders_lab@example.com")}`;
+    code4.innerText = document.querySelectorAll("script")[3].innerText;
+
+    ex5.innerHTML = `${arrSum([1, 30, -20, 0, 50])} <br> ${arrSum([15, 35, -5, "a", 0, -15])}`;
+    code5.innerText = document.querySelectorAll("script")[4].innerText;
+
+    ex6.innerHTML = `${integerRound5(32)} <br> ${integerRound5(137)}`;
+    code6.innerText = document.querySelectorAll("script")[5].innerText;
+
+    ex7.innerHTML = `${JSON.stringify(removeElement([{ x: 1 }, { y: 2 }, { z: 3 }], 1))} <br> ${JSON.stringify(removeElement([{ a: 10 }, { b: 20 }, { c: 30 }], 5))}`;
+    code7.innerText = document.querySelectorAll("script")[6].innerText;
+
+    ex8.innerHTML = `${decapitalise("Dcoders")} <br> ${decapitalise("Javascript")}`;
+    code8.innerText = document.querySelectorAll("script")[7].innerText;
+
+    ex9.innerHTML = `${countNum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5)} <br> ${countNum([10, 15, 25, 35, 40, 55], 30)}`;
+    code9.innerText = document.querySelectorAll("script")[8].innerText;
+
+    ex10.innerHTML = `${JSON.stringify(sortProducts([{ product: "phone", price: 15000 }, { product: "laptop", price: 75000 }, { product: "camera", price: 12000 }]))}`;
+    code10.innerText = document.querySelectorAll("script")[9].innerText;
+  </script>
+
+
+
+</body>
+
+</html>

@@ -65,7 +65,7 @@
       <div>
         <div class="form-main">
           <input type="text" class="output-box" id="inputValue" placeholder="Enter your name" autocomplete="off">
-          <button class="output-box-btn submit-btn" onclick="submitName()">Submit</button>
+          <button class="output-box-btn submit-btn" onclick="submitName(inputValue, addInputData)">Submit</button>
         </div>
         <p id="addInputData"></p>
       </div>
@@ -75,6 +75,7 @@
 
 
 
+  <!-- 1 -->
   <script>
     function changeBgColor() {
       document.body.style.backgroundColor = "#6f967a";
@@ -82,6 +83,7 @@
   </script>
 
 
+  <!-- 2 -->
   <script>
     const apple = document.getElementById("apple");
 
@@ -113,13 +115,14 @@
   </script>
 
 
+  <!-- 3 -->
   <script>
     const inputValue = document.getElementById("inputValue");
 
     const addInputData = document.getElementById("addInputData");
 
 
-    function submitName() {
+    function submitName(inputValue, addInputData) {
       const inputData = inputValue.value;
 
       addInputData.innerText = inputData;

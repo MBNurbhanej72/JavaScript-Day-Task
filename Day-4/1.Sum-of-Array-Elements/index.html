@@ -34,16 +34,17 @@
       <br>
       <pre><code id="code"></code></pre>
       <div id="ex1" class="output-box"></div>
-      <button class="output-box-btn" onclick="sumNum(), getSum()">Click To Output</button>
+      <button class="output-box-btn" onclick="getSum(numbers)">Click To Output</button>
     </div>
   </div>
 
 
 
   <script>
-    function sumNum() {
-      const numbers = [5, 12, 8, 130, 44];
+    const numbers = [5, 12, 8, 130, 44];
 
+
+    function sumNum(numbers) {
       let sum = 0;
 
       for (let i = 0; i < numbers.length; i++) {
@@ -54,15 +55,14 @@
     }
 
 
-    var get_sum = sumNum();
-    console.log(get_sum);
+    console.log(sumNum(numbers));
   </script>
 
 
 
   <script>
-    function getSum() {
-      ex1.innerHTML = `${get_sum}`;
+    function getSum(numbers) {
+      ex1.innerHTML = `${sumNum(numbers)}`;
     }
 
     code.innerText = document.querySelector("script").innerText

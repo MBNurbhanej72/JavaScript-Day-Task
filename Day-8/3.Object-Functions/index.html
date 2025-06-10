@@ -186,12 +186,9 @@
       };
 
 
-      var check_objects1 = checkObjects(obj1, obj2);
-      console.log(check_objects1);
+      console.log(checkObjects(obj1, obj2));
 
-
-      var check_objects2 = checkObjects(obj1, obj3);
-      console.log(check_objects2);
+      console.log(checkObjects(obj1, obj3));
     </script>
 
 
@@ -202,6 +199,7 @@
         class: "JavaScript",
         rollno: 12
       };
+
 
       console.log(Object.keys(students).length);
     </script>
@@ -218,8 +216,7 @@
       const joinValues = obj => Object.values(bio).join(" ");
 
 
-      var join_values = joinValues(bio);
-      console.log(join_values);
+      console.log(joinValues(bio));
     </script>
 
 
@@ -228,18 +225,16 @@
       const checkKey = (obj, key) => key in obj;
 
 
-      var check_key1 = checkKey({ name: "abc" }, "name");
-      console.log(check_key1);
+      console.log(checkKey({ name: "abc" }, "name"));
 
-
-      var check_key2 = checkKey({ age: 10, color: "red" }, "course");
-      console.log(check_key2)
+      console.log(checkKey({ age: 10, color: "red" }, "course"))
     </script>
 
 
     <!-- 5 -->
     <script>
       let changeValue = { name: "dcoders" };
+
 
       console.log(`yes ${changeValue.name}`)
     </script>
@@ -255,6 +250,8 @@
 
 
       var { name } = getName;
+
+
       console.log(name)
     </script>
 
@@ -263,7 +260,9 @@
     <script>
       var removeKey = { name: "John Doe", age: 20, color: "pink" };
 
+
       delete removeKey.color;
+
 
       console.log(Object.entries(removeKey).flat(Infinity).join(" "))
     </script>
@@ -282,8 +281,7 @@
       const getCity = obj => obj.address.city;
 
 
-      var get_city = getCity(person);
-      console.log(get_city);
+      console.log(getCity(person));
     </script>
 
 
@@ -295,8 +293,7 @@
       const getObject = obj => Object.fromEntries(obj);
 
 
-      var get_object = getObject(getObj);
-      console.log(get_object);
+      console.log(getObject(getObj));
     </script>
 
 
@@ -305,12 +302,9 @@
       const checkNumValue = obj => typeof Object.values(obj)[0] === "number";
 
 
-      var check_Num_Value1 = checkNumValue({ age: 20 });
-      console.log(check_Num_Value1);
+      console.log(checkNumValue({ age: 20 }));
 
-
-      var check_Num_Value2 = checkNumValue({ age: "20" });
-      console.log(check_Num_Value2);
+      console.log(checkNumValue({ age: "20" }));
     </script>
 
 
@@ -327,22 +321,23 @@
 
 
       var get_str = getStr([{ name: "John", age: 20 }, { type: "vehicle", model: "car" }]);
+
       console.log(get_str);
     </script>
 
 
 
     <script>
-      ex1.innerHTML = `${check_objects1} <br> ${check_objects2}`;
+      ex1.innerHTML = `${checkObjects(obj1, obj2)} <br> ${checkObjects(obj1, obj3)}`;
       code1.innerText = document.querySelectorAll("script")[0].innerText;
 
       ex2.innerHTML = `${Object.keys(students).length}`;
       code2.innerText = document.querySelectorAll("script")[1].innerText;
 
-      ex3.innerHTML = `${join_values}`;
+      ex3.innerHTML = `${joinValues(bio)}`;
       code3.innerText = document.querySelectorAll("script")[2].innerText;
 
-      ex4.innerHTML = `${check_key1} <br> ${check_key2}`;
+      ex4.innerHTML = `${checkKey({ name: "abc" }, "name")} <br> ${checkKey({ age: 10, color: "red" }, "course")}`;
       code4.innerText = document.querySelectorAll("script")[3].innerText;
 
       ex5.innerHTML = `yes ${changeValue.name}`;
@@ -354,13 +349,13 @@
       ex7.innerHTML = `${Object.entries(removeKey).flat(Infinity).join(" ")}`;
       code7.innerText = document.querySelectorAll("script")[6].innerText;
 
-      ex8.innerHTML = `${get_city}`;
+      ex8.innerHTML = `${getCity(person)}`;
       code8.innerText = document.querySelectorAll("script")[7].innerText;
 
-      ex9.innerHTML = `${JSON.stringify(get_object)}`;
+      ex9.innerHTML = `${JSON.stringify(getObject(getObj))}`;
       code9.innerText = document.querySelectorAll("script")[8].innerText;
 
-      ex10.innerHTML = `${check_Num_Value1} <br> ${check_Num_Value2}`;
+      ex10.innerHTML = `${checkNumValue({ age: 20 })} <br> ${checkNumValue({ age: "20" })}`;
       code10.innerText = document.querySelectorAll("script")[9].innerText;
 
       ex11.innerHTML = `${get_str}`;

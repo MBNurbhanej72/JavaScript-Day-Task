@@ -95,26 +95,35 @@
       ],
     };
 
+
     const cardWraper = document.getElementById('cardWraper');
+
 
     for (let i = 0; i < uiData.data.length; i++) {
       const name = uiData.data[i].first_name;
+
       const email = uiData.data[i].email;
+
       const image = uiData.data[i].avatar;
 
+
       const nameElem = document.createElement("h3");
+
       nameElem.innerHTML = name;
 
+
       const emailElem = document.createElement("p");
+
       emailElem.innerHTML = email;
 
+
       const imageElem = document.createElement("img");
+
       imageElem.src = image;
+
 
       cardWraper.append(nameElem, emailElem, imageElem);
     }
-
-
   </script>
 
 

@@ -90,6 +90,7 @@
     function startCounter() {
       interval = setInterval(() => {
         counter++;
+
         box.innerText = counter;
       }, 1000);
     }
@@ -102,7 +103,10 @@
 
     function resetCounter() {
       counter = 0;
+
       box.innerText = counter;
+
+      clearInterval(interval);
     }
   </script>
 

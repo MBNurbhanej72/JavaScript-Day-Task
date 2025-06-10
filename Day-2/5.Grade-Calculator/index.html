@@ -70,7 +70,7 @@
       <br>
       <pre><code id="code"></code></pre>
       <div id="ex1" class="output-box"></div>
-      <button class="output-box-btn" onclick="getMarks()">Click To Output</button>
+      <button class="output-box-btn" onclick="getMarks(marks)">Click To Output</button>
     </div>
   </div>
 
@@ -99,14 +99,13 @@
     }
 
 
-    var getGrade = checkMarks(marks);
-    console.log(getGrade);
+    console.log(checkMarks(marks));
   </script>
 
 
 
   <script>
-    function getMarks() {
+    function getMarks(marks) {
       ex1.innerHTML = checkMarks(marks);
     }
 

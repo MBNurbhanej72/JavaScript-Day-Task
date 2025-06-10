@@ -44,7 +44,7 @@
       <br>
       <pre><code id="code"></code></pre>
       <div id="ex1" class="output-box"></div>
-      <button class="output-box-btn" onclick="myNum()">Click To Output</button>
+      <button class="output-box-btn" onclick="myNum(num)">Click To Output</button>
     </div>
   </div>
 
@@ -67,15 +67,14 @@
     }
 
 
-    var getNum = checkNumber(num);
-    console.log(getNum);
+    console.log(checkNumber(num));
   </script>
 
 
 
   <script>
-    function myNum() {
-      ex1.innerHTML = `${getNum}`;
+    function myNum(num) {
+      ex1.innerHTML = `${checkNumber(num)}`;
     }
 
     code.innerText = document.querySelector("script").innerText

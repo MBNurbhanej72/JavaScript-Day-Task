@@ -36,7 +36,7 @@
       <div id="ex1" class="output-box">
         <h3 id="heading">Welcome Visitor!</h3>
       </div>
-      <button class="output-box-btn" onclick="changeHeading()">Change The Heading</button>
+      <button class="output-box-btn" onclick="changeHeading(heading)">Change The Heading</button>
     </div>
   </div>
 
@@ -45,7 +45,8 @@
   <script>
     const heading = document.getElementById("heading");
 
-    function changeHeading() {
+
+    function changeHeading(heading) {
       heading.innerText = "Welcome MohammadAli!";
     }
   </script>

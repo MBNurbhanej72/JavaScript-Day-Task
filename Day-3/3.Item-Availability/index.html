@@ -42,7 +42,7 @@
       <br>
       <pre><code id="code"></code></pre>
       <div id="ex1" class="output-box"></div>
-      <button class="output-box-btn" onclick="checkStockOrSubscribed(), stockOrsubscribed()">Click To Output</button>
+      <button class="output-box-btn" onclick="stockOrsubscribed(itemInStock, isSubscribed)">Click To Output</button>
     </div>
   </div>
 
@@ -54,7 +54,7 @@
     let isSubscribed = false;
 
 
-    function checkStockOrSubscribed() {
+    function checkStockOrSubscribed(itemInStock, isSubscribed) {
       if (itemInStock == true && isSubscribed == true) {
         return "You can purchase this item";
       } else if (itemInStock == false && isSubscribed == true) {
@@ -67,15 +67,14 @@
     }
 
 
-    var stock_subscribed = checkStockOrSubscribed();
-    console.log(stock_subscribed);
+    console.log(checkStockOrSubscribed(itemInStock, isSubscribed));
   </script>
 
 
 
   <script>
-    function stockOrsubscribed() {
-      ex1.innerHTML = `${stock_subscribed}`;
+    function stockOrsubscribed(itemInStock, isSubscribed) {
+      ex1.innerHTML = `${checkStockOrSubscribed(itemInStock, isSubscribed)}`;
     }
 
     code.innerText = document.querySelector("script").innerText

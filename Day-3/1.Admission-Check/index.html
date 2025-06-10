@@ -41,7 +41,7 @@
         <br>
         <pre><code id="code"></code></pre>
         <div id="ex1" class="output-box"></div>
-        <button class="output-box-btn" onclick="checkAge(), getAge()">Click To Output</button>
+        <button class="output-box-btn" onclick="getAge(age,hasTicket)">Click To Output</button>
     </div>
   </div>
 
@@ -53,7 +53,7 @@
     let hasTicket = true;
 
 
-    function checkAge() {
+    function checkAge(age, hasTicket) {
       if (age > 18 && hasTicket == true) {
         return "Welcome!";
       } else {
@@ -62,14 +62,13 @@
     }
 
 
-    var get_age = checkAge();
-    console.log(get_age);
+    console.log(checkAge(age, hasTicket));
   </script>
 
 
   <script>
-    function getAge() {
-      ex1.innerHTML = `${get_age}`;
+    function getAge(age, hasTicket) {
+      ex1.innerHTML = `${checkAge(age, hasTicket)}`;
     }
 
     code.innerText = document.querySelector("script").innerText

@@ -82,26 +82,25 @@
 
 
 
+  <!-- 1 -->
   <script>
     const myNumbers = [1, 2, 3, 4, 5];
 
 
-    var finalNumber = myNumbers.findIndex((num) => num % 2 == 0);
-
-    console.log(finalNumber);
+    console.log(myNumbers.findIndex((num) => num % 2 == 0));
   </script>
 
 
+  <!-- 2 -->
   <script>
     const mystr = ["banana", "mango", "apple"];
 
 
-    var finalStr = mystr.findIndex((fruit) => fruit.startsWith("a"));
-
-    console.log(finalStr);
+    console.log(mystr.findIndex((fruit) => fruit.startsWith("a")));
   </script>
 
 
+  <!-- 3 -->
   <script>
     const myObj = [
       { name: "MT", age: 35 },
@@ -110,21 +109,19 @@
     ];
 
 
-    var finalObj = myObj.findIndex((obj) => obj.age > 30);
-
-    console.log(finalObj)
+    console.log(myObj.findIndex((obj) => obj.age > 30))
   </script>
 
 
 
   <script>
-    ex1.innerHTML = `${finalNumber}`;
+    ex1.innerHTML = `${myNumbers.findIndex((num) => num % 2 == 0)}`;
     code1.innerText = document.querySelectorAll("script")[0].innerText;
 
-    ex2.innerHTML = `${finalStr}`;
+    ex2.innerHTML = `${mystr.findIndex((fruit) => fruit.startsWith("a"))}`;
     code2.innerText = document.querySelectorAll("script")[1].innerText;
 
-    ex3.innerHTML = `${finalObj}`;
+    ex3.innerHTML = `${myObj.findIndex((obj) => obj.age > 30)}`;
     code3.innerText = document.querySelectorAll("script")[2].innerText;
   </script>
 

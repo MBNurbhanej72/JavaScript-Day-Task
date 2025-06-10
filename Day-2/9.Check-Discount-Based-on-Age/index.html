@@ -67,7 +67,7 @@
       <br>
       <pre><code id="code"></code></pre>
       <div id="ex1" class="output-box"></div>
-      <button class="output-box-btn" onclick="getDiscount()">Click To Output</button>
+      <button class="output-box-btn" onclick="getDiscount(personDetail)">Click To Output</button>
     </div>
   </div>
 
@@ -97,15 +97,14 @@
     }
 
 
-    var discount = checkDiscount(personDetail);
-    console.log(discount);
+    console.log(checkDiscount(personDetail));
   </script>
 
 
 
   <script>
-    function getDiscount() {
-      ex1.innerHTML = `${discount}`;
+    function getDiscount(personDetail) {
+      ex1.innerHTML = `${checkDiscount(personDetail)}`;
     }
 
     code.innerText = document.querySelector("script").innerText

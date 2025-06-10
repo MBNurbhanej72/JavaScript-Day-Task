@@ -33,9 +33,9 @@
       </ul>
       <br>
       <pre><code id="code"></code></pre>
-      <button class="output-box-btn" onclick="allBox()">Show The All Text Boxes</button>
-      <button class="output-box-btn" onclick="firstBox()">Show The First Text Box</button>
-      <button class="output-box-btn" onclick="secondBox()">Show The Second Text Box</button>
+      <button class="output-box-btn" onclick="allBox(firstTextBox,secondTextBox)">Show The All Text Boxes</button>
+      <button class="output-box-btn" onclick="firstBox(firstTextBox)">Show The First Text Box</button>
+      <button class="output-box-btn" onclick="secondBox(secondTextBox)">Show The Second Text Box</button>
       <br>
       <br>
       <br>
@@ -54,19 +54,19 @@
     const secondTextBox = document.getElementById("secondTextBox");
 
 
-    function allBox() {
+    function allBox(firstTextBox, secondTextBox) {
       firstTextBox.classList.toggle("active");
 
       secondTextBox.classList.toggle("active");
     }
 
 
-    function firstBox() {
+    function firstBox(firstTextBox) {
       firstTextBox.classList.toggle("active");
     }
 
 
-    function secondBox() {
+    function secondBox(secondTextBox) {
       secondTextBox.classList.toggle("active");
     }
   </script>

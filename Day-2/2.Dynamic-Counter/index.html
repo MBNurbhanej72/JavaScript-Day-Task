@@ -32,7 +32,7 @@
       <br>
       <pre><code id="code"></code></pre>
       <div id="ex1" class="output-box">0</div>
-      <button class="output-box-btn" onclick="handleIncrement()">Click To Increment</button>
+      <button class="output-box-btn" onclick="handleIncrement(count)">Click To Increment</button>
     </div>
   </div>
 
@@ -42,7 +42,7 @@
     var count = 0;
 
 
-    function handleIncrement() {
+    function handleIncrement(count) {
       count++;
 
       console.log(count);
@@ -54,7 +54,6 @@
 
 
   <script>
-    console.log(count);
     code.innerText = document.querySelector("script").innerText
   </script>
 
